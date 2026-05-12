@@ -1,0 +1,12 @@
+{
+  "status": "done",
+  "summary": "Child handoff approved by orchestrator",
+  "nextAction": "No further action",
+  "ownerType": "child",
+  "ownerSessionKey": "agent:test:child",
+  "reviewState": "approved",
+  "waitingReason": "none",
+  "staleAt": null,
+  "lastProgressAt": "2026-05-10T10:00:16.152824Z",
+  "updatedAt": "2026-05-10T10:00:33.187021Z"
+}

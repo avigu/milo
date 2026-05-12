@@ -1,0 +1,4 @@
+data/credentials.json
+data/token.json
+data/*-sync.json
+node_modules/

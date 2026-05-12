@@ -1,0 +1,25 @@
+{
+  "name": "google-calendar-bridge",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local OAuth bridge for Google Calendar read/write operations",
+  "scripts": {
+    "auth": "node src/cli.mjs auth",
+    "auth:manual": "node src/cli.mjs auth-manual",
+    "auth:url": "node src/cli.mjs auth-url",
+    "auth:exchange": "node src/cli.mjs auth-exchange",
+    "calendars": "node src/cli.mjs calendars",
+    "upcoming": "node src/cli.mjs upcoming",
+    "create": "node src/cli.mjs create",
+    "patch": "node src/cli.mjs patch",
+    "move": "node src/cli.mjs move",
+    "changes": "node src/cli.mjs changes",
+    "watch": "node src/cli.mjs watch",
+    "help": "node src/cli.mjs"
+  },
+  "dependencies": {
+    "@google-cloud/local-auth": "^3.0.1",
+    "googleapis": "^144.0.0"
+  }
+}

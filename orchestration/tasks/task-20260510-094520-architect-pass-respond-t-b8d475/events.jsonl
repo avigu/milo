@@ -1,0 +1,6 @@
+{"ts": "2026-05-10T09:45:20.356564Z", "type": "task.created", "status": "queued", "message": "Awaiting PM output"}
+{"ts": "2026-05-10T09:47:52.748020Z", "type": "task.status_updated", "status": "running", "message": "Architect pass started from PM document"}
+{"ts": "2026-05-10T09:50:19.789695Z", "type": "retry", "status": null, "message": "Architect pass returned role profile instead of design response; retrying with narrower prompt", "data": null}
+{"ts": "2026-05-10T09:50:19.790020Z", "type": "task.status_updated", "status": "running", "message": "Architect pass returned role profile instead of design response; retrying with narrower prompt"}
+{"ts": "2026-05-10T09:51:43.966880Z", "type": "task.result_written", "status": null, "message": "Result updated"}
+{"ts": "2026-05-10T09:51:43.967159Z", "type": "task.status_updated", "status": "done", "message": "Architect response completed"}

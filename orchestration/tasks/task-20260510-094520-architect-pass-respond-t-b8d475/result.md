@@ -1,0 +1,1 @@
+Created orchestration/docs/architect-design-round.md with the orchestration contract, roll-up rules, review gate semantics, Slack contract, and file-first next slice.

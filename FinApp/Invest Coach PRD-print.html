@@ -1,0 +1,855 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Invest Coach — PRD</title>
+<link rel="stylesheet" href="sketchy.css"/>
+<style>
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: #f0eee9;
+    font-family: 'Kalam', cursive;
+    color: #1a1a1a;
+  }
+
+  /* ── Print styles ── */
+  @media print {
+    @page { size: A4 portrait; margin: 1.2cm 1.4cm; }
+
+    html, body { background: #fff !important; }
+
+    /* hide sidebar */
+    .sidebar { display: none !important; }
+
+    /* full-width main */
+    .main {
+      margin-left: 0 !important;
+      padding: 0 !important;
+      max-width: 100% !important;
+    }
+
+    /* force background colors to print */
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+
+    /* section page breaks */
+    .prd-section {
+      break-before: page;
+      margin-bottom: 0 !important;
+    }
+    /* first section — no page break before */
+    .prd-section:first-child { break-before: avoid; }
+
+    /* keep tables together where possible */
+    table { break-inside: avoid; }
+    .strat-card { break-inside: avoid; }
+    .callout { break-inside: avoid; }
+
+    /* no interactive hover states */
+    a { color: #1C3FE5 !important; text-decoration: none !important; }
+
+    /* hr as light rule */
+    hr { border-top: 1px solid #c4c4c4 !important; margin: 16px 0 !important; }
+
+    /* tighten headings for print */
+    .prd-h1 { font-size: 38px !important; }
+    .prd-h2 { font-size: 26px !important; margin-bottom: 10px !important; }
+    .prd-h3 { font-size: 16px !important; margin: 14px 0 6px !important; }
+
+    /* shrink table font slightly */
+    table { font-size: 12px !important; }
+    th, td { padding: 6px 10px !important; }
+
+    /* footer */
+    body::after {
+      content: 'Invest Coach PRD · v0.1 Draft · April 2026 · Confidential';
+      display: block; text-align: center; font-size: 10px; color: #8a8a8a;
+      margin-top: 24px; padding-top: 8px; border-top: 1px solid #c4c4c4;
+    }
+  }
+
+  /* layout */
+  .sidebar {
+    position: fixed; top: 0; left: 0; bottom: 0; width: 220px;
+    background: #fdfcf8; border-right: 2px dashed #1a1a1a;
+    padding: 24px 16px; overflow-y: auto; z-index: 100;
+    box-sizing: border-box;
+  }
+  .sidebar-logo { font-family: 'Caveat'; font-size: 26px; font-weight: 700; margin-bottom: 4px; }
+  .sidebar-sub { font-size: 11px; color: #4a4a4a; margin-bottom: 24px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .sidebar nav { display: flex; flex-direction: column; gap: 2px; }
+  .sidebar nav a {
+    font-size: 13px; color: #1a1a1a; text-decoration: none;
+    padding: 5px 8px; border-radius: 5px; display: flex; align-items: center; gap: 7px;
+  }
+  .sidebar nav a:hover { background: #f5f3ec; }
+  .sidebar nav a.active { background: #D5DFFF; font-weight: 700; }
+  .sidebar nav .sec-label {
+    font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px;
+    color: #8a8a8a; margin: 14px 0 4px 8px;
+  }
+
+  .main { margin-left: 220px; padding: 48px 60px 80px; max-width: 920px; }
+
+  /* section styling */
+  .prd-section { margin-bottom: 60px; }
+  .prd-h1 {
+    font-family: 'Caveat'; font-size: 48px; font-weight: 700;
+    letter-spacing: -1px; line-height: 1; margin-bottom: 6px;
+  }
+  .prd-h2 {
+    font-family: 'Caveat'; font-size: 32px; font-weight: 700;
+    letter-spacing: -0.5px; margin: 0 0 6px;
+    padding-bottom: 8px; border-bottom: 2px solid #1a1a1a;
+  }
+  .prd-h3 {
+    font-family: 'Kalam'; font-size: 18px; font-weight: 700; margin: 20px 0 8px;
+  }
+  .prd-h4 {
+    font-family: 'Kalam'; font-size: 14px; font-weight: 700; margin: 14px 0 4px;
+    color: #1C3FE5;
+  }
+  .prd-p { font-size: 14px; line-height: 1.65; margin-bottom: 12px; max-width: 680px; text-wrap: pretty; }
+  .prd-meta { font-size: 12px; color: #4a4a4a; margin-bottom: 24px; }
+  .prd-meta span { margin-right: 18px; }
+
+  /* callout boxes */
+  .callout {
+    border: 1.5px solid #1a1a1a; border-radius: 8px 11px 7px 12px / 11px 7px 12px 8px;
+    padding: 14px 18px; margin-bottom: 16px;
+  }
+  .callout.blue  { background: #D5DFFF; }
+  .callout.yellow { background: #fff48a88; }
+  .callout.green  { background: #b8e6b888; }
+  .callout.pink   { background: #ffb3c655; }
+  .callout.plain  { background: #fdfcf8; box-shadow: 2px 3px 0 rgba(0,0,0,0.08); }
+
+  /* tables */
+  table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 20px; }
+  th {
+    text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.3px;
+    padding: 8px 12px; border-bottom: 2px solid #1a1a1a; background: #f5f3ec;
+    font-weight: 700;
+  }
+  td { padding: 8px 12px; border-bottom: 1px dashed #c4c4c4; vertical-align: top; line-height: 1.4; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #f9f7f0; }
+
+  /* badge pill */
+  .badge {
+    display: inline-block; padding: 2px 8px; font-size: 11px; font-weight: 700;
+    border: 1.2px solid #1a1a1a; border-radius: 9999px; margin-right: 4px;
+  }
+  .badge.blue  { background: #D5DFFF; border-color: #1C3FE5; color: #1C3FE5; }
+  .badge.green { background: #b8e6b8; }
+  .badge.yellow{ background: #fff48a; }
+  .badge.pink  { background: #ffb3c6; }
+  .badge.ink   { background: #1a1a1a; color: #fdfcf8; }
+
+  /* checklist */
+  ul.check { list-style: none; padding: 0; margin: 0 0 14px; }
+  ul.check li { display: flex; align-items: flex-start; gap: 8px; padding: 3px 0; font-size: 13.5px; line-height: 1.4; }
+  ul.check li::before { content: '✓'; color: #07715E; font-weight: 700; font-size: 14px; flex-shrink: 0; margin-top: 1px; }
+  ul.cross li::before { content: '✗'; color: #b32121; }
+
+  /* priority dot */
+  .pri { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 4px; vertical-align: 2px; }
+  .pri.p1 { background: #b32121; }
+  .pri.p2 { background: #e07b00; }
+  .pri.p3 { background: #4a4a4a; }
+
+  /* strategy card */
+  .strat-card {
+    border: 1.5px solid #1a1a1a; border-radius: 8px 11px 7px 12px;
+    padding: 14px 16px; margin-bottom: 14px;
+    box-shadow: 2px 3px 0 rgba(0,0,0,0.08);
+    background: #fdfcf8;
+  }
+  .strat-card .strat-name { font-family: 'Caveat'; font-size: 22px; font-weight: 700; margin-bottom: 2px; }
+  .strat-card .strat-sub  { font-size: 12px; color: #4a4a4a; margin-bottom: 10px; }
+
+  /* divider */
+  hr { border: none; border-top: 2px dashed #c4c4c4; margin: 32px 0; }
+
+  /* screen tag */
+  .screen-tag { display: inline-block; font-size: 11px; font-weight: 700; font-family: 'Kalam'; padding: 2px 8px; border: 1.2px solid #1a1a1a; border-radius: 4px; background: #fdfcf8; margin-right: 4px; }
+
+  /* toc numbers */
+  .toc-num { font-family: 'Caveat'; font-size: 22px; font-weight: 700; color: #2F5DFF; margin-right: 6px; }
+
+  /* print */
+  @media print {
+    .sidebar { display: none; }
+    .main { margin-left: 0; padding: 24px 32px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Sidebar TOC -->
+<div class="sidebar">
+  <div class="sidebar-logo">Invest Coach</div>
+  <div class="sidebar-sub">Product Requirements Doc · v0.1</div>
+  <nav>
+    <div class="sec-label">Overview</div>
+    <a href="#overview">1 · Overview</a>
+    <a href="#users">2 · Users & problem</a>
+    <a href="#goals">3 · Goals & metrics</a>
+
+    <div class="sec-label">Product</div>
+    <a href="#strategies">4 · The 5 strategies</a>
+    <a href="#screens">5 · Screens & flows</a>
+    <a href="#aria">6 · Aria AI layer</a>
+
+    <div class="sec-label">Engineering</div>
+    <a href="#data">7 · Data sources & APIs</a>
+    <a href="#scan">8 · Scan architecture</a>
+    <a href="#scoring">9 · Scoring engine</a>
+
+    <div class="sec-label">Planning</div>
+    <a href="#scope">10 · Scope & out-of-scope</a>
+    <a href="#phases">11 · Phases & milestones</a>
+    <a href="#risks">12 · Risks</a>
+  </nav>
+  <div style="margin-top: 24px; padding: 10px; background: #fff48a55; border: 1px dashed #1a1a1a; border-radius: 6px; font-size: 11px; color: #4a4a4a;">
+    <b>Status:</b> Draft · For review<br/>
+    <b>Date:</b> April 2026
+  </div>
+</div>
+
+<!-- Main content -->
+<div class="main">
+
+  <!-- ── 1. Overview ── -->
+  <section class="prd-section" id="overview">
+    <div class="prd-h1">Invest Coach</div>
+    <div class="prd-h2" style="border: none; padding: 0; font-size: 22px; color: #4a4a4a; margin-bottom: 14px;">Product Requirements Document · v0.1 Draft</div>
+    <div class="prd-meta">
+      <span>📅 April 2026</span>
+      <span>🎯 Retail beginner investors</span>
+      <span>📱 Mobile-first, web dashboard</span>
+      <span>🚫 Recommend only — no trade execution</span>
+    </div>
+
+    <div class="callout blue">
+      <div class="prd-h3" style="margin-top:0">What is Invest Coach?</div>
+      <div class="prd-p" style="margin:0">
+        Invest Coach is a stock-picking app that helps retail beginners find investment opportunities without needing to be financial experts. It runs 5 rule-based strategies against a curated universe of ~400 NASDAQ stocks every night, scores each one, and surfaces a ranked opportunity list with plain-English reasoning powered by an AI assistant called <b>Aria</b>. The app recommends — it does not execute trades.
+      </div>
+    </div>
+
+    <div class="prd-h3">One-sentence pitch</div>
+    <div class="prd-p">
+      <span style="font-family: 'Caveat'; font-size: 20px;">"Find the right stock to buy — and understand exactly why."</span>
+    </div>
+  </section>
+
+  <hr/>
+
+  <!-- ── 2. Users & Problem ── -->
+  <section class="prd-section" id="users">
+    <div class="prd-h2">2 · Users &amp; problem</div>
+
+    <div class="prd-h3">Primary user</div>
+    <div class="callout plain">
+      <div style="font-size: 13px; line-height: 1.6;">
+        <b>Retail beginner investor</b> — has a brokerage account (eToro, IBKR, etc.) but doesn't know which stocks to pick or why. Has disposable income to invest. May have heard of value investing or dividends but finds financial data intimidating. Uses their phone primarily; checks market news occasionally. Risk-averse but willing to learn.
+      </div>
+      <div style="margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap;">
+        <span class="badge">Age 25–45</span>
+        <span class="badge">Disposable income $500–$10k/yr</span>
+        <span class="badge">Mobile-first</span>
+        <span class="badge">Beginner–intermediate</span>
+        <span class="badge">Israel / US market focus</span>
+      </div>
+    </div>
+
+    <div class="prd-h3">The problem</div>
+    <table>
+      <thead><tr><th>Pain point</th><th>How users cope today</th><th>What we do instead</th></tr></thead>
+      <tbody>
+        <tr><td>"Which stock should I buy?"</td><td>Ask friends, read Reddit, guess</td><td>Surface ranked opportunities with Aria reasoning</td></tr>
+        <tr><td>"Why is this a good buy?"</td><td>Read analyst reports (confusing) or skip</td><td>Plain-English "why" on every pick, sourced from real data</td></tr>
+        <tr><td>"Is the market down an opportunity?"</td><td>Usually freeze, miss the dip</td><td>Market Dip strategy detects and alerts automatically</td></tr>
+        <tr><td>"I don't know which strategy suits me"</td><td>Pick randomly, lose money, give up</td><td>Risk profile → strategy match → conservative default</td></tr>
+        <tr><td>"Bloomberg is too complex"</td><td>Use simplified app with no reasoning</td><td>Scannable cards with depth on demand</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <hr/>
+
+  <!-- ── 3. Goals & Metrics ── -->
+  <section class="prd-section" id="goals">
+    <div class="prd-h2">3 · Goals &amp; success metrics</div>
+
+    <div class="prd-h3">Product goals</div>
+    <ul class="check">
+      <li>Help beginners identify at least one actionable investment opportunity per week</li>
+      <li>Ensure every recommendation has a traceable, plain-English rationale (no black-box picks)</li>
+      <li>Build a daily habit: users open the app at least 3× per week</li>
+      <li>Make the app correct: Aria's "why" must come from real data, not hallucination</li>
+    </ul>
+
+    <div class="prd-h3">Success metrics — Phase 2 (public launch)</div>
+    <table>
+      <thead><tr><th>Metric</th><th>Target (6 months)</th><th>Measured by</th></tr></thead>
+      <tbody>
+        <tr><td>DAU/MAU ratio</td><td>&gt; 35%</td><td>Analytics events</td></tr>
+        <tr><td>% users who tap "See details" on a pick</td><td>&gt; 50% per session</td><td>Click tracking</td></tr>
+        <tr><td>% users who click "Buy on broker"</td><td>&gt; 15% per session</td><td>Outbound link events</td></tr>
+        <tr><td>Pick accuracy (price up within 90d)</td><td>&gt; 55% of picks</td><td>Price tracking job</td></tr>
+        <tr><td>NPS</td><td>&gt; 40</td><td>In-app survey</td></tr>
+        <tr><td>Avg session length</td><td>3–6 min</td><td>Analytics</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout yellow">
+      <b>Note on accuracy:</b> We do not guarantee returns. Legal disclaimer required on every recommendation. The 55% target is above random (50%) and is a product health signal, not a financial promise.
+    </div>
+  </section>
+
+  <hr/>
+
+  <!-- ── 4. Strategies ── -->
+  <section class="prd-section" id="strategies">
+    <div class="prd-h2">4 · The 5 strategies</div>
+    <div class="prd-p">Each strategy is a rule-based scoring pipeline. Strategies are not mutually exclusive — one stock can qualify under multiple strategies simultaneously.</div>
+
+    <div class="strat-card">
+      <div class="strat-name">1 · Bounce-Back <span class="badge blue">Medium risk</span></div>
+      <div class="strat-sub">A good company had one bad quarter and the stock overreacted. History suggests recovery in 3–6 months.</div>
+      <div class="prd-h4">Signal conditions (all must pass)</div>
+      <ul class="check" style="font-size:13px; margin:0 0 8px">
+        <li>Revenue YoY growth &gt; +8% for ≥ 3 of last 4 quarters (long-term health)</li>
+        <li>Latest quarterly EPS missed estimate by &gt; 10% (the "bad Q")</li>
+        <li>Stock price down &gt; 15% from its 60-day high (overreaction)</li>
+        <li>News sentiment score &gt; –0.3 (no scandal, no structural issue)</li>
+      </ul>
+      <div class="prd-h4">Data sources</div>
+      <span class="badge blue">FMP Q reports</span><span class="badge">Alpaca price</span><span class="badge green">Marketaux news</span>
+    </div>
+
+    <div class="strat-card">
+      <div class="strat-name">2 · Market Dip <span class="badge yellow">Medium-high risk</span></div>
+      <div class="strat-sub">External shock (war, rate hike, macro panic) pushes whole market down. Quality stocks drop unfairly — buy the dip.</div>
+      <div class="prd-h4">Signal conditions (all must pass)</div>
+      <ul class="check" style="font-size:13px; margin:0 0 8px">
+        <li>Market index (SPY or QQQ) down &gt; 5% in last 10 trading days</li>
+        <li>News trigger is macro/geopolitical — not company-specific (earnings, fraud)</li>
+        <li>Stock P/E below its 5-year average (quality — not just cheap)</li>
+        <li>Stock dropped more than the index by &gt; 5% (overreaction vs market)</li>
+      </ul>
+      <div class="prd-h4">Data sources</div>
+      <span class="badge blue">Alpaca index + stock bars</span><span class="badge green">Marketaux macro news</span><span class="badge yellow">FMP fundamentals</span>
+    </div>
+
+    <div class="strat-card">
+      <div class="strat-name">3 · Undervalued <span class="badge green">Low-medium risk</span></div>
+      <div class="strat-sub">Classic value investing: the stock is priced below what the company is actually worth by the numbers.</div>
+      <div class="prd-h4">Signal conditions (all must pass)</div>
+      <ul class="check" style="font-size:13px; margin:0 0 8px">
+        <li>P/E ratio &lt; industry average P/E by ≥ 20%</li>
+        <li>Revenue growing YoY &gt; 0% for last 2 consecutive years</li>
+        <li>Free cash flow positive for last 4 quarters</li>
+        <li>Debt/equity &lt; 2.0 (not a value trap due to debt)</li>
+      </ul>
+      <div class="prd-h4">Data sources</div>
+      <span class="badge yellow">FMP income, ratios, cash flow</span><span class="badge blue">FMP analyst targets (fair value)</span>
+    </div>
+
+    <div class="strat-card">
+      <div class="strat-name">4 · Steady Dividend <span class="badge green">Low risk</span></div>
+      <div class="strat-sub">Reliable income investors. Companies with 10+ years of raising dividends, low debt, recession-proof.</div>
+      <div class="prd-h4">Signal conditions (all must pass)</div>
+      <ul class="check" style="font-size:13px; margin:0 0 8px">
+        <li>Dividend raised every year for ≥ 10 consecutive years</li>
+        <li>Payout ratio &lt; 65% (room to keep paying)</li>
+        <li>Debt/equity &lt; 1.5</li>
+        <li>Current dividend yield ≥ 2.5% (above 10-year Treasury)</li>
+      </ul>
+      <div class="prd-h4">Data sources</div>
+      <span class="badge yellow">FMP dividend history + balance sheet</span><span class="badge blue">Alpaca price (for yield calc)</span>
+    </div>
+
+    <div class="strat-card">
+      <div class="strat-name">5 · Analyst Upgrade <span class="badge yellow">Medium risk</span></div>
+      <div class="strat-sub">3+ professional sell-side analysts raised their price target in the last 30 days. The smart money is moving.</div>
+      <div class="prd-h4">Signal conditions (all must pass)</div>
+      <ul class="check" style="font-size:13px; margin:0 0 8px">
+        <li>≥ 3 Buy / Outperform ratings issued in last 30 days</li>
+        <li>Average price target raised vs 30 days ago</li>
+        <li>Current price &lt; average analyst target by ≥ 10% (margin of safety)</li>
+        <li>Downgrades in same period &lt; 2 (no split opinion)</li>
+      </ul>
+      <div class="prd-h4">Data sources</div>
+      <span class="badge yellow">FMP analyst upgrades + price targets</span><span class="badge blue">Alpaca price</span>
+    </div>
+
+    <div class="prd-h3">Risk profile → strategy mapping</div>
+    <table>
+      <thead><tr><th>User risk level</th><th>Default strategies shown</th><th>Optional (tap to add)</th></tr></thead>
+      <tbody>
+        <tr><td><span class="badge green">Conservative</span></td><td>Steady Dividend · Undervalued</td><td>Bounce-Back</td></tr>
+        <tr><td><span class="badge yellow">Balanced</span></td><td>All 5</td><td>—</td></tr>
+        <tr><td><span class="badge pink">Aggressive</span></td><td>Bounce-Back · Market Dip · Analyst Upgrade</td><td>Undervalued · Dividend</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <hr/>
+
+  <!-- ── 5. Screens & Flows ── -->
+  <section class="prd-section" id="screens">
+    <div class="prd-h2">5 · Screens &amp; flows</div>
+    <div class="prd-p">Primary flow is mobile (opportunity-first). Web dashboard is secondary for returning power users.</div>
+
+    <div class="prd-h3">Core screens — P1</div>
+    <table>
+      <thead><tr><th>Screen</th><th>Purpose</th><th>Key elements</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="screen-tag">Home</span></td>
+          <td>Daily opportunity list ranked by upside %</td>
+          <td>Ranked cards with upside %, strategy badge, Aria one-liner, sparkline. Filter chips for strategy. Risk badge.</td>
+        </tr>
+        <tr>
+          <td><span class="screen-tag">Stock detail</span></td>
+          <td>Full reasoning for a single pick</td>
+          <td>Price + chart · Aria breakdown (which checks passed, from which sources) · Fit score · Analyst target · Time horizon · "Buy on broker" CTA</td>
+        </tr>
+        <tr>
+          <td><span class="screen-tag">Onboarding</span></td>
+          <td>Set risk profile on first open</td>
+          <td>3-question flow: goal (income / growth / both), time horizon, comfort with loss. Maps to conservative / balanced / aggressive.</td>
+        </tr>
+        <tr>
+          <td><span class="screen-tag">Strategy browser</span></td>
+          <td>Explain each strategy in plain English</td>
+          <td>What it is · why it works · example stocks · data sources used</td>
+        </tr>
+        <tr>
+          <td><span class="screen-tag">Watchlist</span></td>
+          <td>Track stocks user is considering</td>
+          <td>Price, % change, strategy tag, Aria note. Push alert when a watched stock scores higher.</td>
+        </tr>
+        <tr>
+          <td><span class="screen-tag">Web dashboard</span></td>
+          <td>All 5 strategies at once — power users</td>
+          <td>Strategy cards (top 2 picks each) · full sortable table · Aria summary panel</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="prd-h3">User flow — first open</div>
+    <div class="callout plain" style="font-family: 'Kalam'; font-size: 13px; line-height: 2;">
+      Open app
+      → <b>Onboarding</b> (3 questions, 60 sec)
+      → <b>Home</b> (today's opportunity list, pre-filtered for their risk)
+      → tap a card
+      → <b>Stock detail</b> (Aria reasoning, fit score)
+      → tap "Buy on broker"
+      → deep-link to broker app
+    </div>
+
+    <div class="prd-h3">AI coach flow — optional</div>
+    <div class="callout plain" style="font-family: 'Kalam'; font-size: 13px; line-height: 2;">
+      Home → tap "Ask Aria"
+      → <b>Chat screen</b>
+      → Aria proactively presents top pick
+      → user asks follow-up ("too risky?", "tell me more")
+      → Aria explains using real data
+      → rich stock card in message → tap to full detail
+    </div>
+
+    <div class="prd-h3">Screens — P2 (post-launch)</div>
+    <table>
+      <thead><tr><th>Screen</th><th>Why deferred</th></tr></thead>
+      <tbody>
+        <tr><td>Push notifications (daily pick, dip alert)</td><td>Needs backend infra; add after core is stable</td></tr>
+        <tr><td>Portfolio tracker (paper trading)</td><td>Complex state; add in Phase 3</td></tr>
+        <tr><td>Learn / glossary</td><td>Nice to have; link out to Investopedia for MVP</td></tr>
+        <tr><td>Social (share a pick)</td><td>Regulatory complexity around sharing financial advice</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <hr/>
+
+  <!-- ── 6. Aria ── -->
+  <section class="prd-section" id="aria">
+    <div class="prd-h2">6 · Aria — AI reasoning layer</div>
+
+    <div class="callout blue">
+      <b>What Aria is:</b> A supporting AI assistant, not the decision-maker. The scoring engine makes the pick. Aria translates the score into human language and answers follow-up questions. Rule-based scoring is the source of truth.
+    </div>
+
+    <div class="prd-h3">Aria's jobs</div>
+    <table>
+      <thead><tr><th>Job</th><th>Input</th><th>Output</th><th>Model</th></tr></thead>
+      <tbody>
+        <tr><td>One-liner "why" per pick</td><td>Scorer output + news headlines</td><td>1–2 sentences shown on card</td><td>Claude Haiku (cached 24h)</td></tr>
+        <tr><td>Full reasoning breakdown</td><td>All 4 data source signals for the stock</td><td>Bullet points on stock detail screen</td><td>Claude Haiku (cached 24h)</td></tr>
+        <tr><td>Chat / follow-up questions</td><td>Conversation history + stock context</td><td>Free-form conversation</td><td>Claude Haiku (live)</td></tr>
+        <tr><td>Market-wide summary</td><td>Today's full scan results</td><td>"3 strategies are flashing — unusual" callout</td><td>Claude Haiku (nightly)</td></tr>
+      </tbody>
+    </table>
+
+    <div class="prd-h3">Aria guardrails</div>
+    <ul class="check">
+      <li>Aria never makes a price prediction ("this will go up") — only explains what the data shows</li>
+      <li>All Aria text is grounded in real scorer data — no hallucinated statistics</li>
+      <li>Aria includes a disclaimer on first chat session: "I'm not a financial advisor"</li>
+      <li>If user asks "should I put all my money in X?" — Aria redirects to risk profile and diversification</li>
+    </ul>
+
+    <div class="prd-h3">Prompt strategy</div>
+    <div class="callout plain" style="font-size: 13px; line-height: 1.7;">
+      System: <i>"You are Aria, an investing coach for retail beginners. You explain investment ideas in plain English. You always cite which data source supports each claim. You never predict prices or guarantee returns. Tone: warm, clear, confident."</i><br/><br/>
+      User context injected per call: ticker, strategy matched, score breakdown, last 3 news headlines, analyst target, price change.
+    </div>
+  </section>
+
+  <hr/>
+
+  <!-- ── 7. Data & APIs ── -->
+  <section class="prd-section" id="data">
+    <div class="prd-h2">7 · Data sources &amp; APIs</div>
+
+    <table>
+      <thead><tr><th>Data type</th><th>Provider (free)</th><th>Provider (paid)</th><th>Used by strategies</th><th>Cache TTL</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Real-time &amp; historical prices</td>
+          <td>Alpaca (free, unlimited bars)</td>
+          <td>Polygon Developer $79/mo</td>
+          <td>All 5</td>
+          <td>1 day (bars) / live (quotes)</td>
+        </tr>
+        <tr>
+          <td>Income statement, Q reports</td>
+          <td>FMP free (250 req/day)</td>
+          <td>FMP Premium $99/mo</td>
+          <td>Bounce-Back, Undervalued, Dividend</td>
+          <td>90 days</td>
+        </tr>
+        <tr>
+          <td>Earnings calendar</td>
+          <td>FMP free</td>
+          <td>Bundled with above</td>
+          <td>Bounce-Back trigger</td>
+          <td>1 day</td>
+        </tr>
+        <tr>
+          <td>Analyst ratings &amp; targets</td>
+          <td>FMP free (delayed)</td>
+          <td>FMP Premium / Benzinga $300+</td>
+          <td>Analyst Upgrade, all (fair value)</td>
+          <td>7 days</td>
+        </tr>
+        <tr>
+          <td>Dividend history</td>
+          <td>FMP free</td>
+          <td>Bundled</td>
+          <td>Steady Dividend</td>
+          <td>30 days</td>
+        </tr>
+        <tr>
+          <td>News &amp; sentiment</td>
+          <td>Marketaux free (100 req/day)</td>
+          <td>Marketaux Standard $50/mo</td>
+          <td>Bounce-Back, Market Dip</td>
+          <td>12 hours</td>
+        </tr>
+        <tr>
+          <td>AI reasoning (Aria text)</td>
+          <td>Claude Haiku (~$0.05/day)</td>
+          <td>Claude Sonnet (scale)</td>
+          <td>All (output layer)</td>
+          <td>24 hours</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout green">
+      <b>MVP is free:</b> All Phase 1 data needs are covered by free tiers. FMP 250 req/day comfortably handles 400 stocks with smart caching. Marketaux 100 req/day covers nightly news. Total infra cost: ~$0.05/day (Claude tokens only).
+    </div>
+  </section>
+
+  <hr/>
+
+  <!-- ── 8. Scan Architecture ── -->
+  <section class="prd-section" id="scan">
+    <div class="prd-h2">8 · Scan architecture</div>
+
+    <div class="prd-h3">Universe</div>
+    <div class="prd-p">~400 NASDAQ stocks, filtered to: market cap &gt; $1B, avg volume &gt; 500k/day, ≥ 2 years of data + fundamentals. This covers all major names a retail beginner would recognise. Expandable to full NASDAQ or NYSE in Phase 3.</div>
+
+    <div class="prd-h3">Scan triggers</div>
+    <table>
+      <thead><tr><th>Trigger</th><th>Time</th><th>Scope</th><th>Extra API calls</th></tr></thead>
+      <tbody>
+        <tr><td>🌙 Nightly batch</td><td>4:30 PM ET daily</td><td>All 400 stocks, all 5 strategies</td><td>~76 total (baseline)</td></tr>
+        <tr><td>📉 Intraday dip alert</td><td>When SPY/QQQ drops &gt;3% vs prior close</td><td>Market Dip strategy only</td><td>~25 extra</td></tr>
+        <tr><td>📋 Earnings release</td><td>Within 2h of Q report</td><td>Reported tickers only</td><td>~5 per ticker</td></tr>
+        <tr><td>⭐ Analyst upgrade detected</td><td>Nightly delta check</td><td>Upgraded tickers only</td><td>~2 per ticker</td></tr>
+        <tr><td>🔄 Weekly full refresh</td><td>Sunday night</td><td>All 400, catch slow-moving signals</td><td>Same as nightly</td></tr>
+      </tbody>
+    </table>
+
+    <div class="prd-h3">Nightly batch — call breakdown</div>
+    <table>
+      <thead><tr><th>Step</th><th>Provider</th><th>Calls/night</th><th>How</th></tr></thead>
+      <tbody>
+        <tr><td>Price bars (60d daily)</td><td>Alpaca</td><td>4</td><td>Bulk: up to 100 symbols/call</td></tr>
+        <tr><td>Earnings calendar</td><td>FMP</td><td>1</td><td>One call, next 7 days</td></tr>
+        <tr><td>Q reports (fresh only)</td><td>FMP</td><td>~20</td><td>Only tickers that just reported (~5/day avg)</td></tr>
+        <tr><td>Analyst ratings delta</td><td>FMP</td><td>~10</td><td>Incremental: only new upgrades today</td></tr>
+        <tr><td>Index bars (SPY, QQQ)</td><td>Alpaca</td><td>1</td><td>One bulk call</td></tr>
+        <tr><td>News &amp; sentiment</td><td>Marketaux</td><td>~20</td><td>5 sector calls + 15 targeted (movers &gt;3%)</td></tr>
+        <tr><td>Dividend history</td><td>FMP</td><td>~5</td><td>Monthly refresh, ~5 tickers/night rolling</td></tr>
+        <tr><td>Claude Haiku (Aria text)</td><td>Anthropic</td><td>~15</td><td>Only new/changed picks today</td></tr>
+        <tr><td style="font-weight:700">TOTAL</td><td></td><td style="font-weight:700; color:#1C3FE5; font-size:16px">~76</td><td>Well within all free tier limits</td></tr>
+      </tbody>
+    </table>
+
+    <div class="prd-h3">Per-user API calls</div>
+    <table>
+      <thead><tr><th>Action</th><th>API calls</th><th>Reason</th></tr></thead>
+      <tbody>
+        <tr><td>Open app (see today's list)</td><td style="font-weight:700">0</td><td>Reads pre-computed DB results from nightly batch</td></tr>
+        <tr><td>View stock detail (chart)</td><td style="font-weight:700">1</td><td>Alpaca live quote + 1-day bars</td></tr>
+        <tr><td>Tap "Why Aria picked this"</td><td style="font-weight:700">0</td><td>Cached Aria text served from DB</td></tr>
+        <tr><td>Chat with Aria (follow-up)</td><td style="font-weight:700">1 LLM call</td><td>~400 tokens input, ~150 output = &lt;$0.001</td></tr>
+        <tr><td>Search a specific stock</td><td style="font-weight:700">1–2</td><td>Live price + cached fundamentals</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout blue">
+      <b>Key architecture principle:</b> API calls do NOT scale with user count. The nightly batch runs once and serves all users from a database. 1 user or 10,000 users = same ~76 batch calls/night. Per-user overhead: 1–3 calls/session.
+    </div>
+  </section>
+
+  <hr/>
+
+  <!-- ── 9. Scoring engine ── -->
+  <section class="prd-section" id="scoring">
+    <div class="prd-h2">9 · Scoring engine</div>
+
+    <div class="prd-p">Each strategy produces a 0–100 score. A stock must meet all <b>binary gate conditions</b> before scoring. The final opportunity list ranks by upside % (analyst target – current price), not raw score.</div>
+
+    <div class="prd-h3">Score weights by strategy</div>
+    <table>
+      <thead><tr><th>Strategy</th><th>Weight components</th><th>Min score to surface</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Bounce-Back</td>
+          <td>Revenue strength ×0.4 · Drop size ×0.4 · News clean ×0.2</td>
+          <td>≥ 65</td>
+        </tr>
+        <tr>
+          <td>Market Dip</td>
+          <td>Market drop size ×0.3 · Stock overreaction ×0.4 · Fundamentals quality ×0.3</td>
+          <td>≥ 60</td>
+        </tr>
+        <tr>
+          <td>Undervalued</td>
+          <td>P/E discount ×0.35 · Revenue trend ×0.25 · FCF strength ×0.25 · Debt safety ×0.15</td>
+          <td>≥ 70</td>
+        </tr>
+        <tr>
+          <td>Steady Dividend</td>
+          <td>Streak ×0.4 · Payout safety ×0.3 · Yield ×0.2 · Debt ×0.1</td>
+          <td>≥ 75</td>
+        </tr>
+        <tr>
+          <td>Analyst Upgrade</td>
+          <td>Upgrade count ×0.35 · Target raise % ×0.35 · Price gap ×0.2 · Consensus ratio ×0.1</td>
+          <td>≥ 68</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="prd-h3">Upside % calculation</div>
+    <div class="callout plain" style="font-size: 13px; line-height: 1.7;">
+      <b>For strategies with analyst targets</b> (Bounce-Back, Market Dip, Undervalued, Analyst Upgrade):<br/>
+      <code>upside % = (avg_analyst_target – current_price) / current_price × 100</code><br/><br/>
+      <b>For Steady Dividend:</b><br/>
+      <code>upside % = annual_dividend_per_share / current_price × 100  (= yield)</code><br/><br/>
+      Displayed as the hero number on Home screen cards. Maximum cap: 80% (filters out data errors).
+    </div>
+
+    <div class="prd-h3">Fit score</div>
+    <div class="prd-p">
+      The "fit" score (0–100) shown on stock detail is the strategy score adjusted for the user's risk profile. Conservative users see dividend-weighted fit; aggressive users see momentum-weighted fit. Purely informational — does not change the ranking order.
+    </div>
+  </section>
+
+  <hr/>
+
+  <!-- ── 10. Scope ── -->
+  <section class="prd-section" id="scope">
+    <div class="prd-h2">10 · Scope &amp; out of scope</div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+      <div>
+        <div class="prd-h3">✅ In scope (Phase 1)</div>
+        <ul class="check">
+          <li>NASDAQ-only universe (~400 stocks)</li>
+          <li>5 strategies with rule-based scoring</li>
+          <li>Home screen: opportunity list</li>
+          <li>Stock detail with Aria reasoning</li>
+          <li>Onboarding: 3-question risk profile</li>
+          <li>Watchlist (simple)</li>
+          <li>"Buy on broker" deep-link</li>
+          <li>Mobile app (iOS primary)</li>
+          <li>Web dashboard (read-only)</li>
+          <li>Aria AI text (Haiku, cached)</li>
+          <li>Nightly batch scan</li>
+          <li>Intraday dip alert</li>
+        </ul>
+      </div>
+      <div>
+        <div class="prd-h3">✗ Out of scope (Phase 1)</div>
+        <ul class="check cross">
+          <li>Trade execution inside app</li>
+          <li>Portfolio tracking (real money)</li>
+          <li>NYSE / global markets</li>
+          <li>Options, ETFs, crypto</li>
+          <li>Social features (share a pick)</li>
+          <li>Push notifications</li>
+          <li>Custom strategy builder</li>
+          <li>Backtesting tool</li>
+          <li>Android app</li>
+          <li>Paid subscription / paywall</li>
+          <li>Real-time streaming quotes</li>
+          <li>Regulatory / investment advice license</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <hr/>
+
+  <!-- ── 11. Phases ── -->
+  <section class="prd-section" id="phases">
+    <div class="prd-h2">11 · Phases &amp; milestones</div>
+
+    <table>
+      <thead><tr><th>Phase</th><th>Duration</th><th>Goal</th><th>API cost</th><th>Deliverables</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="badge">Phase 0</span> Prototype</td>
+          <td>2–3 weeks</td>
+          <td>Validate scoring logic on real data. No UI.</td>
+          <td>$0/mo</td>
+          <td>CLI script that scans 50 NASDAQ stocks with all 5 strategies and prints results</td>
+        </tr>
+        <tr>
+          <td><span class="badge blue">Phase 1</span> MVP</td>
+          <td>6–8 weeks</td>
+          <td>Working app with nightly batch, real picks, Aria text.</td>
+          <td>$0–$80/mo</td>
+          <td>iOS app (Home + Stock detail + Onboarding) · Web dashboard · Nightly batch job · Aria reasoning</td>
+        </tr>
+        <tr>
+          <td><span class="badge green">Phase 2</span> Launch</td>
+          <td>+8 weeks</td>
+          <td>Public, polished, 1k users.</td>
+          <td>$350–$700/mo</td>
+          <td>Push notifications · Watchlist alerts · Android · Paid data providers · UX polish · Legal disclaimers</td>
+        </tr>
+        <tr>
+          <td><span class="badge yellow">Phase 3</span> Scale</td>
+          <td>Ongoing</td>
+          <td>10k+ users, revenue, expanded universe.</td>
+          <td>$3k–$10k/mo</td>
+          <td>NYSE expansion · Paper portfolio · Power-user chat · Subscription tier · Backtesting</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="prd-h3">Phase 1 — detailed milestones</div>
+    <table>
+      <thead><tr><th>Week</th><th>Milestone</th><th>Owner</th></tr></thead>
+      <tbody>
+        <tr><td>1–2</td><td>Scoring engine (all 5 strategies) + test harness with real FMP + Alpaca data</td><td>Eng</td></tr>
+        <tr><td>2–3</td><td>Nightly batch job (cron) + DB schema (stocks, scores, picks, aria_text)</td><td>Eng</td></tr>
+        <tr><td>3–4</td><td>Aria text generation pipeline (Haiku, cached)</td><td>Eng + AI</td></tr>
+        <tr><td>4–5</td><td>Home screen + Stock detail (mobile)</td><td>Mobile</td></tr>
+        <tr><td>5–6</td><td>Onboarding + risk profile → strategy mapping</td><td>Mobile + Product</td></tr>
+        <tr><td>6–7</td><td>Web dashboard</td><td>Web</td></tr>
+        <tr><td>7–8</td><td>Beta test (20 users) · Legal disclaimer review · Bug fixes</td><td>All</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <hr/>
+
+  <!-- ── 12. Risks ── -->
+  <section class="prd-section" id="risks">
+    <div class="prd-h2">12 · Risks &amp; mitigations</div>
+
+    <table>
+      <thead><tr><th>Risk</th><th>Likelihood</th><th>Impact</th><th>Mitigation</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Pick accuracy is poor — users lose money</td>
+          <td>Medium</td>
+          <td>High</td>
+          <td>Strong legal disclaimer. Track accuracy internally. Tune scoring thresholds using Phase 0 backtesting. Do not make price predictions.</td>
+        </tr>
+        <tr>
+          <td>FMP free tier hit (250 req/day)</td>
+          <td>Low in Phase 1</td>
+          <td>Medium</td>
+          <td>Smart caching (90-day fundamentals). Upgrade to FMP Premium ($99/mo) if needed — budgeted for Phase 2.</td>
+        </tr>
+        <tr>
+          <td>Aria hallucinates a statistic</td>
+          <td>Low with grounding</td>
+          <td>High</td>
+          <td>All Aria prompts include structured scorer data. Aria is instructed to cite only injected data. No web search enabled.</td>
+        </tr>
+        <tr>
+          <td>Regulatory / legal liability (financial advice)</td>
+          <td>Medium</td>
+          <td>Very high</td>
+          <td>Clear "not financial advice" disclaimer. Recommend only — no trade execution. Consult legal before Phase 2 launch.</td>
+        </tr>
+        <tr>
+          <td>News API sentiment misclassifies macro vs company event</td>
+          <td>Medium</td>
+          <td>Medium</td>
+          <td>Use Marketaux category tags (geopolitical, earnings, macro) + fallback: if ambiguous, do not trigger Market Dip strategy.</td>
+        </tr>
+        <tr>
+          <td>User churn — opens once, never returns</td>
+          <td>Medium</td>
+          <td>High</td>
+          <td>Push alerts for dip events. Daily "pick of the day" habit. Watchlist alerts keep users returning.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="margin-top: 28px;" class="callout yellow">
+      <b>Legal note:</b> This product surfaces publicly available financial data and algorithmic analysis. It does not provide personalised financial advice and must not be positioned as such. A legal review is required before any public launch or marketing that implies investment recommendations.
+    </div>
+  </section>
+
+  <hr/>
+
+  <div style="text-align: center; font-family: 'Caveat'; font-size: 18px; color: #4a4a4a; padding: 24px 0;">
+    Invest Coach PRD · v0.1 · Draft · April 2026<br/>
+    <span style="font-size: 14px;">For review — not for public distribution</span>
+  </div>
+
+</div><!-- /main -->
+
+<script>
+  // Auto-print after fonts load + small delay
+  document.fonts.ready.then(function() {
+    setTimeout(function() { window.print(); }, 500);
+  });
+</script>
+</body>
+</html>

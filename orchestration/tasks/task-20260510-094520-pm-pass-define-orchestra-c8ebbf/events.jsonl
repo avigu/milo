@@ -1,0 +1,4 @@
+{"ts": "2026-05-10T09:45:20.321570Z", "type": "task.created", "status": "queued", "message": "Awaiting PM pass"}
+{"ts": "2026-05-10T09:46:01.817651Z", "type": "task.status_updated", "status": "running", "message": "Product Manager pass started"}
+{"ts": "2026-05-10T09:47:52.705630Z", "type": "task.result_written", "status": null, "message": "Result updated"}
+{"ts": "2026-05-10T09:47:52.705923Z", "type": "task.status_updated", "status": "done", "message": "PM requirements pass completed"}

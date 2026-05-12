@@ -1,0 +1,1 @@
+PM and Architect converged on the orchestration contract. Next implementation should extend the current file-first tracker with additive schema, lifecycle, roll-up, handoff, and event rules before broader transport or storage changes.

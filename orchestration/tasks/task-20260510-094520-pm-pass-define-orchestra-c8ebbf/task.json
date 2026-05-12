@@ -1,0 +1,14 @@
+{
+  "id": "task-20260510-094520-pm-pass-define-orchestra-c8ebbf",
+  "title": "PM pass: define orchestration requirements",
+  "role": "product-manager",
+  "priority": "medium",
+  "parentTaskId": "task-20260510-094520-define-orchestration-sys-04c618",
+  "ownerSessionKey": "agent:main:main",
+  "childSessionKey": null,
+  "createdAt": "2026-05-10T09:45:20.321570Z",
+  "updatedAt": "2026-05-10T09:47:52.705923Z",
+  "summary": "Awaiting PM pass",
+  "goal": "PM pass: define orchestration requirements",
+  "tags": []
+}

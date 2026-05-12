@@ -1,0 +1,14 @@
+{
+  "id": "task-20260510-090711-build-stronger-internal--f1ddeb",
+  "title": "Build stronger internal tracking system",
+  "role": "product-manager",
+  "priority": "medium",
+  "parentTaskId": null,
+  "ownerSessionKey": "agent:main:main",
+  "childSessionKey": null,
+  "createdAt": "2026-05-10T09:07:11.337348Z",
+  "updatedAt": "2026-05-10T09:07:30.831426Z",
+  "summary": "Implementing the first real orchestration tracker in files",
+  "goal": "Build stronger internal tracking system",
+  "tags": []
+}

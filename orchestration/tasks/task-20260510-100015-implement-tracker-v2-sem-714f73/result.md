@@ -1,0 +1,1 @@
+Implemented tracker V2 semantics: richer task schema, expanded lifecycle states, structured handoffs, Slack message ledger, parent/child roll-up helper, and stale detection support.

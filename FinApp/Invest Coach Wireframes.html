@@ -1,0 +1,298 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Invest Coach — Wireframes</title>
+<link rel="stylesheet" href="sketchy.css"/>
+<style>
+  html, body { height: 100%; margin: 0; overflow: hidden; }
+  .tab-bar {
+    position: fixed; top: 12px; left: 50%; transform: translateX(-50%);
+    z-index: 100; display: flex; gap: 4px;
+    background: #fdfcf8; border: 1.5px solid #1a1a1a;
+    border-radius: 12px; padding: 4px;
+    box-shadow: 2px 3px 0 rgba(0,0,0,0.15);
+    font-family: 'Kalam', cursive;
+  }
+  .tab-bar button {
+    font-family: 'Kalam', cursive; font-weight: 700; font-size: 13px;
+    padding: 6px 14px; border: none; background: transparent;
+    border-radius: 8px; cursor: pointer; color: #1a1a1a;
+  }
+  .tab-bar button.on { background: #2F5DFF; color: #fff; }
+
+  .tweaks-panel {
+    position: fixed; bottom: 16px; right: 16px; z-index: 200;
+    width: 260px;
+    background: #fdfcf8; border: 2px solid #1a1a1a;
+    border-radius: 12px; padding: 14px;
+    box-shadow: 3px 4px 0 rgba(0,0,0,0.2);
+    font-family: 'Kalam', cursive;
+    display: none;
+  }
+  .tweaks-panel.on { display: block; }
+  .tweaks-panel h4 { margin: 0 0 10px; font-family: 'Caveat', cursive; font-size: 20px; font-weight: 700; }
+  .tweak-row { margin-bottom: 12px; }
+  .tweak-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: #4a4a4a; margin-bottom: 4px; }
+  .tweak-chips { display: flex; gap: 4px; flex-wrap: wrap; }
+  .tweak-chip {
+    padding: 4px 10px; font-size: 12px; font-family: 'Kalam', cursive;
+    border: 1.2px solid #1a1a1a; border-radius: 9999px;
+    background: #fdfcf8; cursor: pointer; font-weight: 500;
+  }
+  .tweak-chip.on { background: #2F5DFF; color: #fff; }
+</style>
+</head>
+<body>
+
+<div class="tab-bar" id="tabBar"></div>
+<div id="root"></div>
+
+<div class="tweaks-panel" id="tweaksPanel">
+  <h4>Tweaks</h4>
+  <div class="tweak-row">
+    <div class="tweak-label">Risk level</div>
+    <div class="tweak-chips" id="riskChips"></div>
+  </div>
+  <div class="tweak-row">
+    <div class="tweak-label">Data sources</div>
+    <div class="tweak-chips" id="sourceChips"></div>
+  </div>
+  <div style="font-size: 11px; color: #8a8a8a; margin-top: 8px;">
+    Changes update the "why" & fit score across all directions.
+  </div>
+</div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script src="design-canvas.jsx" type="text/babel"></script>
+<script src="wireframe-components.jsx" type="text/babel"></script>
+<script src="phone-frame.jsx" type="text/babel"></script>
+<script src="direction-a.jsx" type="text/babel"></script>
+<script src="direction-b.jsx" type="text/babel"></script>
+<script src="direction-c.jsx" type="text/babel"></script>
+<script src="direction-d.jsx" type="text/babel"></script>
+
+<script type="text/babel">
+/*EDITMODE-BEGIN*/
+const TWEAK_DEFAULTS = {
+  "risk": "balanced",
+  "sources": ["Q reports", "Price", "Analyst", "News"]
+};
+/*EDITMODE-END*/
+
+const RISK_OPTIONS = ['conservative', 'balanced', 'aggressive'];
+const SOURCE_OPTIONS = ['Q reports', 'Price', 'Analyst', 'News'];
+
+function App() {
+  const [view, setView] = React.useState(() => localStorage.getItem('ic_view') || 'A');
+  const [risk, setRisk] = React.useState(TWEAK_DEFAULTS.risk);
+  const [sources, setSources] = React.useState(TWEAK_DEFAULTS.sources);
+  const [tweaksOn, setTweaksOn] = React.useState(false);
+
+  React.useEffect(() => { localStorage.setItem('ic_view', view); }, [view]);
+
+  // Tweaks protocol
+  React.useEffect(() => {
+    const onMsg = (e) => {
+      if (e.data?.type === '__activate_edit_mode') setTweaksOn(true);
+      if (e.data?.type === '__deactivate_edit_mode') setTweaksOn(false);
+    };
+    window.addEventListener('message', onMsg);
+    window.parent.postMessage({ type: '__edit_mode_available' }, '*');
+    return () => window.removeEventListener('message', onMsg);
+  }, []);
+
+  React.useEffect(() => {
+    document.getElementById('tweaksPanel').classList.toggle('on', tweaksOn);
+  }, [tweaksOn]);
+
+  const updateRisk = (r) => {
+    setRisk(r);
+    window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { risk: r } }, '*');
+  };
+  const updateSources = (src) => {
+    const next = sources.includes(src) ? sources.filter(s => s !== src) : [...sources, src];
+    setSources(next);
+    window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { sources: next } }, '*');
+  };
+
+  // Mount tweak controls in external DOM
+  React.useEffect(() => {
+    const riskEl = document.getElementById('riskChips');
+    riskEl.innerHTML = '';
+    RISK_OPTIONS.forEach(r => {
+      const b = document.createElement('button');
+      b.className = 'tweak-chip' + (r === risk ? ' on' : '');
+      b.textContent = r;
+      b.onclick = () => updateRisk(r);
+      riskEl.appendChild(b);
+    });
+    const srcEl = document.getElementById('sourceChips');
+    srcEl.innerHTML = '';
+    SOURCE_OPTIONS.forEach(s => {
+      const b = document.createElement('button');
+      b.className = 'tweak-chip' + (sources.includes(s) ? ' on' : '');
+      b.textContent = s;
+      b.onclick = () => updateSources(s);
+      srcEl.appendChild(b);
+    });
+  }, [risk, sources]);
+
+  // Tab bar
+  React.useEffect(() => {
+    const tabs = [
+      { id: 'A', label: 'A · Opportunity-first' },
+      { id: 'B', label: 'B · Daily feed' },
+      { id: 'C', label: 'C · AI coach' },
+      { id: 'D', label: 'D · Web dashboard' },
+    ];
+    const el = document.getElementById('tabBar');
+    el.innerHTML = '';
+    tabs.forEach(t => {
+      const b = document.createElement('button');
+      b.textContent = t.label;
+      b.className = t.id === view ? 'on' : '';
+      b.onclick = () => setView(t.id);
+      el.appendChild(b);
+    });
+  }, [view]);
+
+  return (
+    <DesignCanvas>
+      {view === 'A' && <DirectionA risk={risk} sources={sources} />}
+      {view === 'B' && <DirectionB risk={risk} sources={sources} />}
+      {view === 'C' && <DirectionC risk={risk} sources={sources} />}
+      {view === 'D' && <DirectionD risk={risk} sources={sources} />}
+    </DesignCanvas>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────
+// DIRECTION A — Strategy-first mobile (3 screens)
+// ─────────────────────────────────────────────────────────────
+function DirectionA({ risk, sources }) {
+  return (
+    <DCSection
+      title="Direction A — Opportunity-first mobile"
+      subtitle="Main view ranks every opportunity by upside size. Strategy is a secondary filter.">
+      <DCArtboard label="1 · Home — ranked opportunities (strategy = filter chip)">
+        <SkPhone><DirA_Home risk={risk} /></SkPhone>
+      </DCArtboard>
+      <DCArtboard label="2 · Strategy filter — picks explained">
+        <SkPhone><DirA_StrategyDetail sources={sources} /></SkPhone>
+      </DCArtboard>
+      <DCArtboard label="3 · Stock detail — 'why Aria picked this'">
+        <SkPhone><DirA_StockDetail sources={sources} /></SkPhone>
+      </DCArtboard>
+      <div style={{ width: 260, paddingTop: 40 }}>
+        <div className="sk-h2" style={{ fontSize: 20, marginBottom: 8 }}>Why this works</div>
+        <ul style={{ fontSize: 13, lineHeight: 1.5, paddingLeft: 18, color: '#4a4a4a' }}>
+          <li><b>Answers the real question.</b> "What should I buy?" not "Which strategy do I want?"</li>
+          <li>Every card shows <span className="sk-hi--blue">upside %</span> as the hero number — ranked top to bottom.</li>
+          <li>Aria's reasoning sits on every stock, not per strategy.</li>
+          <li>Strategy chips at top let users filter down when they want to.</li>
+        </ul>
+      </div>
+      <DCPostIt top={-10} left={-20} rotate={-4}>
+        Opportunity is the subject.<br/>Strategy is just a label.
+      </DCPostIt>
+    </DCSection>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────
+// DIRECTION B — Feed-first
+// ─────────────────────────────────────────────────────────────
+function DirectionB({ risk, sources }) {
+  return (
+    <DCSection
+      title="Direction B — Daily opportunity feed"
+      subtitle="Each day, Aria surfaces fresh picks like a news app. Pull-to-refresh.">
+      <DCArtboard label="1 · Today's picks — mixed strategies">
+        <SkPhone><DirB_Feed sources={sources} /></SkPhone>
+      </DCArtboard>
+      <div style={{ width: 300, paddingTop: 40 }}>
+        <div className="sk-h2" style={{ fontSize: 20, marginBottom: 8 }}>Why this works</div>
+        <ul style={{ fontSize: 13, lineHeight: 1.5, paddingLeft: 18, color: '#4a4a4a' }}>
+          <li><b>Habit-forming.</b> Daily rhythm, like morning news — users open it every day.</li>
+          <li><b>Time-sensitive.</b> "2h ago" shows freshness; "this won't last" pressure (handle with care).</li>
+          <li>Strategy surfaces as a <SkTag variant="blue">tag</SkTag>, not the organizing principle.</li>
+          <li>Top card = Aria's highest-confidence pick of the day. Rest = curated queue.</li>
+          <li>Filter chips let pros still scan by strategy.</li>
+        </ul>
+        <div style={{ marginTop: 14, padding: 10, background: '#fff48a33', border: '1.5px dashed #1a1a1a', borderRadius: 8, fontSize: 12 }}>
+          <b>⚠ Risk:</b> feed format can encourage over-trading. Mitigate by limiting to 3-5 items/day and always showing the time horizon.
+        </div>
+      </div>
+      <DCPostIt top={-10} left={-20} rotate={-3}>
+        If users open the app DAILY, you win.
+      </DCPostIt>
+    </DCSection>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────
+// DIRECTION C — AI Chat-first
+// ─────────────────────────────────────────────────────────────
+function DirectionC({ risk, sources }) {
+  return (
+    <DCSection
+      title="Direction C — AI coach chat"
+      subtitle="Aria walks beginners through investing like a mentor. Stocks embedded as rich cards.">
+      <DCArtboard label="1 · Chat with Aria — stock recommendations inline">
+        <SkPhone><DirC_Chat /></SkPhone>
+      </DCArtboard>
+      <div style={{ width: 300, paddingTop: 40 }}>
+        <div className="sk-h2" style={{ fontSize: 20, marginBottom: 8 }}>Why this works</div>
+        <ul style={{ fontSize: 13, lineHeight: 1.5, paddingLeft: 18, color: '#4a4a4a' }}>
+          <li><b>Perfect for beginners.</b> They don't know what to ask — Aria starts the conversation.</li>
+          <li>Rich cards in messages give <span className="sk-hi">data depth</span> without feeling like a spreadsheet.</li>
+          <li>Quick-reply chips ("Too safe?", "Next pick") keep users moving without typing.</li>
+          <li>Doubles as learning: every pick teaches one investing concept.</li>
+        </ul>
+        <div style={{ marginTop: 14, padding: 10, background: '#D5DFFF55', border: '1.5px dashed #1C3FE5', borderRadius: 8, fontSize: 12 }}>
+          <b>💡 Hybrid option:</b> combine with A — tabs for "Strategies" + "Chat with Aria". Users pick their mode.
+        </div>
+      </div>
+      <DCPostIt top={-10} left={-20} rotate={-4}>
+        Chat is the ONBOARDING layer. After a week, users graduate to Direction A.
+      </DCPostIt>
+    </DCSection>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────
+// DIRECTION D — Desktop dashboard
+// ─────────────────────────────────────────────────────────────
+function DirectionD({ risk, sources }) {
+  return (
+    <DCSection
+      title="Direction D — Web dashboard"
+      subtitle="All 5 strategies scanned at once. For users who want more density once they're ready.">
+      <DCArtboard label="1 · Desktop — scan all strategies side-by-side" width={1100} height={680} style={{ overflow: 'hidden' }}>
+        <DirD_Desktop sources={sources} risk={risk} />
+      </DCArtboard>
+      <div style={{ width: 300, paddingTop: 40 }}>
+        <div className="sk-h2" style={{ fontSize: 20, marginBottom: 8 }}>Why this works</div>
+        <ul style={{ fontSize: 13, lineHeight: 1.5, paddingLeft: 18, color: '#4a4a4a' }}>
+          <li><b>For returning users.</b> Once they trust the system, they want to see everything at once.</li>
+          <li>3 strategy cards + full table = scannable density without Bloomberg chaos.</li>
+          <li>Aria summary panel on the right stays out of the way but gives <span className="sk-hi--blue">opinion on demand</span>.</li>
+          <li>Mobile + desktop share a backend — same picks, different density.</li>
+          <li>The "3 strategies flashing" callout shows macro-level insights the mobile feed can't.</li>
+        </ul>
+      </div>
+      <DCPostIt top={-10} left={-20} rotate={-3}>
+        Same data as mobile.<br/>Different lens.
+      </DCPostIt>
+    </DCSection>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>

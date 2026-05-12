@@ -1,0 +1,513 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Invest Coach — API & Cost Plan</title>
+<link rel="stylesheet" href="sketchy.css"/>
+<style>
+  html, body { height: 100%; margin: 0; overflow: auto; background: #f0eee9; }
+  .page {
+    max-width: 1180px; margin: 0 auto; padding: 36px 32px 64px;
+    font-family: 'Kalam', cursive;
+  }
+  .grid {
+    display: grid; gap: 14px;
+    grid-template-columns: 1.3fr 1.4fr 0.9fr 0.9fr 1.2fr 1.1fr;
+    align-items: stretch;
+  }
+  .grid > div { padding: 10px 12px; }
+  .grid .h {
+    font-family: 'Kalam', cursive; font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    color: #4a4a4a; border-bottom: 2px dashed #1a1a1a;
+    padding-bottom: 6px;
+  }
+  .row {
+    background: #fdfcf8;
+    border: 1.5px solid #1a1a1a;
+    border-radius: 7px 10px 6px 11px / 10px 6px 11px 7px;
+    box-shadow: 2px 3px 0 rgba(0,0,0,0.1);
+    padding: 14px 14px !important;
+    display: flex; flex-direction: column; gap: 3px;
+    font-size: 13px; line-height: 1.35;
+  }
+  .row .cap { font-family: 'Caveat'; font-size: 15px; font-weight: 700; }
+  .row .sub { font-size: 11.5px; color: #4a4a4a; }
+  .price {
+    font-family: 'Kalam', cursive; font-weight: 700;
+    font-size: 17px; color: #1a1a1a;
+  }
+  .price .u { font-size: 11px; color: #8a8a8a; font-weight: 400; }
+  .pill {
+    display: inline-block; padding: 2px 8px; font-size: 11px;
+    border: 1.2px solid #1a1a1a; border-radius: 9999px;
+    background: #fdfcf8; font-weight: 700;
+  }
+  .pill.blue { background: #D5DFFF; border-color: #1C3FE5; color: #1C3FE5; }
+  .pill.green { background: #b8e6b8; }
+  .pill.yellow { background: #fff48a; }
+  .pill.pink { background: #ffb3c6; }
+  .section-title { font-family: 'Caveat'; font-size: 32px; font-weight: 700; margin: 0 0 4px; letter-spacing: -0.5px; }
+  .section-sub { font-size: 13px; color: #4a4a4a; margin-bottom: 22px; }
+  h2.caveat { font-family: 'Caveat'; font-size: 24px; font-weight: 700; margin: 36px 0 12px; letter-spacing: -0.3px; }
+  .group-row {
+    grid-column: 1 / -1;
+    font-family: 'Caveat'; font-size: 22px; font-weight: 700;
+    border: none !important; background: transparent !important; box-shadow: none !important;
+    padding: 10px 2px 4px !important;
+    border-bottom: 2px solid #1a1a1a !important; border-radius: 0 !important;
+    display: flex !important; align-items: center; gap: 10px;
+  }
+  .group-row .tag { font-family: 'Kalam'; font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; color: #4a4a4a; font-weight: 400; }
+
+  .summary-grid {
+    display: grid; gap: 14px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 12px;
+  }
+  .stage {
+    background: #fdfcf8;
+    border: 2px solid #1a1a1a;
+    border-radius: 9px 12px 8px 13px / 12px 8px 13px 9px;
+    padding: 16px 16px 18px;
+    box-shadow: 3px 4px 0 rgba(0,0,0,0.12);
+  }
+  .stage h3 { font-family: 'Caveat'; font-size: 24px; margin: 0 0 2px; font-weight: 700; }
+  .stage .phase { font-size: 11px; color: #4a4a4a; text-transform: uppercase; letter-spacing: 0.5px; }
+  .stage .total {
+    font-family: 'Caveat'; font-size: 32px; font-weight: 700;
+    color: #1C3FE5; margin: 10px 0 6px;
+  }
+  .stage ul { padding-left: 18px; margin: 8px 0 0; font-size: 12.5px; line-height: 1.5; color: #2b2a2a; }
+  .stage ul li { margin-bottom: 2px; }
+  .stage .note {
+    background: #fff48a55;
+    border: 1px dashed #1a1a1a; border-radius: 6px;
+    padding: 8px 10px; font-size: 11.5px; margin-top: 12px;
+  }
+
+  .footnote {
+    margin-top: 28px; padding: 14px 18px;
+    background: #fdfcf8; border: 1.5px dashed #1a1a1a; border-radius: 8px;
+    font-size: 12px; color: #4a4a4a; line-height: 1.5;
+  }
+  .footnote b { color: #1a1a1a; }
+
+  .legend {
+    display: flex; gap: 14px; margin-bottom: 14px; flex-wrap: wrap;
+    font-size: 12px; color: #4a4a4a;
+  }
+  .legend .dot {
+    display: inline-block; width: 10px; height: 10px; border-radius: 2px;
+    border: 1.2px solid #1a1a1a; margin-right: 5px; vertical-align: -1px;
+  }
+
+  a.external { color: #1C3FE5; text-decoration: none; border-bottom: 1px dashed #1C3FE5; }
+
+  @media (max-width: 900px) {
+    .grid { grid-template-columns: 1fr; }
+    .grid .h { display: none; }
+    .summary-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div style="font-family: 'Caveat'; font-size: 46px; font-weight: 700; letter-spacing: -1px; line-height: 1;">
+    APIs &amp; <span class="sk-hi--blue">costs</span> for Invest Coach
+  </div>
+  <div style="font-size: 14px; color: #4a4a4a; margin-top: 6px; margin-bottom: 24px;">
+    What you need to plug in · vendor options · ballpark price · updated April 2026
+  </div>
+
+  <div class="legend">
+    <span><span class="dot" style="background: #D5DFFF;"></span> Core data</span>
+    <span><span class="dot" style="background: #b8e6b8;"></span> News / sentiment</span>
+    <span><span class="dot" style="background: #fff48a;"></span> Fundamentals &amp; analyst</span>
+    <span><span class="dot" style="background: #ffb3c6;"></span> AI / infra</span>
+    <span><span class="dot" style="background: #fdfcf8;"></span> Exec / compliance</span>
+  </div>
+
+  <!-- Main table -->
+  <div class="grid">
+    <div class="h">Capability</div>
+    <div class="h">What you use it for</div>
+    <div class="h">Free tier</div>
+    <div class="h">Build tier</div>
+    <div class="h">Scale tier</div>
+    <div class="h">Top vendors</div>
+
+    <!-- PRICES & HISTORY -->
+    <div class="group-row">
+      <span class="pill blue">1</span> Stock prices &amp; history
+      <span class="tag">foundation · all 5 strategies</span>
+    </div>
+
+    <div class="row">
+      <span class="cap">Real-time quotes + intraday bars</span>
+      <span class="sub">Live price on stock detail · sparklines · "down 28%" signals</span>
+    </div>
+    <div class="row">
+      <span class="sub">Ticker price every tick (or 15-min delayed). Used on Home ranking, Stock Detail chart, watchlist updates.</span>
+    </div>
+    <div class="row">
+      <span class="sub">Free</span>
+      <div class="price">$0<span class="u"> /mo</span></div>
+      <span class="sub">15-min delay OK for MVP</span>
+    </div>
+    <div class="row">
+      <span class="sub">Paid start</span>
+      <div class="price">$29–$99<span class="u"> /mo</span></div>
+      <span class="sub">Real-time US stocks</span>
+    </div>
+    <div class="row">
+      <span class="sub">Professional</span>
+      <div class="price">$200–$449<span class="u"> /mo</span></div>
+      <span class="sub">Unlimited, WS streaming, options/FX</span>
+    </div>
+    <div class="row">
+      <span class="cap"><a class="external" href="https://polygon.io">Polygon.io</a></span>
+      <span class="sub"><a class="external" href="https://alpaca.markets">Alpaca</a> · <a class="external" href="https://finnhub.io">Finnhub</a> · <a class="external" href="https://twelvedata.com">Twelve Data</a></span>
+    </div>
+
+    <div class="row">
+      <span class="cap">Long historical prices (10–30y)</span>
+      <span class="sub">"Good 5-yr record" check · bounce-back patterns · dividend history</span>
+    </div>
+    <div class="row">
+      <span class="sub">Nightly batch job over 10-yr daily bars for every tracked stock. Feeds the scoring engine, not the UI.</span>
+    </div>
+    <div class="row">
+      <span class="sub">Free w/ account</span>
+      <div class="price">$0</div>
+      <span class="sub">Alpaca: 10y free</span>
+    </div>
+    <div class="row">
+      <span class="sub">EOD subscription</span>
+      <div class="price">$20–$80<span class="u"> /mo</span></div>
+      <span class="sub">EODHD, Tiingo</span>
+    </div>
+    <div class="row">
+      <span class="sub">Bulk + intraday</span>
+      <div class="price">$79–$200<span class="u"> /mo</span></div>
+      <span class="sub">Polygon Developer tier</span>
+    </div>
+    <div class="row">
+      <span class="cap"><a class="external" href="https://eodhd.com">EODHD</a></span>
+      <span class="sub"><a class="external" href="https://tiingo.com">Tiingo</a> · Alpaca · Polygon</span>
+    </div>
+
+    <!-- FUNDAMENTALS -->
+    <div class="group-row">
+      <span class="pill yellow">2</span> Fundamentals &amp; Q reports
+      <span class="tag">Bounce-Back · Undervalued · Dividend</span>
+    </div>
+
+    <div class="row">
+      <span class="cap">Income / balance / cash flow</span>
+      <span class="sub">Revenue YoY · debt · payout ratio · "cheap by numbers"</span>
+    </div>
+    <div class="row">
+      <span class="sub">Quarterly + annual statements, 25–70k companies, SEC-sourced. Core of the Undervalued and Dividend scorers.</span>
+    </div>
+    <div class="row">
+      <span class="sub">Free (limited)</span>
+      <div class="price">$0</div>
+      <span class="sub">~250 req/day</span>
+    </div>
+    <div class="row">
+      <span class="sub">Starter / Premium</span>
+      <div class="price">$22–$99<span class="u"> /mo</span></div>
+      <span class="sub">Full endpoints, 20–50 GB/mo</span>
+    </div>
+    <div class="row">
+      <span class="sub">Ultimate / Enterprise</span>
+      <div class="price">$249–$500+<span class="u"> /mo</span></div>
+      <span class="sub">150 GB+, bulk downloads</span>
+    </div>
+    <div class="row">
+      <span class="cap"><a class="external" href="https://site.financialmodelingprep.com">Financial Modeling Prep</a></span>
+      <span class="sub">EODHD · Finnhub · Benzinga Fundamentals</span>
+    </div>
+
+    <div class="row">
+      <span class="cap">Earnings calendar &amp; surprises</span>
+      <span class="sub">Detect the "one bad Q" event that triggers Bounce-Back</span>
+    </div>
+    <div class="row">
+      <span class="sub">Upcoming &amp; past earnings dates, estimate vs actual, guidance updates.</span>
+    </div>
+    <div class="row">
+      <span class="sub">Free w/ limits</span>
+      <div class="price">$0</div>
+      <span class="sub">Finnhub free tier</span>
+    </div>
+    <div class="row">
+      <span class="sub">Bundled w/ above</span>
+      <div class="price">incl.</div>
+      <span class="sub">FMP / EODHD plans</span>
+    </div>
+    <div class="row">
+      <span class="sub">Benzinga premium</span>
+      <div class="price">contact sales</div>
+      <span class="sub">Institutional feed</span>
+    </div>
+    <div class="row">
+      <span class="cap">FMP · Finnhub</span>
+      <span class="sub">Benzinga Calendar API</span>
+    </div>
+
+    <!-- ANALYST -->
+    <div class="group-row">
+      <span class="pill yellow">3</span> Analyst ratings &amp; targets
+      <span class="tag">Analyst Upgrade · sanity-check all others</span>
+    </div>
+
+    <div class="row">
+      <span class="cap">Ratings, upgrades, price targets</span>
+      <span class="sub">Direct input to Analyst Upgrade strategy · fair-value vs price</span>
+    </div>
+    <div class="row">
+      <span class="sub">"3+ analysts raised target in 30 days" signal. Also powers the "analyst fair value" line on charts.</span>
+    </div>
+    <div class="row">
+      <span class="sub">Free</span>
+      <div class="price">$0</div>
+      <span class="sub">FMP free tier (delayed)</span>
+    </div>
+    <div class="row">
+      <span class="sub">Paid</span>
+      <div class="price">$22–$99<span class="u"> /mo</span></div>
+      <span class="sub">FMP Premium / Ultimate</span>
+    </div>
+    <div class="row">
+      <span class="sub">Benzinga Ratings</span>
+      <div class="price">$300–$1000+<span class="u"> /mo</span></div>
+      <span class="sub">Institutional, real-time</span>
+    </div>
+    <div class="row">
+      <span class="cap">FMP Grades &amp; Price Target APIs</span>
+      <span class="sub"><a class="external" href="https://www.benzinga.com/apis/data/">Benzinga Analyst Ratings</a></span>
+    </div>
+
+    <!-- NEWS -->
+    <div class="group-row">
+      <span class="pill green">4</span> News, sentiment &amp; macro events
+      <span class="tag">Market Dip · Bounce-Back context</span>
+    </div>
+
+    <div class="row">
+      <span class="cap">Financial news feed</span>
+      <span class="sub">"Why is stock down?" context · Aria's reasoning bubbles</span>
+    </div>
+    <div class="row">
+      <span class="sub">Headlines tagged to tickers, article bodies (licensed or link-out), publisher + timestamp.</span>
+    </div>
+    <div class="row">
+      <span class="sub">Marketaux free</span>
+      <div class="price">$0</div>
+      <span class="sub">100 req/day, headlines only</span>
+    </div>
+    <div class="row">
+      <span class="sub">Marketaux paid</span>
+      <div class="price">$25–$200<span class="u"> /mo</span></div>
+      <span class="sub">5k–100k req/day + sentiment</span>
+    </div>
+    <div class="row">
+      <span class="sub">Benzinga Newswire</span>
+      <div class="price">$500–$3000+<span class="u"> /mo</span></div>
+      <span class="sub">Full body, real-time, fee-liable</span>
+    </div>
+    <div class="row">
+      <span class="cap"><a class="external" href="https://www.marketaux.com">Marketaux</a></span>
+      <span class="sub"><a class="external" href="https://www.benzinga.com/apis/">Benzinga News</a> · Finnhub News</span>
+    </div>
+
+    <div class="row">
+      <span class="cap">Sentiment scoring</span>
+      <span class="sub">Aria tone detection on news · "market fear" vs "isolated issue"</span>
+    </div>
+    <div class="row">
+      <span class="sub">NLP-derived score per article/ticker. Drives Market Dip detection and the Aria summaries.</span>
+    </div>
+    <div class="row">
+      <span class="sub">Marketaux free</span>
+      <div class="price">$0</div>
+      <span class="sub">Incl. basic sentiment</span>
+    </div>
+    <div class="row">
+      <span class="sub">Bundled</span>
+      <div class="price">incl.</div>
+      <span class="sub">In Marketaux / Finnhub paid</span>
+    </div>
+    <div class="row">
+      <span class="sub">Build your own</span>
+      <div class="price">LLM cost</div>
+      <span class="sub">Run Claude Haiku on headlines</span>
+    </div>
+    <div class="row">
+      <span class="cap">Marketaux · Finnhub</span>
+      <span class="sub">Or: roll-your-own via Claude</span>
+    </div>
+
+    <!-- AI LAYER -->
+    <div class="group-row">
+      <span class="pill pink">5</span> AI reasoning layer
+      <span class="tag">Aria "why" text · summaries · coach</span>
+    </div>
+
+    <div class="row">
+      <span class="cap">LLM for plain-English explanations</span>
+      <span class="sub">Generate the "Aria" one-liner per pick, answer questions</span>
+    </div>
+    <div class="row">
+      <span class="sub">Input: scorer output + retrieved news. Output: the blue italic "why" text on every card. ~200 tokens per pick.</span>
+    </div>
+    <div class="row">
+      <span class="sub">Haiku usage</span>
+      <div class="price">&lt;$50<span class="u"> /mo</span></div>
+      <span class="sub">MVP, 50 picks × 100 users/day</span>
+    </div>
+    <div class="row">
+      <span class="sub">Haiku at scale</span>
+      <div class="price">$200–$800<span class="u"> /mo</span></div>
+      <span class="sub">1k users, chat enabled</span>
+    </div>
+    <div class="row">
+      <span class="sub">Sonnet 4 for nuance</span>
+      <div class="price">$2k–$8k<span class="u"> /mo</span></div>
+      <span class="sub">Power-user chat + deep analysis</span>
+    </div>
+    <div class="row">
+      <span class="cap">Anthropic Claude API</span>
+      <span class="sub">(cache recent picks to cut cost 70%)</span>
+    </div>
+
+    <!-- EXEC -->
+    <div class="group-row">
+      <span class="pill">6</span> Broker handoff
+      <span class="tag">"Buy on my broker" link</span>
+    </div>
+
+    <div class="row">
+      <span class="cap">Deep-link to trade</span>
+      <span class="sub">User taps Buy → opens their chosen broker to the ticker</span>
+    </div>
+    <div class="row">
+      <span class="sub">No execution inside the app. Deep-link format per broker (eToro, IBKR, Robinhood, local ISR brokers). No cost, just integration work.</span>
+    </div>
+    <div class="row">
+      <span class="sub">Free</span>
+      <div class="price">$0</div>
+      <span class="sub">URL scheme per broker</span>
+    </div>
+    <div class="row">
+      <span class="sub">Affiliate rev</span>
+      <div class="price">negative</div>
+      <span class="sub">Brokers pay you per signup</span>
+    </div>
+    <div class="row">
+      <span class="sub">Future: Snaptrade</span>
+      <div class="price">$0.50<span class="u"> /user/mo</span></div>
+      <span class="sub">If you add portfolio import</span>
+    </div>
+    <div class="row">
+      <span class="cap">Deep links (free)</span>
+      <span class="sub">Snaptrade · Plaid Investments</span>
+    </div>
+
+    <!-- INFRA -->
+    <div class="group-row">
+      <span class="pill pink">7</span> Supporting infra
+      <span class="tag">Not financial APIs, but needed</span>
+    </div>
+
+    <div class="row">
+      <span class="cap">Auth, DB, push, hosting</span>
+      <span class="sub">Sign-in · watchlist · risk profile · daily pick notifications</span>
+    </div>
+    <div class="row">
+      <span class="sub">Supabase/Firebase auth + DB + push. Vercel / Fly / AWS for API backend.</span>
+    </div>
+    <div class="row">
+      <span class="sub">Free tiers</span>
+      <div class="price">$0</div>
+      <span class="sub">All have generous free plans</span>
+    </div>
+    <div class="row">
+      <span class="sub">1k–10k MAU</span>
+      <div class="price">$50–$300<span class="u"> /mo</span></div>
+      <span class="sub">Supabase Pro + Vercel Pro</span>
+    </div>
+    <div class="row">
+      <span class="sub">100k+ MAU</span>
+      <div class="price">$1k–$5k<span class="u"> /mo</span></div>
+      <span class="sub">AWS / GCP</span>
+    </div>
+    <div class="row">
+      <span class="cap">Supabase · Vercel · Sentry</span>
+      <span class="sub">Or: Firebase, AWS Amplify</span>
+    </div>
+  </div>
+
+  <!-- Stages -->
+  <h2 class="caveat">Three budget scenarios <span style="font-size: 14px; color: #4a4a4a; font-weight: 400;">· pick one based on where you are</span></h2>
+
+  <div class="summary-grid">
+    <div class="stage">
+      <div class="phase">Phase 1 · MVP / Demo</div>
+      <h3>Scrappy</h3>
+      <div class="total">~$0–$80 <span style="font-size:13px; color:#4a4a4a; font-weight:400;">/month</span></div>
+      <div style="font-size:12px; color:#4a4a4a;">Prove the concept, ~100 beta users, delayed data is fine.</div>
+      <ul>
+        <li>Alpaca free (prices + 10yr history)</li>
+        <li>FMP free tier (fundamentals + analyst)</li>
+        <li>Marketaux free (news + basic sentiment)</li>
+        <li>Claude Haiku (~$30/mo for Aria text)</li>
+        <li>Supabase free · Vercel free</li>
+      </ul>
+      <div class="note"><b>Limit:</b> rate limits (~250 req/day each); US stocks only; 15-min delayed.</div>
+    </div>
+
+    <div class="stage" style="border-color: #1C3FE5; box-shadow: 3px 4px 0 #2F5DFF33;">
+      <div class="phase" style="color: #1C3FE5;">Phase 2 · Public launch · recommended</div>
+      <h3>Real product</h3>
+      <div class="total">~$350–$700 <span style="font-size:13px; color:#4a4a4a; font-weight:400;">/month</span></div>
+      <div style="font-size:12px; color:#4a4a4a;">1k–10k users, real-time US data, full "why" engine.</div>
+      <ul>
+        <li>Polygon Stocks Developer — <b>$79</b></li>
+        <li>FMP Premium — <b>$99</b></li>
+        <li>Marketaux Standard — <b>$50</b></li>
+        <li>Claude Haiku at scale — <b>~$200</b></li>
+        <li>Supabase Pro + Vercel Pro — <b>~$70</b></li>
+        <li>Sentry + misc — <b>~$30</b></li>
+      </ul>
+      <div class="note"><b>Sweet spot.</b> Real-time quotes, all 5 strategies fully powered, AI reasoning on every pick.</div>
+    </div>
+
+    <div class="stage">
+      <div class="phase">Phase 3 · Scale / pro tier</div>
+      <h3>Institutional</h3>
+      <div class="total">~$3k–$10k <span style="font-size:13px; color:#4a4a4a; font-weight:400;">/month</span></div>
+      <div style="font-size:12px; color:#4a4a4a;">100k+ users, push-notification news, power-user chat.</div>
+      <ul>
+        <li>Polygon Advanced — <b>$200</b></li>
+        <li>FMP Ultimate — <b>$249</b></li>
+        <li>Benzinga News + Ratings — <b>$1k–$3k</b></li>
+        <li>Claude Sonnet 4 power chat — <b>$2k–$4k</b></li>
+        <li>AWS infra — <b>$1k–$3k</b></li>
+      </ul>
+      <div class="note"><b>Only if:</b> you hit product-market fit and have revenue. Most of phase 3 cost is AI chat + premium news.</div>
+    </div>
+  </div>
+
+  <div class="footnote">
+    <b>Caveats &amp; notes:</b>
+    Prices are published list prices as of April 2026; vendors negotiate, and <i>commercial redistribution</i> of market data often needs a separate licensing agreement (FMP, Benzinga, Polygon exchange fees) — read the fine print before showing data to end users.
+    For Israeli / European markets add <b>EODHD</b> ($60–$80/mo) — broader non-US coverage than Polygon.
+    <b>Alpaca</b> doubles as execution: if you later want to trade inside the app instead of deep-linking, you can — commission-free, same API.
+    <b>Hot tip:</b> Polygon's free plan is great for dev, but has 5 req/min — do not ship production on it.
+  </div>
+</div>
+</body>
+</html>

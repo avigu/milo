@@ -1,0 +1,21 @@
+{
+  "id": "task-20260510-100016-child-validation-scenari-41504d",
+  "title": "Child validation scenario",
+  "goal": "Child validation scenario",
+  "parentTaskId": "task-20260510-100015-implement-tracker-v2-sem-714f73",
+  "role": "software-architect",
+  "priority": "medium",
+  "ownerType": "child",
+  "ownerSessionKey": "agent:test:child",
+  "childSessionKey": null,
+  "requestedDeliverable": "Structured handoff",
+  "summary": "Child handoff approved by orchestrator",
+  "nextAction": "No further action",
+  "escalationTarget": "orchestrator",
+  "slackThreadKey": null,
+  "reviewState": "approved",
+  "createdAt": "2026-05-10T10:00:16.034100Z",
+  "updatedAt": "2026-05-10T10:00:33.187021Z",
+  "completedAt": "2026-05-10T10:00:33.187021Z",
+  "tags": []
+}

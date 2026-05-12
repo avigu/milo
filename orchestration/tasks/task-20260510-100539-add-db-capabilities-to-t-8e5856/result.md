@@ -1,0 +1,1 @@
+Added SQLite-backed DB capabilities to the orchestration tracker while keeping files as the source of truth. The tracker now maintains orchestration/state/tasks.db with tasks, task_events, task_handoffs, slack_messages, and an open_tasks view. Added db-sync and db-summary commands and validated sync plus direct SQL queries.

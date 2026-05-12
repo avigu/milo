@@ -1,0 +1,7392 @@
+{
+  "by_category": {
+    "shawarma": [
+      {
+        "name": "ביס בר",
+        "address": "סמטת התבור 3 פתח תקווה",
+        "eta": "45-55",
+        "price_range": 2,
+        "primary": [
+          "street_food",
+          "kosher-for-passover",
+          "kosher",
+          "sandwich",
+          "mediterranean",
+          "salad"
+        ],
+        "rating": 344,
+        "slug": "bis-bar",
+        "id": "68e772ae4f8bba49b44162c1"
+      },
+      {
+        "name": "ג׳וני קפה",
+        "address": "שלמה המלך 6 קרית אונו",
+        "eta": "20-30",
+        "price_range": 1,
+        "primary": [
+          "mediterranean",
+          "israeli",
+          "hummus"
+        ],
+        "rating": 342,
+        "slug": "joni-coffee-wine",
+        "id": "68ebaf27f8f5d9a9e28f3f17"
+      },
+      {
+        "name": "״המושבה״ פלאפל ושניצל 4 טעמים",
+        "address": "בר כוכבא 41",
+        "eta": "55-65",
+        "price_range": 1,
+        "primary": [
+          "street_food",
+          "kosher-for-passover",
+          "kosher",
+          "sandwich",
+          "mediterranean"
+        ],
+        "rating": 341,
+        "slug": "falafel-4-flavours-petah-tikva",
+        "id": "6044c8b7603591ae129f2233"
+      },
+      {
+        "name": "טורקיש גריל",
+        "address": "העבודה 2, אור יהודה ",
+        "eta": "40-50",
+        "price_range": 2,
+        "primary": [
+          "mediterranean",
+          "kebab",
+          "sandwich"
+        ],
+        "rating": 330,
+        "slug": "turkish-grill-or-yehuda",
+        "id": "671f839eeb755f61f46353fb"
+      },
+      {
+        "name": "השווארמה של מנו",
+        "address": "השילוח 5 פ״ת",
+        "eta": "45-55",
+        "price_range": 2,
+        "primary": [
+          "kosher-for-passover",
+          "kosher",
+          "kebab",
+          "street_food"
+        ],
+        "rating": 326,
+        "slug": "manos-shawarma",
+        "id": "65a64f9d069c2e49bdf512e3"
+      },
+      {
+        "name": "אצל אלברט",
+        "address": "אהרון קציר 2, רמת גן",
+        "eta": "30-40",
+        "price_range": 2,
+        "primary": [
+          "street_food",
+          "american",
+          "kosher-for-passover",
+          "kosher",
+          "mediterranean",
+          "bbq"
+        ],
+        "rating": 324,
+        "slug": "at-alberts",
+        "id": "62bdb0988f5bb1c47f4db27a"
+      },
+      {
+        "name": "סביח פרישמן | אור יהודה",
+        "address": "יהדות קנדה 6",
+        "eta": "40-50",
+        "price_range": 1,
+        "primary": [
+          "mediterranean",
+          "street_food",
+          "sandwich"
+        ],
+        "rating": 321,
+        "slug": "sabich-frishman-or-yehuda",
+        "id": "664f070413b017528c0fbb76"
+      },
+      {
+        "name": "ברגר קינג כשר | כפר גנים",
+        "address": "העצמאות 63, פתח תקווה",
+        "eta": "45-55",
+        "price_range": 2,
+        "primary": [
+          "burgers",
+          "street_food",
+          "kids-meals",
+          "kosher-for-passover",
+          "kosher",
+          "sandwich"
+        ],
+        "rating": 319,
+        "slug": "burger-king-kfar-ganim",
+        "id": "6485c7f43cbfa52aa6852d70"
+      },
+      {
+        "name": "יאשקה | פתח תקווה",
+        "address": "גיסין 15, פתח תקווה",
+        "eta": "45-55",
+        "price_range": 2,
+        "primary": [
+          "steak",
+          "kosher-for-passover",
+          "kosher",
+          "salad",
+          "kebab",
+          "bbq"
+        ],
+        "rating": 318,
+        "slug": "yashka-petah-tikva",
+        "id": "6469f2e5a89dfe2b28953ae0"
+      },
+      {
+        "name": "מטבל | גבעת שמואל",
+        "address": "יוני נתניהו 31, גבעת שמואל",
+        "eta": "40-50",
+        "price_range": 2,
+        "primary": [
+          "street_food",
+          "american",
+          "kosher-for-passover",
+          "kosher",
+          "sandwich",
+          "kosher-lmehadrin",
+          "mediterranean",
+          "bbq"
+        ],
+        "rating": 315,
+        "slug": "hataboon-vehamangal",
+        "id": "62cc1c6f158c82f06711e7e5"
+      }
+    ],
+    "pizza": [
+      {
+        "name": "פיצה פרגו | יהוד",
+        "address": "Derech Moshe Dayan 3, Yehud-Monosson",
+        "eta": "45-55",
+        "price_range": 2,
+        "primary": [
+          "italian",
+          "pizza",
+          "kosher-for-passover",
+          "kosher",
+          "salad"
+        ],
+        "rating": 333,
+        "slug": "pizza-prego-yehud",
+        "id": "64c23d1d969adb2ad4d3d8e9"
+      },
+      {
+        "name": "ביגה | פתח תקווה",
+        "address": "זאב ז׳בוטינסקי 72, פתח תקווה",
+        "eta": "55-65",
+        "price_range": 2,
+        "primary": [
+          "pizza",
+          "pasta",
+          "sandwich",
+          "kosher-lmehadrin",
+          "breakfast",
+          "lunch",
+          "salad"
+        ],
+        "rating": 328,
+        "slug": "biga-petah-tikva",
+        "id": "67a1e231e9f5ce06533d4273"
+      },
+      {
+        "name": "פיצה לוגאנו",
+        "address": "זאב וינהויז 9, יהוד",
+        "eta": "45-55",
+        "price_range": 2,
+        "primary": [
+          "dessert",
+          "pizza",
+          "italian",
+          "pasta"
+        ],
+        "rating": 325,
+        "slug": "pizza-lugano",
+        "id": "67bf7ba2eb063308b2b5f15a"
+      },
+      {
+        "name": "פיצה נעמה | קריית אונו",
+        "address": "הנשיא 57 קרית אונו",
+        "eta": "25-35",
+        "price_range": 2,
+        "primary": [
+          "pizza",
+          "kosher-for-passover",
+          "kosher",
+          "pasta",
+          "salad"
+        ],
+        "rating": 322,
+        "slug": "pizza-naama-ko",
+        "id": "64a2cb6ded345b5a891e8c72"
+      },
+      {
+        "name": "פיצה שמש | גני תקווה",
+        "address": "עין גנים 7, גני תקווה",
+        "eta": "35-45",
+        "price_range": 2,
+        "primary": [
+          "italian",
+          "pizza",
+          "kosher-for-passover",
+          "kosher",
+          "pasta"
+        ],
+        "rating": 311,
+        "slug": "pizza-shemesh-ganei-tikva",
+        "id": "648736867f343208e20138e8"
+      },
+      {
+        "name": "פיצה שמש | אור יהודה",
+        "address": "Sderot Mordehai Ben Porat 79, Or Yehuda",
+        "eta": "40-50",
+        "price_range": 2,
+        "primary": [
+          "italian",
+          "pizza",
+          "kosher-for-passover",
+          "kosher",
+          "pasta",
+          "kosher-lmehadrin"
+        ],
+        "rating": 308,
+        "slug": "pizza-shemesh-or-yehuda",
+        "id": "63ff6ceadab857efe2892cff"
+      },
+      {
+        "name": "פיצה האט | גני תקווה כשר",
+        "address": "הר יהודה 56, גני תקווה",
+        "eta": "35-45",
+        "price_range": 2,
+        "primary": [
+          "italian",
+          "pizza",
+          "kids-meals",
+          "kosher-for-passover",
+          "kosher",
+          "pasta",
+          "gluten-free"
+        ],
+        "rating": 298,
+        "slug": "pizza-hut-ganei-tikva",
+        "id": "66320ea4f807190dc5719def"
+      },
+      {
+        "name": "סיציליאנו | פתח תקווה",
+        "address": "ז'בוטינסקי 72",
+        "eta": "50-60",
+        "price_range": 2,
+        "primary": [
+          "italian",
+          "pizza",
+          "kosher-for-passover",
+          "kosher",
+          "pasta",
+          "kosher-lmehadrin"
+        ],
+        "rating": 288,
+        "slug": "siciliano-petach-tikva",
+        "id": "5ed39f9c852f4524eb1d8830"
+      },
+      {
+        "name": "פיצטה | קריית אונו",
+        "address": "Derekh Refa'el Eitan 1 Kiryat Ono",
+        "eta": "30-40",
+        "price_range": 2,
+        "primary": [
+          "pizza",
+          "pasta",
+          "salad"
+        ],
+        "rating": 280,
+        "slug": "pizzetta",
+        "id": "5f047d638190d7b83e6c8df4"
+      },
+      {
+        "name": "פיצה סטורי | אור יהודה",
+        "address": "Haim Bar Lev Blvd 12 or yehuda",
+        "eta": "50-60",
+        "price_range": 2,
+        "primary": [
+          "italian",
+          "pizza",
+          "kosher-for-passover",
+          "kosher",
+          "pasta",
+          "kosher-lmehadrin"
+        ],
+        "rating": 275,
+        "slug": "pizza-story-or-yehuda",
+        "id": "6465e66e54eb15014431bc5e"
+      }
+    ],
+    "pasta": [
+      {
+        "name": "הקערה בר בריאות",
+        "address": "וולט אנטרפריזס ישראל בע״מ",
+        "eta": "45-55",
+        "price_range": 1,
+        "primary": [
+          "kosher-for-passover",
+          "kosher",
+          "pasta",
+          "salad"
+        ],
+        "rating": 336,
+        "slug": "the-bowl",
+        "id": "5ff1cab2e83fd970c1142a1e"
+      },
+      {
+        "name": "פיצה פרגו | יהוד",
+        "address": "Derech Moshe Dayan 3, Yehud-Monosson",
+        "eta": "45-55",
+        "price_range": 2,
+        "primary": [
+          "italian",
+          "pizza",
+          "kosher-for-passover",
+          "kosher",
+          "salad"
+        ],
+        "rating": 333,
+        "slug": "pizza-prego-yehud",
+        "id": "64c23d1d969adb2ad4d3d8e9"
+      },
+      {
+        "name": "ביגה | פתח תקווה",
+        "address": "זאב ז׳בוטינסקי 72, פתח תקווה",
+        "eta": "55-65",
+        "price_range": 2,
+        "primary": [
+          "pizza",
+          "pasta",
+          "sandwich",
+          "kosher-lmehadrin",
+          "breakfast",
+          "lunch",
+          "salad"
+        ],
+        "rating": 328,
+        "slug": "biga-petah-tikva",
+        "id": "67a1e231e9f5ce06533d4273"
+      },
+      {
+        "name": "פיצה לוגאנו",
+        "address": "זאב וינהויז 9, יהוד",
+        "eta": "45-55",
+        "price_range": 2,
+        "primary": [
+          "dessert",
+          "pizza",
+          "italian",
+          "pasta"
+        ],
+        "rating": 325,
+        "slug": "pizza-lugano",
+        "id": "67bf7ba2eb063308b2b5f15a"
+      },
+      {
+        "name": "פיצה נעמה | קריית אונו",
+        "address": "הנשיא 57 קרית אונו",
+        "eta": "25-35",
+        "price_range": 2,
+        "primary": [
+          "pizza",
+          "kosher-for-passover",
+          "kosher",
+          "pasta",
+          "salad"
+        ],
+        "rating": 322,
+        "slug": "pizza-naama-ko",
+        "id": "64a2cb6ded345b5a891e8c72"
+      },
+      {
+        "name": "פיצה שמש | גני תקווה",
+        "address": "עין גנים 7, גני תקווה",
+        "eta": "35-45",
+        "price_range": 2,
+        "primary": [
+          "italian",
+          "pizza",
+          "kosher-for-passover",
+          "kosher",
+          "pasta"
+        ],
+        "rating": 311,
+        "slug": "pizza-shemesh-ganei-tikva",
+        "id": "648736867f343208e20138e8"
+      },
+      {
+        "name": "פיצה שמש | אור יהודה",
+        "address": "Sderot Mordehai Ben Porat 79, Or Yehuda",
+        "eta": "40-50",
+        "price_range": 2,
+        "primary": [
+          "italian",
+          "pizza",
+          "kosher-for-passover",
+          "kosher",
+          "pasta",
+          "kosher-lmehadrin"
+        ],
+        "rating": 308,
+        "slug": "pizza-shemesh-or-yehuda",
+        "id": "63ff6ceadab857efe2892cff"
+      },
+      {
+        "name": "בוקריה",
+        "address": "שחם 17, מתחם יכין יצחק רבין",
+        "eta": "45-55",
+        "price_range": 2,
+        "primary": [
+          "breakfast",
+          "italian",
+          "salad"
+        ],
+        "rating": 303,
+        "slug": "bokeria",
+        "id": "5f86ce7c7ce6eb05b4a57d6e"
+      },
+      {
+        "name": "פיצה האט | גני תקווה כשר",
+        "address": "הר יהודה 56, גני תקווה",
+        "eta": "35-45",
+        "price_range": 2,
+        "primary": [
+          "italian",
+          "pizza",
+          "kids-meals",
+          "kosher-for-passover",
+          "kosher",
+          "pasta",
+          "gluten-free"
+        ],
+        "rating": 298,
+        "slug": "pizza-hut-ganei-tikva",
+        "id": "66320ea4f807190dc5719def"
+      },
+      {
+        "name": "שרינה קפה",
+        "address": "אימבר 14",
+        "eta": "45-55",
+        "price_range": 2,
+        "primary": [
+          "kosher-for-passover",
+          "kosher",
+          "pasta",
+          "sandwich",
+          "kosher-lmehadrin",
+          "salad"
+        ],
+        "rating": 292,
+        "slug": "sarina-cafe",
+        "id": "6203e36d2485aa1851649c06"
+      }
+    ],
+    "salad": [
+      {
+        "name": "ביס בר",
+        "address": "סמטת התבור 3 פתח תקווה",
+        "eta": "45-55",
+        "price_range": 2,
+        "primary": [
+          "street_food",
+          "kosher-for-passover",
+          "kosher",
+          "sandwich",
+          "mediterranean",
+          "salad"
+        ],
+        "rating": 344,
+        "slug": "bis-bar",
+        "id": "68e772ae4f8bba49b44162c1"
+      },
+      {
+        "name": "בורקאסה",
+        "address": "אפעל 18, פתח תקווה",
+        "eta": "50-60",
+        "price_range": 2,
+        "primary": [
+          "vegetarian",
+          "kosher-for-passover",
+          "kosher",
+          "kosher-lmehadrin",
+          "mediterranean",
+          "salad"
+        ],
+        "rating": 343,
+        "slug": "bourecasa",
+        "id": "685bba02f93fcf72cabeaebb"
+      },
+      {
+        "name": "הקערה בר בריאות",
+        "address": "וולט אנטרפריזס ישראל בע״מ",
+        "eta": "45-55",
+        "price_range": 1,
+        "primary": [
+          "kosher-for-passover",
+          "kosher",
+          "pasta",
+          "salad"
+        ],
+        "rating": 336,
+        "slug": "the-bowl",
+        "id": "5ff1cab2e83fd970c1142a1e"
+      },
+      {
+        "name": "פיצה פרגו | יהוד",
+        "address": "Derech Moshe Dayan 3, Yehud-Monosson",
+        "eta": "45-55",
+        "price_range": 2,
+        "primary": [
+          "italian",
+          "pizza",
+          "kosher-for-passover",
+          "kosher",
+          "salad"
+        ],
+        "rating": 333,
+        "slug": "pizza-prego-yehud",
+        "id": "64c23d1d969adb2ad4d3d8e9"
+      },
+      {
+        "name": "ביגה | פתח תקווה",
+        "address": "זאב ז׳בוטינסקי 72, פתח תקווה",
+        "eta": "55-65",
+        "price_range": 2,
+        "primary": [
+          "pizza",
+          "pasta",
+          "sandwich",
+          "kosher-lmehadrin",
+          "breakfast",
+          "lunch",
+          "salad"
+        ],
+        "rating": 328,
+        "slug": "biga-petah-tikva",
+        "id": "67a1e231e9f5ce06533d4273"
+      },
+      {
+        "name": "דרימרי",
+        "address": "הסיבים 48, גבעת שמואל",
+        "eta": "40-50",
+        "price_range": 3,
+        "primary": [
+          "bakery",
+          "kosher-for-passover",
+          "kosher",
+          "breakfast",
+          "dessert",
+          "salad"
+        ],
+        "rating": 323,
+        "slug": "dreamerie",
+        "id": "5ecbdfe9785321d345a3fd87"
+      },
+      {
+        "name": "פיצה נעמה | קריית אונו",
+        "address": "הנשיא 57 קרית אונו",
+        "eta": "25-35",
+        "price_range": 2,
+        "primary": [
+          "pizza",
+          "kosher-for-passover",
+          "kosher",
+          "pasta",
+          "salad"
+        ],
+        "rating": 322,
+        "slug": "pizza-naama-ko",
+        "id": "64a2cb6ded345b5a891e8c72"
+      },
+      {
+        "name": "צ׳ו טו",
+        "address": "הסיבים 18, פתח תקווה",
+        "eta": "40-50",
+        "price_range": 2,
+        "primary": [
+          "noodles",
+          "asian",
+          "kosher-for-passover",
+          "kosher",
+          "thai",
+          "salad"
+        ],
+        "rating": 320,
+        "slug": "choo-tu",
+        "id": "6638926505d62bcb7902878b"
+      },
+      {
+        "name": "יאשקה | פתח תקווה",
+        "address": "גיסין 15, פתח תקווה",
+        "eta": "45-55",
+        "price_range": 2,
+        "primary": [
+          "steak",
+          "kosher-for-passover",
+          "kosher",
+          "salad",
+          "kebab",
+          "bbq"
+        ],
+        "rating": 318,
+        "slug": "yashka-petah-tikva",
+        "id": "6469f2e5a89dfe2b28953ae0"
+      },
+      {
+        "name": "ג׳ונם",
+        "address": "בן ציון גליס 51 פתח תקווה ",
+        "eta": "50-60",
+        "price_range": 2,
+        "primary": [
+          "soup",
+          "kosher-for-passover",
+          "kosher",
+          "mediterranean",
+          "healthy"
+        ],
+        "rating": 306,
+        "slug": "joonam",
+        "id": "622619109bea5cd4f6b80c00"
+      }
+    ],
+    "dessert": [
+      {
+        "name": "ג׳ט לק | פתח תקווה",
+        "address": "תוצרת הארץ 2",
+        "eta": "55-65",
+        "price_range": 2,
+        "primary": [
+          "ice_cream",
+          "kids-meals",
+          "kosher-for-passover",
+          "kosher",
+          "kosher-lmehadrin",
+          "dessert"
+        ],
+        "rating": 332,
+        "slug": "jetlek-petach-tikva",
+        "id": "5ed8d8309d01f446a64941cb"
+      },
+      {
+        "name": "פיצה לוגאנו",
+        "address": "זאב וינהויז 9, יהוד",
+        "eta": "45-55",
+        "price_range": 2,
+        "primary": [
+          "dessert",
+          "pizza",
+          "italian",
+          "pasta"
+        ],
+        "rating": 325,
+        "slug": "pizza-lugano",
+        "id": "67bf7ba2eb063308b2b5f15a"
+      },
+      {
+        "name": "דרימרי",
+        "address": "הסיבים 48, גבעת שמואל",
+        "eta": "40-50",
+        "price_range": 3,
+        "primary": [
+          "bakery",
+          "kosher-for-passover",
+          "kosher",
+          "breakfast",
+          "dessert",
+          "salad"
+        ],
+        "rating": 323,
+        "slug": "dreamerie",
+        "id": "5ecbdfe9785321d345a3fd87"
+      },
+      {
+        "name": "מר פרצל | קריית אונו",
+        "address": "Shlomo ha-Melekh St 37, Kiryat Ono",
+        "eta": "30-40",
+        "price_range": 1,
+        "primary": [
+          "street_food",
+          "kids-meals",
+          "kosher-for-passover",
+          "bakery",
+          "kosher",
+          "breakfast",
+          "dessert"
+        ],
+        "rating": 301,
+        "slug": "mr-pretzel-kiryat-ono",
+        "id": "5fd9cc0cc0b79e1c861e9ec3"
+      },
+      {
+        "name": "‫קרמרי דה ל׳אקלר | גבעת שמואל",
+        "address": "מנחם בגין 38, גבעת שמואל",
+        "eta": "40-50",
+        "price_range": 2,
+        "primary": [
+          "kosher-for-passover",
+          "dessert",
+          "kosher",
+          "ice_cream"
+        ],
+        "rating": 299,
+        "slug": "cremerie-de-leclair-givat-shmuel",
+        "id": "636a4250066fbb424d6857eb"
+      },
+      {
+        "name": "סופט קוקיז | קרית אונו",
+        "address": "שלמה המלך 37, קרית אונו",
+        "eta": "30-40",
+        "price_range": 2,
+        "primary": [
+          "ice_cream",
+          "kosher-for-passover",
+          "kosher",
+          "crepe",
+          "dessert"
+        ],
+        "rating": 297,
+        "slug": "soft-cookies-kiryat-ono",
+        "id": "64b7fc2b917544425f4bd287"
+      },
+      {
+        "name": "הדרים | קרית אונו",
+        "address": "דרך דורי יעקב 7, קרית אונו",
+        "eta": "20-30",
+        "price_range": 1,
+        "primary": [
+          "dessert",
+          "smoothie"
+        ],
+        "rating": 284,
+        "slug": "citrus",
+        "id": "5f3a4df51649aaba74fabeff"
+      },
+      {
+        "name": "גולדה כשר | גבעת שמואל",
+        "address": "הערבה 1, גבעת שמואל",
+        "eta": "45-55",
+        "price_range": 2,
+        "primary": [
+          "kosher-for-passover",
+          "dessert",
+          "kosher",
+          "ice_cream"
+        ],
+        "rating": 271,
+        "slug": "golda-givat-shmuel",
+        "id": "5eeb3c64ad87fe8c93816bf4"
+      },
+      {
+        "name": "דון פרדו | פתח תקווה",
+        "address": "אליעזר קפלן 13, פתח תקווה",
+        "eta": "45-55",
+        "price_range": 2,
+        "primary": [
+          "pizza",
+          "kosher-for-passover",
+          "kosher",
+          "dessert",
+          "salad"
+        ],
+        "rating": 264,
+        "slug": "don-perdo-petah-tikva",
+        "id": "6321a2781b3b305f73944a63"
+      },
+      {
+        "name": "גולדה כשר | אם המושבות",
+        "address": "רפאל איתן 5 ",
+        "eta": "55-65",
+        "price_range": 2,
+        "primary": [
+          "dessert",
+          "ice_cream"
+        ],
+        "rating": 247,
+        "slug": "golda-em-em-hamoshavot",
+        "id": "610002f56a2978199de2fa81"
+      }
+    ],
+    "breakfast": [
+      {
+        "name": "ביגה | פתח תקווה",
+        "address": "זאב ז׳בוטינסקי 72, פתח תקווה",
+        "eta": "55-65",
+        "price_range": 2,
+        "primary": [
+          "pizza",
+          "pasta",
+          "sandwich",
+          "kosher-lmehadrin",
+          "breakfast",
+          "lunch",
+          "salad"
+        ],
+        "rating": 328,
+        "slug": "biga-petah-tikva",
+        "id": "67a1e231e9f5ce06533d4273"
+      },
+      {
+        "name": "דרימרי",
+        "address": "הסיבים 48, גבעת שמואל",
+        "eta": "40-50",
+        "price_range": 3,
+        "primary": [
+          "bakery",
+          "kosher-for-passover",
+          "kosher",
+          "breakfast",
+          "dessert",
+          "salad"
+        ],
+        "rating": 323,
+        "slug": "dreamerie",
+        "id": "5ecbdfe9785321d345a3fd87"
+      },
+      {
+        "name": "בוקריה",
+        "address": "שחם 17, מתחם יכין יצחק רבין",
+        "eta": "45-55",
+        "price_range": 2,
+        "primary": [
+          "breakfast",
+          "italian",
+          "salad"
+        ],
+        "rating": 303,
+        "slug": "bokeria",
+        "id": "5f86ce7c7ce6eb05b4a57d6e"
+      },
+      {
+        "name": "מר פרצל | קריית אונו",
+        "address": "Shlomo ha-Melekh St 37, Kiryat Ono",
+        "eta": "30-40",
+        "price_range": 1,
+        "primary": [
+          "street_food",
+          "kids-meals",
+          "kosher-for-passover",
+          "bakery",
+          "kosher",
+          "breakfast",
+          "dessert"
+        ],
+        "rating": 301,
+        "slug": "mr-pretzel-kiryat-ono",
+        "id": "5fd9cc0cc0b79e1c861e9ec3"
+      },
+      {
+        "name": "ריבאר כשר | רמת אפעל",
+        "address": "דרך שיבא 14, רמת גן",
+        "eta": "30-40",
+        "price_range": 2,
+        "primary": [
+          "vegan",
+          "smoothie",
+          "kosher-for-passover",
+          "kosher",
+          "breakfast"
+        ],
+        "rating": 282,
+        "slug": "rebar-ramat-efal",
+        "id": "660a6fabec174c407e3189d3"
+      },
+      {
+        "name": "ביגה | כפר גנים",
+        "address": "העצמאות 63, כפר גנים",
+        "eta": "40-50",
+        "price_range": 2,
+        "primary": [
+          "italian",
+          "kosher-for-passover",
+          "kosher",
+          "pasta",
+          "breakfast",
+          "salad"
+        ],
+        "rating": 267,
+        "slug": "biga-kfar-ganim",
+        "id": "62ea773429a0282e80f41166"
+      },
+      {
+        "name": "לנדוור הכשר למהדרין | גבעת שמואל",
+        "address": "מנחם בגין 38, גבעת שמואל, מתחם רוגובין",
+        "eta": "50-60",
+        "price_range": 2,
+        "primary": [
+          "kids-meals",
+          "cafe",
+          "kosher-for-passover",
+          "kosher",
+          "kosher-lmehadrin",
+          "salad"
+        ],
+        "rating": 260,
+        "slug": "landwer-cafe-givat-shmuel",
+        "id": "5f22c0b6148581a059f4b908"
+      },
+      {
+        "name": "לנדוור הכשר | אור יהודה",
+        "address": "יהדות קנדה 1, אור יהודה",
+        "eta": "40-50",
+        "price_range": 2,
+        "primary": [
+          "pizza",
+          "kids-meals",
+          "kosher-for-passover",
+          "cafe",
+          "kosher",
+          "pasta",
+          "sandwich",
+          "kosher-lmehadrin",
+          "salad"
+        ],
+        "rating": 246,
+        "slug": "landwer-cafe-kosher-or-yehuda",
+        "id": "5f4763f705909c46472e7efd"
+      },
+      {
+        "name": "טאבון סיטי",
+        "address": "תוצרת הארץ 3, פתח תקווה",
+        "eta": "45-55",
+        "price_range": 2,
+        "primary": [
+          "pizza",
+          "bakery",
+          "kosher-for-passover",
+          "kosher",
+          "sandwich",
+          "kosher-lmehadrin",
+          "breakfast"
+        ],
+        "rating": 234,
+        "slug": "tabun-city",
+        "id": "635e5c6490f420f9a39b596f"
+      },
+      {
+        "name": "לנדוור | השחם פתח תקווה",
+        "address": "שחם 30",
+        "eta": "45-55",
+        "price_range": 2,
+        "primary": [
+          "burgers",
+          "kids-meals",
+          "cafe",
+          "sandwich",
+          "salad"
+        ],
+        "rating": 211,
+        "slug": "landwer-cafe-petach-tikva",
+        "id": "5ee0f0e563c120d4fce654c7"
+      }
+    ],
+    "burgers": [
+      {
+        "name": "מקדונלד'ס סביון סנטר",
+        "address": "שדרות חיים בר לב 10-12 אור יהודה, אור יהודה",
+        "eta": "30-40",
+        "price_range": 2,
+        "primary": [
+          "american",
+          "burgers",
+          "kids-meals",
+          "chicken"
+        ],
+        "rating": 340,
+        "slug": "mcdonalds-savyon-center",
+        "id": "5f4cf23dbd0c2ba63f139366"
+      },
+      {
+        "name": "בורגראנץ׳ | אור יהודה",
+        "address": "אליהו סעדון 120, אור יהודה",
+        "eta": "40-50",
+        "price_range": 2,
+        "primary": [
+          "burgers"
+        ],
+        "rating": 339,
+        "slug": "burgeranch-or-yehuda",
+        "id": "62b9bda58791d647c5478c4c"
+      },
+      {
+        "name": "מקדונלד'ס הסיבים",
+        "address": "הסיבים 2 פינת ז'בוטינסקי פתח תקווה",
+        "eta": "40-50",
+        "price_range": 2,
+        "primary": [
+          "american",
+          "burgers",
+          "kids-meals",
+          "chicken"
+        ],
+        "rating": 337,
+        "slug": "mcdonalds-hasivim",
+        "id": "5f75ac34040d9d09dfcb0a46"
+      },
+      {
+        "name": "שנקר על האש | פתח תקווה",
+        "address": "אריה שנקר 8 פתח תקווה",
+        "eta": "50-60",
+        "price_range": 2,
+        "primary": [
+          "burgers",
+          "steak",
+          "hummus",
+          "kosher-for-passover",
+          "kosher",
+          "sandwich",
+          "mediterranean",
+          "bbq"
+        ],
+        "rating": 334,
+        "slug": "grill-bar-petah-tikva",
+        "id": "6728cf6e606f8b3678fd7fd3"
+      },
+      {
+        "name": "מקדונלד׳ס עמי ב.ס.ר סיטי הכשר",
+        "address": "תוצרת הארץ 3, פתח תקווה",
+        "eta": "50-60",
+        "price_range": 2,
+        "primary": [
+          "kids-meals",
+          "burgers",
+          "kosher",
+          "kosher-for-passover"
+        ],
+        "rating": 331,
+        "slug": "mcdonalds-dan-town",
+        "id": "630f5bfa3d5cc686c4593c10"
+      },
+      {
+        "name": "בורגראנץ׳ | קרית אונו",
+        "address": "שלמה המלך 37, קרית אונו",
+        "eta": "30-40",
+        "price_range": 2,
+        "primary": [
+          "kids-meals",
+          "burgers",
+          "kosher",
+          "kosher-for-passover"
+        ],
+        "rating": 329,
+        "slug": "burgeranch-kiryat-ono",
+        "id": "5fad106e799e0655ac547f10"
+      },
+      {
+        "name": "מקדונלד'ס תל השומר הכשר",
+        "address": "מרכז גימיון - בית חולים תל השומר",
+        "eta": "30-40",
+        "price_range": 2,
+        "primary": [
+          "burgers",
+          "chicken",
+          "american",
+          "kosher-for-passover",
+          "kids-meals",
+          "kosher"
+        ],
+        "rating": 327,
+        "slug": "mcdonalds-tel-hashomer-kosher",
+        "id": "5f75a8d081494302db669e56"
+      },
+      {
+        "name": "אצל אלברט",
+        "address": "אהרון קציר 2, רמת גן",
+        "eta": "30-40",
+        "price_range": 2,
+        "primary": [
+          "street_food",
+          "american",
+          "kosher-for-passover",
+          "kosher",
+          "mediterranean",
+          "bbq"
+        ],
+        "rating": 324,
+        "slug": "at-alberts",
+        "id": "62bdb0988f5bb1c47f4db27a"
+      },
+      {
+        "name": "ברגר קינג כשר | כפר גנים",
+        "address": "העצמאות 63, פתח תקווה",
+        "eta": "45-55",
+        "price_range": 2,
+        "primary": [
+          "burgers",
+          "street_food",
+          "kids-meals",
+          "kosher-for-passover",
+          "kosher",
+          "sandwich"
+        ],
+        "rating": 319,
+        "slug": "burger-king-kfar-ganim",
+        "id": "6485c7f43cbfa52aa6852d70"
+      },
+      {
+        "name": "מקדונלד'ס אונו מרקט",
+        "address": "Derekh Refa'el Eitan 1, Kiryat Ono",
+        "eta": "25-35",
+        "price_range": 2,
+        "primary": [
+          "american",
+          "burgers",
+          "kids-meals"
+        ],
+        "rating": 317,
+        "slug": "mcdonalds-ono-market",
+        "id": "5f06f4e4a8c36bb093fa5040"
+      }
+    ],
+    "sushi": [
+      {
+        "name": "צ׳וקה | קרית אונו",
+        "address": "שלמה המלך 37, קריית אונו",
+        "eta": "30-40",
+        "price_range": 2,
+        "primary": [
+          "noodles",
+          "sushi",
+          "asian",
+          "kosher-for-passover",
+          "kosher",
+          "japanese"
+        ],
+        "rating": 295,
+        "slug": "chooka-kiryat-ono",
+        "id": "620a3aed60286d1c39738a89"
+      },
+      {
+        "name": "שגב ניהון נו בה | פתח תקווה",
+        "address": "תוצרת הארץ 3, פתח תקווה",
+        "eta": "45-55",
+        "price_range": 2,
+        "primary": [
+          "noodles",
+          "sushi",
+          "asian",
+          "kosher-for-passover",
+          "kosher",
+          "japanese"
+        ],
+        "rating": 231,
+        "slug": "nihon-nu-ba",
+        "id": "62b2f86af3ea7e1cd3803ae5"
+      },
+      {
+        "name": "זינק | יהוד",
+        "address": "אלטלף 9 יהוד",
+        "eta": "40-50",
+        "price_range": 3,
+        "primary": [
+          "burgers",
+          "sushi",
+          "italian",
+          "asian",
+          "japanese"
+        ],
+        "rating": 229,
+        "slug": "zinc",
+        "id": "5f4268092ce5105f52ee7671"
+      },
+      {
+        "name": "טורו סושי",
+        "address": "יצחק רבין 5, אור יהודה",
+        "eta": "40-50",
+        "price_range": 2,
+        "primary": [
+          "noodles",
+          "sushi",
+          "asian",
+          "kosher-for-passover",
+          "kosher-lmehadrin",
+          "kosher",
+          "japanese"
+        ],
+        "rating": 225,
+        "slug": "toro-sushi-or-yehuda",
+        "id": "673b3fbd9f214569298af589"
+      },
+      {
+        "name": "ג׳אפן ג׳אפן | גבעת שמואל",
+        "address": "מטה גור 14, גבעת שמואל",
+        "eta": "40-50",
+        "price_range": 2,
+        "primary": [
+          "noodles",
+          "sushi",
+          "asian",
+          "kosher-for-passover",
+          "kosher",
+          "japanese",
+          "fish"
+        ],
+        "rating": 220,
+        "slug": "japan-japan-givat",
+        "id": "630377c15aa4a21a760ecf75"
+      },
+      {
+        "name": "ג׳פניקה | פתח תקווה",
+        "address": "שחם 32, פתח תקווה",
+        "eta": "50-60",
+        "price_range": 2,
+        "primary": [
+          "soup",
+          "noodles",
+          "sushi",
+          "asian",
+          "japanese"
+        ],
+        "rating": 206,
+        "slug": "japanika-petah-tikva",
+        "id": "6321e0a5aa57606e4656402e"
+      },
+      {
+        "name": "סיונרה",
+        "address": "הורדים 11 סביון",
+        "eta": "45-55",
+        "price_range": 2,
+        "primary": [
+          "sushi",
+          "asian",
+          "kosher-for-passover",
+          "kosher",
+          "japanese",
+          "fish"
+        ],
+        "rating": 205,
+        "slug": "sayonara-kiryat-ono",
+        "id": "6044ac744bb7b8d845d3d9f7"
+      },
+      {
+        "name": "Sunkiss | סאן קיס",
+        "address": "מוהליבר 2 יהוד",
+        "eta": "45-55",
+        "price_range": 3,
+        "primary": [
+          "asian",
+          "noodles",
+          "sushi",
+          "japanese"
+        ],
+        "rating": 187,
+        "slug": "sunkiss-yehud",
+        "id": "6968a9a848bb89d4c0f077ee"
+      },
+      {
+        "name": "ריבר סושי בר | פתח תקווה",
+        "address": "השחם 36",
+        "eta": "45-55",
+        "price_range": 2,
+        "primary": [
+          "noodles",
+          "sushi",
+          "asian",
+          "japanese",
+          "fish"
+        ],
+        "rating": 184,
+        "slug": "river-petah-tikva",
+        "id": "606c55162669ad2f02c5aa14"
+      },
+      {
+        "name": "מינה טומיי | יהוד",
+        "address": "אלטלף 4, יהוד",
+        "eta": "40-50",
+        "price_range": 3,
+        "primary": [
+          "noodles",
+          "sushi",
+          "asian",
+          "japanese",
+          "fish"
+        ],
+        "rating": 180,
+        "slug": "minna-tomei-yehud",
+        "id": "64ecb3d4b0201c75e7c09a8a"
+      }
+    ],
+    "asian": [
+      {
+        "name": "צ׳ו טו",
+        "address": "הסיבים 18, פתח תקווה",
+        "eta": "40-50",
+        "price_range": 2,
+        "primary": [
+          "noodles",
+          "asian",
+          "kosher-for-passover",
+          "kosher",
+          "thai",
+          "salad"
+        ],
+        "rating": 320,
+        "slug": "choo-tu",
+        "id": "6638926505d62bcb7902878b"
+      },
+      {
+        "name": "צ׳וקה | קרית אונו",
+        "address": "שלמה המלך 37, קריית אונו",
+        "eta": "30-40",
+        "price_range": 2,
+        "primary": [
+          "noodles",
+          "sushi",
+          "asian",
+          "kosher-for-passover",
+          "kosher",
+          "japanese"
+        ],
+        "rating": 295,
+        "slug": "chooka-kiryat-ono",
+        "id": "620a3aed60286d1c39738a89"
+      },
+      {
+        "name": "נאפיס | פתח תקווה",
+        "address": "הפסגות 9, פתח תקווה",
+        "eta": "55-65",
+        "price_range": 2,
+        "primary": [
+          "asian",
+          "italian",
+          "kids-meals",
+          "street_food"
+        ],
+        "rating": 259,
+        "slug": "nafis-petah-tikva",
+        "id": "5f1da4c74ca56066e7018ba0"
+      },
+      {
+        "name": "סנדוויץ׳ בר מוקפץ | אור יהודה",
+        "address": "יחזקאל קזז 12, אור יהודה",
+        "eta": "30-40",
+        "price_range": 2,
+        "primary": [
+          "noodles",
+          "street_food",
+          "kosher-for-passover",
+          "kosher",
+          "sandwich"
+        ],
+        "rating": 258,
+        "slug": "hamukpats",
+        "id": "67570875ceb3346107ceda3c"
+      },
+      {
+        "name": "שגב ניהון נו בה | פתח תקווה",
+        "address": "תוצרת הארץ 3, פתח תקווה",
+        "eta": "45-55",
+        "price_range": 2,
+        "primary": [
+          "noodles",
+          "sushi",
+          "asian",
+          "kosher-for-passover",
+          "kosher",
+          "japanese"
+        ],
+        "rating": 231,
+        "slug": "nihon-nu-ba",
+        "id": "62b2f86af3ea7e1cd3803ae5"
+      },
+      {
+        "name": "זינק | יהוד",
+        "address": "אלטלף 9 יהוד",
+        "eta": "40-50",
+        "price_range": 3,
+        "primary": [
+          "burgers",
+          "sushi",
+          "italian",
+          "asian",
+          "japanese"
+        ],
+        "rating": 229,
+        "slug": "zinc",
+        "id": "5f4268092ce5105f52ee7671"
+      },
+      {
+        "name": "טורו סושי",
+        "address": "יצחק רבין 5, אור יהודה",
+        "eta": "40-50",
+        "price_range": 2,
+        "primary": [
+          "noodles",
+          "sushi",
+          "asian",
+          "kosher-for-passover",
+          "kosher-lmehadrin",
+          "kosher",
+          "japanese"
+        ],
+        "rating": 225,
+        "slug": "toro-sushi-or-yehuda",
+        "id": "673b3fbd9f214569298af589"
+      },
+      {
+        "name": "ג׳אפן ג׳אפן | גבעת שמואל",
+        "address": "מטה גור 14, גבעת שמואל",
+        "eta": "40-50",
+        "price_range": 2,
+        "primary": [
+          "noodles",
+          "sushi",
+          "asian",
+          "kosher-for-passover",
+          "kosher",
+          "japanese",
+          "fish"
+        ],
+        "rating": 220,
+        "slug": "japan-japan-givat",
+        "id": "630377c15aa4a21a760ecf75"
+      },
+      {
+        "name": "ג׳פניקה | פתח תקווה",
+        "address": "שחם 32, פתח תקווה",
+        "eta": "50-60",
+        "price_range": 2,
+        "primary": [
+          "soup",
+          "noodles",
+          "sushi",
+          "asian",
+          "japanese"
+        ],
+        "rating": 206,
+        "slug": "japanika-petah-tikva",
+        "id": "6321e0a5aa57606e4656402e"
+      },
+      {
+        "name": "סיונרה",
+        "address": "הורדים 11 סביון",
+        "eta": "45-55",
+        "price_range": 2,
+        "primary": [
+          "sushi",
+          "asian",
+          "kosher-for-passover",
+          "kosher",
+          "japanese",
+          "fish"
+        ],
+        "rating": 205,
+        "slug": "sayonara-kiryat-ono",
+        "id": "6044ac744bb7b8d845d3d9f7"
+      }
+    ],
+    "hummus": [
+      {
+        "name": "ג׳וני קפה",
+        "address": "שלמה המלך 6 קרית אונו",
+        "eta": "20-30",
+        "price_range": 1,
+        "primary": [
+          "mediterranean",
+          "israeli",
+          "hummus"
+        ],
+        "rating": 342,
+        "slug": "joni-coffee-wine",
+        "id": "68ebaf27f8f5d9a9e28f3f17"
+      },
+      {
+        "name": "שנקר על האש | פתח תקווה",
+        "address": "אריה שנקר 8 פתח תקווה",
+        "eta": "50-60",
+        "price_range": 2,
+        "primary": [
+          "burgers",
+          "steak",
+          "hummus",
+          "kosher-for-passover",
+          "kosher",
+          "sandwich",
+          "mediterranean",
+          "bbq"
+        ],
+        "rating": 334,
+        "slug": "grill-bar-petah-tikva",
+        "id": "6728cf6e606f8b3678fd7fd3"
+      },
+      {
+        "name": "חומוס הר-ברכה",
+        "address": "ברקת 9",
+        "eta": "40-50",
+        "price_range": 1,
+        "primary": [
+          "hummus",
+          "kosher-for-passover",
+          "kosher",
+          "kosher-lmehadrin",
+          "mediterranean",
+          "salad"
+        ],
+        "rating": 302,
+        "slug": "hummus-har-bracha",
+        "id": "613f44b2e4de99e696db7a71"
+      },
+      {
+        "name": "מרכז החומוס והפול",
+        "address": "הברון הירש 22, פתח תקווה",
+        "eta": "40-50",
+        "price_range": 1,
+        "primary": [
+          "mediterranean",
+          "street_food",
+          "hummus"
+        ],
+        "rating": 291,
+        "slug": "merkaz-hahummus-vehaful",
+        "id": "65003f543aa032018d3b7ff7"
+      },
+      {
+        "name": "חומוס אליהו | קריית אונו",
+        "address": "השדרה האקדמית 1, קרית אונו",
+        "eta": "45-55",
+        "price_range": 0,
+        "primary": [
+          "hummus",
+          "kosher-for-passover",
+          "kosher",
+          "kosher-lmehadrin",
+          "mediterranean"
+        ],
+        "rating": 278,
+        "slug": "hummus-eliyahu-kiryat-ono",
+        "id": "675193eb11df9b3715eb0693"
+      },
+      {
+        "name": "חומוס אליהו | פתח תקווה",
+        "address": " דרך יצחק רבין 4, פתח תקווה",
+        "eta": "40-50",
+        "price_range": 2,
+        "primary": [
+          "hummus",
+          "vegetarian",
+          "kosher-for-passover",
+          "kosher",
+          "mediterranean"
+        ],
+        "rating": 248,
+        "slug": "hummus-eliyahu-petah-tikva",
+        "id": "62ab1838dab8ea43f792ef86"
+      },
+      {
+        "name": "גוזל וציונה",
+        "address": "המכבים 29",
+        "eta": "50-60",
+        "price_range": 1,
+        "primary": [
+          "hummus",
+          "kosher-for-passover",
+          "kosher",
+          "sandwich",
+          "mediterranean"
+        ],
+        "rating": 237,
+        "slug": "gozal-ve-ziona",
+        "id": "5ee65b602a9a003a52b7d78e"
+      },
+      {
+        "name": "חומוס הבוטקה",
+        "address": "HaSivim 18 ",
+        "eta": "45-55",
+        "price_range": 1,
+        "primary": [
+          "hummus",
+          "salad"
+        ],
+        "rating": 232,
+        "slug": "habotke-hummus",
+        "id": "5ed0f4d8768509451d95ec43"
+      },
+      {
+        "name": "שווארמה רפאלוס",
+        "address": "שדה יצחק 34, פתח תקווה",
+        "eta": "45-55",
+        "price_range": 2,
+        "primary": [
+          "hummus",
+          "kosher-for-passover",
+          "kosher",
+          "kosher-lmehadrin",
+          "kebab"
+        ],
+        "rating": 198,
+        "slug": "shawarma-refaelos",
+        "id": "61bf370128da80684522304c"
+      },
+      {
+        "name": "דונר | יהוד",
+        "address": "גירון אברהם 15, יהוד",
+        "eta": "40-50",
+        "price_range": 2,
+        "primary": [
+          "street_food",
+          "hummus",
+          "kids-meals",
+          "kosher-for-passover",
+          "kosher"
+        ],
+        "rating": 173,
+        "slug": "doner",
+        "id": "5f4e28c4f1c629cfabf86d22"
+      }
+    ],
+    "fish": [
+      {
+        "name": "אנסלדה | פתח תקווה",
+        "address": "וולט אנטרפריזס ישראל בע״מ",
+        "eta": "45-55",
+        "price_range": 2,
+        "primary": [
+          "vegetarian",
+          "kosher-for-passover",
+          "kosher",
+          "fish",
+          "healthy",
+          "salad"
+        ],
+        "rating": 304,
+        "slug": "nsalada-petah-tikva",
+        "id": "65a4f79e480efdc8c610361b"
+      },
+      {
+        "name": "ג׳ויה | פתח תקווה",
+        "address": "גיסין 17, פתח תקווה",
+        "eta": "45-55",
+        "price_range": 2,
+        "primary": [
+          "italian",
+          "pizza",
+          "kids-meals",
+          "pasta",
+          "fish"
+        ],
+        "rating": 238,
+        "slug": "joya-petah-tikva",
+        "id": "635923d6de3b0e99abcfa162"
+      },
+      {
+        "name": "ג׳אפן ג׳אפן | גבעת שמואל",
+        "address": "מטה גור 14, גבעת שמואל",
+        "eta": "40-50",
+        "price_range": 2,
+        "primary": [
+          "noodles",
+          "sushi",
+          "asian",
+          "kosher-for-passover",
+          "kosher",
+          "japanese",
+          "fish"
+        ],
+        "rating": 220,
+        "slug": "japan-japan-givat",
+        "id": "630377c15aa4a21a760ecf75"
+      },
+      {
+        "name": "סיונרה",
+        "address": "הורדים 11 סביון",
+        "eta": "45-55",
+        "price_range": 2,
+        "primary": [
+          "sushi",
+          "asian",
+          "kosher-for-passover",
+          "kosher",
+          "japanese",
+          "fish"
+        ],
+        "rating": 205,
+        "slug": "sayonara-kiryat-ono",
+        "id": "6044ac744bb7b8d845d3d9f7"
+      },
+      {
+        "name": "ריבר סושי בר | פתח תקווה",
+        "address": "השחם 36",
+        "eta": "45-55",
+        "price_range": 2,
+        "primary": [
+          "noodles",
+          "sushi",
+          "asian",
+          "japanese",
+          "fish"
+        ],
+        "rating": 184,
+        "slug": "river-petah-tikva",
+        "id": "606c55162669ad2f02c5aa14"
+      },
+      {
+        "name": "מינה טומיי | יהוד",
+        "address": "אלטלף 4, יהוד",
+        "eta": "40-50",
+        "price_range": 3,
+        "primary": [
+          "noodles",
+          "sushi",
+          "asian",
+          "japanese",
+          "fish"
+        ],
+        "rating": 180,
+        "slug": "minna-tomei-yehud",
+        "id": "64ecb3d4b0201c75e7c09a8a"
+      },
+      {
+        "name": "אושי אושי | קרית אונו",
+        "address": "קניון קרית אונו, שלמה המלך 37",
+        "eta": "30-40",
+        "price_range": 2,
+        "primary": [
+          "noodles",
+          "sushi",
+          "asian",
+          "kosher-for-passover",
+          "kosher",
+          "japanese",
+          "fish"
+        ],
+        "rating": 171,
+        "slug": "oshi-oshi-kiryat-ono",
+        "id": "5f06dfd913299b865ee08699"
+      },
+      {
+        "name": "הסושיה | פתח תקווה",
+        "address": "יעל רום 8",
+        "eta": "55-65",
+        "price_range": 1,
+        "primary": [
+          "noodles",
+          "sushi",
+          "asian",
+          "japanese",
+          "fish"
+        ],
+        "rating": 144,
+        "slug": "hasushia-petach-tikva",
+        "id": "5ee0de0341983500f9374e0e"
+      },
+      {
+        "name": "קפאו",
+        "address": "תוצרת הארץ 3, פתח תקווה",
+        "eta": "55-65",
+        "price_range": 2,
+        "primary": [
+          "sushi",
+          "kosher-lmehadrin",
+          "kosher-for-passover",
+          "kosher",
+          "thai",
+          "japanese",
+          "fish"
+        ],
+        "rating": 102,
+        "slug": "kapao",
+        "id": "64f5b324433d751e35781ce9"
+      },
+      {
+        "name": "סואשי",
+        "address": "הסיבים 9, פתח תקווה",
+        "eta": "60-70",
+        "price_range": 2,
+        "primary": [
+          "sushi",
+          "asian",
+          "kosher-for-passover",
+          "kosher",
+          "japanese",
+          "fish"
+        ],
+        "rating": 57,
+        "slug": "soashi",
+        "id": "62021fd88957a9e3f7f86ad9"
+      }
+    ],
+    "mexican": [
+      {
+        "name": "מקסיקנה | פתח תקווה",
+        "address": "תוצרת הארץ 2, פתח תקווה",
+        "eta": "55-65",
+        "price_range": 2,
+        "primary": [
+          "vegan",
+          "street_food",
+          "kids-meals",
+          "kosher-for-passover",
+          "kosher",
+          "mexican"
+        ],
+        "rating": 215,
+        "slug": "mexicana-petah-tikva",
+        "id": "5f0f07d8390c96472aa03bee"
+      },
+      {
+        "name": "ברילוצ׳ה | פתח תקווה",
+        "address": "תוצרת הארץ 1, פתח תקווה",
+        "eta": "45-55",
+        "price_range": 2,
+        "primary": [
+          "burgers",
+          "street_food",
+          "kosher-for-passover",
+          "kosher",
+          "mexican",
+          "sandwich"
+        ],
+        "rating": 195,
+        "slug": "bariloche-petah-tikva",
+        "id": "6849763c4b10f4193561f37b"
+      },
+      {
+        "name": "דודי׳ס על הפלנצ׳ה",
+        "address": "אמפי פארק יהוד",
+        "eta": "40-50",
+        "price_range": 0,
+        "primary": [
+          "sandwich",
+          "mexican",
+          "street_food"
+        ],
+        "rating": 140,
+        "slug": "dudis-al-haplancha",
+        "id": "67598b9db526a1660036969e"
+      },
+      {
+        "name": "באפלו | פתח תקווה",
+        "address": "Derech Yitshak Rabin 2, Petah Tikva",
+        "eta": "40-50",
+        "price_range": 2,
+        "primary": [
+          "burgers",
+          "street_food",
+          "kosher-for-passover",
+          "kosher",
+          "sandwich",
+          "mexican"
+        ],
+        "rating": 133,
+        "slug": "buffalo-petah-tikva",
+        "id": "6926dfa21b930a1df481c82c"
+      }
+    ]
+  },
+  "all_delivering": [
+    {
+      "name": "שווארמה אלוני",
+      "address": "קניון קרית אונו, שלמה המלך 37",
+      "eta": "25-35",
+      "price_range": 1,
+      "primary": [
+        "kosher-for-passover",
+        "mediterranean",
+        "kosher",
+        "kebab"
+      ],
+      "rating": 117,
+      "slug": "shawarma-aloni",
+      "id": "60c5f0252a1e96abd67df28b"
+    },
+    {
+      "name": "נונומימי | קרית אונו",
+      "address": "המייסדים 3, קרית אונו",
+      "eta": "25-35",
+      "price_range": 2,
+      "primary": [
+        "ice_cream",
+        "pizza",
+        "bakery",
+        "pasta",
+        "breakfast",
+        "lunch",
+        "dessert",
+        "salad"
+      ],
+      "rating": 25,
+      "slug": "nonomimi-kiryat-ono",
+      "id": "63beb471f7d2007a7b6197dc"
+    },
+    {
+      "name": "מקדונלד'ס קניון קרית-אונו",
+      "address": "Shlomo ha-Melekh St 37, Kiryat Ono",
+      "eta": "20-30",
+      "price_range": 2,
+      "primary": [
+        "american",
+        "burgers",
+        "kids-meals"
+      ],
+      "rating": 310,
+      "slug": "mcdonalds-kiryat-ono-mall",
+      "id": "5f06f700a618a2df3db376fc"
+    },
+    {
+      "name": "גולדה | קרית אונו",
+      "address": "המייסדים 3, קרית אונו",
+      "eta": "25-35",
+      "price_range": 2,
+      "primary": [
+        "dessert",
+        "ice_cream"
+      ],
+      "rating": 213,
+      "slug": "golda-kiryat-ono",
+      "id": "5f0c2301d96b3663968064ba"
+    },
+    {
+      "name": "שׁניצל קוקי | קרית אונו",
+      "address": "שלמה המלך 37, קרית אונו",
+      "eta": "20-30",
+      "price_range": 2,
+      "primary": [
+        "homemade",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "salad"
+      ],
+      "rating": 250,
+      "slug": "schnitzel-kuki-kiryat-ono",
+      "id": "5fa94555a93018ea30f8d09d"
+    },
+    {
+      "name": "ג׳פניקה | קרית אונו",
+      "address": "השדרה האקדמית 1, קרית אונו",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "soup",
+        "noodles",
+        "sushi",
+        "asian",
+        "japanese"
+      ],
+      "rating": 164,
+      "slug": "japanika-kiryat-ono",
+      "id": "630decba250f4d9b5bbca8ed"
+    },
+    {
+      "name": "מיטבר בורגר | רמת אפעל",
+      "address": "דרך שיבא 18, רמת גן ",
+      "eta": "25-35",
+      "price_range": 2,
+      "primary": [
+        "american",
+        "burgers"
+      ],
+      "rating": 251,
+      "slug": "meatbar-burger-ramat-efal",
+      "id": "6644ab0f6ebf190f7b65f100"
+    },
+    {
+      "name": "קיסו | קרית אונו",
+      "address": "דרך איתן 1 קרית אונו",
+      "eta": "50-60",
+      "price_range": 3,
+      "primary": [
+        "noodles",
+        "sushi",
+        "asian",
+        "kids-meals",
+        "japanese"
+      ],
+      "rating": 165,
+      "slug": "kisu",
+      "id": "5f032bddb823932cf8b9f259"
+    },
+    {
+      "name": "שי-שי | קריית אונו",
+      "address": "הדובדבן 9, קרית אונו",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "vegan",
+        "soup",
+        "sushi",
+        "asian",
+        "street_food",
+        "japanese",
+        "salad"
+      ],
+      "rating": 81,
+      "slug": "shi-shi-kiryat-ono",
+      "id": "648049aa9b3f26598388d34e"
+    },
+    {
+      "name": "נייט קוקי 🍪 | גני תקוה",
+      "address": "דרך הים 14, גני תקווה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "dessert",
+        "ice_cream"
+      ],
+      "rating": 118,
+      "slug": "night-cookie-kiryat-ono",
+      "id": "641c1ce646c5c1caa30e4c00"
+    },
+    {
+      "name": "צ׳וקה | קרית אונו",
+      "address": "שלמה המלך 37, קריית אונו",
+      "eta": "30-40",
+      "price_range": 2,
+      "primary": [
+        "noodles",
+        "sushi",
+        "asian",
+        "kosher-for-passover",
+        "kosher",
+        "japanese"
+      ],
+      "rating": 295,
+      "slug": "chooka-kiryat-ono",
+      "id": "620a3aed60286d1c39738a89"
+    },
+    {
+      "name": "פסטיטו | קריית אונו",
+      "address": "שלמה המלך 37 קרית אונו",
+      "eta": "25-35",
+      "price_range": 2,
+      "primary": [
+        "italian",
+        "kosher-for-passover",
+        "kosher",
+        "pasta",
+        "salad"
+      ],
+      "rating": 166,
+      "slug": "pastito-kiryat-ono",
+      "id": "672b9a097f6b4b7854d45327"
+    },
+    {
+      "name": "ארומה | גבעת שמואל",
+      "address": "האורנים 1 גבעת שמואל",
+      "eta": "30-40",
+      "price_range": 2,
+      "primary": [
+        "soup",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "salad"
+      ],
+      "rating": 167,
+      "slug": "aroma-givat-shmuel",
+      "id": "6037a6375dc48ac2766888bd"
+    },
+    {
+      "name": "פלאפליקו",
+      "address": "הרמה 23, גני תקווה",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "steak",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "kebab",
+        "bbq"
+      ],
+      "rating": 119,
+      "slug": "falafelico",
+      "id": "628f6e21b60920d1a11e20e1"
+    },
+    {
+      "name": "‫M32 | קריית אונו",
+      "address": "הדובדבן 7, קריית אונו",
+      "eta": "30-40",
+      "price_range": 2,
+      "primary": [
+        "american",
+        "burgers",
+        "street_food",
+        "bbq"
+      ],
+      "rating": 252,
+      "slug": "m32-kiryat-ono",
+      "id": "649972794e468bc8191add8a"
+    },
+    {
+      "name": "יאשקה | רמת אפעל",
+      "address": "דרך שיבא 14, רמת אפעל",
+      "eta": "30-40",
+      "price_range": 2,
+      "primary": [
+        "kebab",
+        "chicken"
+      ],
+      "rating": 296,
+      "slug": "yashka-ramat-efal",
+      "id": "6613ce58331c73483e085410"
+    },
+    {
+      "name": "סופט קוקיז | קרית אונו",
+      "address": "שלמה המלך 37, קרית אונו",
+      "eta": "30-40",
+      "price_range": 2,
+      "primary": [
+        "ice_cream",
+        "kosher-for-passover",
+        "kosher",
+        "crepe",
+        "dessert"
+      ],
+      "rating": 297,
+      "slug": "soft-cookies-kiryat-ono",
+      "id": "64b7fc2b917544425f4bd287"
+    },
+    {
+      "name": "טומי רול | קרית אונו",
+      "address": "נעמי שמר 5, קריית אונו",
+      "eta": "30-40",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich"
+      ],
+      "rating": 168,
+      "slug": "tommy-roll-kiryat-ono",
+      "id": "667032582a01ef2209138e71"
+    },
+    {
+      "name": "חומוס נרי | קריית אונו",
+      "address": "הדובדבן 7, קריית אונו",
+      "eta": "35-45",
+      "price_range": 1,
+      "primary": [
+        "street_food",
+        "hummus",
+        "kosher-for-passover",
+        "kosher",
+        "kosher-lmehadrin",
+        "mediterranean"
+      ],
+      "rating": 46,
+      "slug": "hummus-neri-kiryat-ono",
+      "id": "6570588c243172b189d60c67"
+    },
+    {
+      "name": "האק | קריית אונו",
+      "address": "שלמה המלך 37, קריית אונו",
+      "eta": "25-35",
+      "price_range": 2,
+      "primary": [
+        "street_food",
+        "mediterranean",
+        "sandwich",
+        "salad"
+      ],
+      "rating": 82,
+      "slug": "hak-kiryat-ono",
+      "id": "6821db09e64ac42e1fc245a9"
+    },
+    {
+      "name": "בטר בורגר | קרית אונו",
+      "address": "שלמה המלך 37, קרית אונו",
+      "eta": "25-35",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "kosher-lmehadrin"
+      ],
+      "rating": 214,
+      "slug": "better-burger-kiryat-ono",
+      "id": "66a25a9e01c4e74eb3396059"
+    },
+    {
+      "name": "גירף | צומת סביון",
+      "address": "עפרה חזה 1",
+      "eta": "30-40",
+      "price_range": 2,
+      "primary": [
+        "sushi",
+        "asian",
+        "vegetarian",
+        "thai",
+        "japanese"
+      ],
+      "rating": 169,
+      "slug": "giraffe-savion",
+      "id": "68246d6548ec4225718f89ff"
+    },
+    {
+      "name": "הפלאפל של דוד המלך",
+      "address": "עזר ומרזוק 1 קרית אונו",
+      "eta": "30-40",
+      "price_range": 2,
+      "primary": [
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "mediterranean"
+      ],
+      "rating": 8,
+      "slug": "hafalafel-shel-david-ko",
+      "id": "637a284f396fc2398447991b"
+    },
+    {
+      "name": "KFC | פתח תקווה",
+      "address": "שחם 17, פתח תקווה",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "kids-meals",
+        "burgers",
+        "street_food"
+      ],
+      "rating": 170,
+      "slug": "kfc-petah-tikva",
+      "id": "635e5312ed71224eee8c5a85"
+    },
+    {
+      "name": "פיצה סטורי | קריית אונו",
+      "address": "שלמה המלך 37, קרית אונו",
+      "eta": "30-40",
+      "price_range": 2,
+      "primary": [
+        "pizza",
+        "italian",
+        "street_food"
+      ],
+      "rating": 26,
+      "slug": "pizza-story-kiryat-ono",
+      "id": "66013ecf83f38c45bd6ef321"
+    },
+    {
+      "name": "אוטלו | רמת אפעל",
+      "address": "רפאל איתן 44, רמת גן",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "dessert",
+        "ice_cream"
+      ],
+      "rating": 47,
+      "slug": "otello-ramat-gan",
+      "id": "6554a39a5bf9273f62c340c4"
+    },
+    {
+      "name": "אושי אושי | קרית אונו",
+      "address": "קניון קרית אונו, שלמה המלך 37",
+      "eta": "30-40",
+      "price_range": 2,
+      "primary": [
+        "noodles",
+        "sushi",
+        "asian",
+        "kosher-for-passover",
+        "kosher",
+        "japanese",
+        "fish"
+      ],
+      "rating": 171,
+      "slug": "oshi-oshi-kiryat-ono",
+      "id": "5f06dfd913299b865ee08699"
+    },
+    {
+      "name": "מי מה מו כשר | קריית אונו",
+      "address": "השדרה האקדמית 1, קרית אונו ",
+      "eta": "30-40",
+      "price_range": 2,
+      "primary": [
+        "american",
+        "burgers",
+        "kosher",
+        "kosher-for-passover"
+      ],
+      "rating": 83,
+      "slug": "me-ma-mu-kiryat-ono",
+      "id": "6665b35186f09e2ca010a2eb"
+    },
+    {
+      "name": "שווארמה שיפודי הבקעה",
+      "address": "שלמה המלך 37 קרית אונו",
+      "eta": "30-40",
+      "price_range": 2,
+      "primary": [
+        "steak",
+        "kosher-for-passover",
+        "kosher",
+        "mediterranean",
+        "bbq"
+      ],
+      "rating": 253,
+      "slug": "shipudey-habika",
+      "id": "63bbd97194a9b2b3367edd44"
+    },
+    {
+      "name": "בייגל קפה | קרית אונו",
+      "address": "שלמה המלך 37 , קרית אונו",
+      "eta": "30-40",
+      "price_range": 2,
+      "primary": [
+        "cafe",
+        "sandwich",
+        "salad"
+      ],
+      "rating": 120,
+      "slug": "bagel-cafe-kiryat-ono",
+      "id": "6834dee32835b2821ee2fb0a"
+    },
+    {
+      "name": "בייגלז",
+      "address": "הנשיא 57, קריית אונו",
+      "eta": "30-40",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "street_food",
+        "kids-meals",
+        "bagel",
+        "sandwich"
+      ],
+      "rating": 5,
+      "slug": "bagelz",
+      "id": "65a4f9174920db7b1c245279"
+    },
+    {
+      "name": "פסטה ויה | קרית אונו",
+      "address": "הנשיא 57, קרית אונו, Israel",
+      "eta": "20-30",
+      "price_range": 2,
+      "primary": [
+        "italian",
+        "pasta",
+        "street_food",
+        "salad"
+      ],
+      "rating": 27,
+      "slug": "pasta-via-kiryat-ono",
+      "id": "67233151e5d4bea38d0e5c05"
+    },
+    {
+      "name": "חומוס אליהו | קריית אונו",
+      "address": "השדרה האקדמית 1, קרית אונו",
+      "eta": "45-55",
+      "price_range": 0,
+      "primary": [
+        "hummus",
+        "kosher-for-passover",
+        "kosher",
+        "kosher-lmehadrin",
+        "mediterranean"
+      ],
+      "rating": 278,
+      "slug": "hummus-eliyahu-kiryat-ono",
+      "id": "675193eb11df9b3715eb0693"
+    },
+    {
+      "name": "פסטה בסטה | גני תקווה - פתח תקוה",
+      "address": "דרך הים 14 גני תקווה",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "italian",
+        "kosher-for-passover",
+        "kosher",
+        "pasta",
+        "salad"
+      ],
+      "rating": 84,
+      "slug": "pasta-basta-ganei-tikva",
+      "id": "61eeb4fdd6a6882a7e3e5682"
+    },
+    {
+      "name": "קומפנייא | קריית אונו",
+      "address": "נעמי שמר 5 קריית אונו",
+      "eta": "35-45",
+      "price_range": 1,
+      "primary": [
+        "steak",
+        "american",
+        "kosher-for-passover",
+        "kosher",
+        "salad",
+        "mediterranean",
+        "kebab",
+        "bbq"
+      ],
+      "rating": 121,
+      "slug": "coompaniya-kiryat-ono",
+      "id": "673068893cb1bf07a180b571"
+    },
+    {
+      "name": "הונו | גבעת שמואל",
+      "address": "אורנים 1, גבעת שמואל",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "soup",
+        "sushi",
+        "asian",
+        "kosher-for-passover",
+        "kosher",
+        "japanese"
+      ],
+      "rating": 172,
+      "slug": "hono-givat-shmuel",
+      "id": "60d47c2e4f3df97be52a56b3"
+    },
+    {
+      "name": "קפה זליק | קרית אונו",
+      "address": "קניון קרית אונו, שלמה המלך 37",
+      "eta": "25-35",
+      "price_range": 2,
+      "primary": [
+        "vegan",
+        "pizza",
+        "italian",
+        "salad"
+      ],
+      "rating": 85,
+      "slug": "cafe-zelik-kiryat-ono",
+      "id": "5f0c67fb4979c8d7b8166239"
+    },
+    {
+      "name": "מוזס שופ כשר | סביון",
+      "address": "השקמה 1, סביון",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "american",
+        "kids-meals",
+        "kosher-for-passover",
+        "kosher"
+      ],
+      "rating": 254,
+      "slug": "moses-shop-savyon",
+      "id": "64f03573ac68f03b2c41df57"
+    },
+    {
+      "name": "פיצה האט | גני תקווה כשר",
+      "address": "הר יהודה 56, גני תקווה",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "italian",
+        "pizza",
+        "kids-meals",
+        "kosher-for-passover",
+        "kosher",
+        "pasta",
+        "gluten-free"
+      ],
+      "rating": 298,
+      "slug": "pizza-hut-ganei-tikva",
+      "id": "66320ea4f807190dc5719def"
+    },
+    {
+      "name": "אבולעפיה | פתח תקווה",
+      "address": "הסיבים 19",
+      "eta": "40-50",
+      "price_range": 1,
+      "primary": [
+        "bakery",
+        "kosher-for-passover",
+        "kosher",
+        "breakfast",
+        "dessert"
+      ],
+      "rating": 86,
+      "slug": "abulafia-petach-tikva",
+      "id": "5ee87b7f30db76908dcbbf5d"
+    },
+    {
+      "name": "שניצליאנו",
+      "address": "אורנים 1, גבעת שמואל",
+      "eta": "30-40",
+      "price_range": 2,
+      "primary": [
+        "chicken",
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "kosher-lmehadrin"
+      ],
+      "rating": 87,
+      "slug": "shnitzeliano",
+      "id": "60f586ced5bcda31e279ac30"
+    },
+    {
+      "name": "אינקרדיבל פוד",
+      "address": "Ha-Vradim St 11, Savyon",
+      "eta": "55-65",
+      "price_range": 2,
+      "primary": [
+        "homemade",
+        "hummus",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "salad"
+      ],
+      "rating": 48,
+      "slug": "incredible-food",
+      "id": "66375b64f8fa72440e2150d3"
+    },
+    {
+      "name": "פיצה שמש | גני תקווה",
+      "address": "עין גנים 7, גני תקווה",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "italian",
+        "pizza",
+        "kosher-for-passover",
+        "kosher",
+        "pasta"
+      ],
+      "rating": 311,
+      "slug": "pizza-shemesh-ganei-tikva",
+      "id": "648736867f343208e20138e8"
+    },
+    {
+      "name": "מוג׳וסאן | גני תקווה",
+      "address": "דרך ההדרים 7, גני תקווה",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "asian",
+        "noodles",
+        "sushi",
+        "japanese"
+      ],
+      "rating": 122,
+      "slug": "mojo-san-ganei-tikva",
+      "id": "685a5f5aeaf8a35a87a31cb4"
+    },
+    {
+      "name": "מקסיקנה | פתח תקווה",
+      "address": "תוצרת הארץ 2, פתח תקווה",
+      "eta": "55-65",
+      "price_range": 2,
+      "primary": [
+        "vegan",
+        "street_food",
+        "kids-meals",
+        "kosher-for-passover",
+        "kosher",
+        "mexican"
+      ],
+      "rating": 215,
+      "slug": "mexicana-petah-tikva",
+      "id": "5f0f07d8390c96472aa03bee"
+    },
+    {
+      "name": "דונר | יהוד",
+      "address": "גירון אברהם 15, יהוד",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "street_food",
+        "hummus",
+        "kids-meals",
+        "kosher-for-passover",
+        "kosher"
+      ],
+      "rating": 173,
+      "slug": "doner",
+      "id": "5f4e28c4f1c629cfabf86d22"
+    },
+    {
+      "name": "שווארמה מיקס",
+      "address": "אלטלף 8, יהוד",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "kebab"
+      ],
+      "rating": 123,
+      "slug": "shawarma-mix",
+      "id": "631494b285710ebf3de9ed71"
+    },
+    {
+      "name": "קפטן בורגר | קרית אונו",
+      "address": "דרך רפאל איתן 1, קרית אונו",
+      "eta": "30-40",
+      "price_range": 2,
+      "primary": [
+        "american",
+        "burgers",
+        "sandwich"
+      ],
+      "rating": 216,
+      "slug": "captain-kiryat-ono",
+      "id": "5f17eb2d06085d2ae8cf2b62"
+    },
+    {
+      "name": "רובע | קרית אונו",
+      "address": "יצחק נבון 6, קרית אונו",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "street_food",
+        "sandwich",
+        "salad"
+      ],
+      "rating": 174,
+      "slug": "rova-kiryat-ono",
+      "id": "676bd44bb3a8e451df44152e"
+    },
+    {
+      "name": "קצפת | גבעת שמואל",
+      "address": "פארק ה100, גבעת שמואל",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "ice_cream",
+        "smoothie",
+        "kosher-for-passover",
+        "kosher",
+        "kosher-lmehadrin",
+        "dessert"
+      ],
+      "rating": 88,
+      "slug": "katsefet-givat-shmuel",
+      "id": "612780449b72398833f1c719"
+    },
+    {
+      "name": "אלישקו | גבעת שמואל",
+      "address": "אורנים 1, גבעת שמואל",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "mediterranean",
+        "street_food",
+        "sandwich"
+      ],
+      "rating": 279,
+      "slug": "elishko-givat-shmuel",
+      "id": "617a9a6be428cf9383d1abbd"
+    },
+    {
+      "name": "בורגראנץ׳ | קרית אונו",
+      "address": "שלמה המלך 37, קרית אונו",
+      "eta": "30-40",
+      "price_range": 2,
+      "primary": [
+        "kids-meals",
+        "burgers",
+        "kosher",
+        "kosher-for-passover"
+      ],
+      "rating": 329,
+      "slug": "burgeranch-kiryat-ono",
+      "id": "5fad106e799e0655ac547f10"
+    },
+    {
+      "name": "Teabar | Kiryat Ono",
+      "address": "שלמה המלך 37, קרית אונו",
+      "eta": "25-35",
+      "price_range": 1,
+      "primary": [
+        "tapioca",
+        "dessert",
+        "smoothie"
+      ],
+      "rating": 9,
+      "slug": "teabar-kiryat-ono",
+      "id": "64a141ea6f12dde6dd2b9934"
+    },
+    {
+      "name": "יומי סושי ליין | פתח תקווה",
+      "address": "בר כוכבא 3 פתח תקווה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "noodles",
+        "sushi",
+        "asian",
+        "japanese",
+        "fish"
+      ],
+      "rating": 49,
+      "slug": "yomi-sushi-line-petah-tikva",
+      "id": "6098e72cb0a4cc22f98f596b"
+    },
+    {
+      "name": "בורגרס בר כשר | גבעת שמואל",
+      "address": "האורנים 1 ,גבעת שמואל ",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "street_food",
+        "american",
+        "kids-meals",
+        "kosher-for-passover",
+        "kosher",
+        "kosher-lmehadrin"
+      ],
+      "rating": 89,
+      "slug": "burgers-bar-givat-shmuel",
+      "id": "5ee758e2da907dae3b4c8002"
+    },
+    {
+      "name": "סעיד",
+      "address": "השוק 1 אור יהודה",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "american",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "mediterranean",
+        "bbq"
+      ],
+      "rating": 217,
+      "slug": "said",
+      "id": "68f9dabe487ae9495ff0aff1"
+    },
+    {
+      "name": "מה מה תפוח אדמה | קרית אונו",
+      "address": "שלמה המלך 37, קרית אונו",
+      "eta": "25-35",
+      "price_range": 1,
+      "primary": [
+        "kids-meals",
+        "kosher-lmehadrin",
+        "street_food",
+        "vegetarian"
+      ],
+      "rating": 175,
+      "slug": "mama-potato-kiryat-ono",
+      "id": "61701091f5050b6add427827"
+    },
+    {
+      "name": "מפרומה | בארות יצחק",
+      "address": "מתחם מבנה בארות יצחק",
+      "eta": "40-50",
+      "price_range": 1,
+      "primary": [
+        "homemade",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "mediterranean"
+      ],
+      "rating": 50,
+      "slug": "mafroma",
+      "id": "5f4e48cf95e4487a42d2b7dd"
+    },
+    {
+      "name": "פיצטה | קריית אונו",
+      "address": "Derekh Refa'el Eitan 1 Kiryat Ono",
+      "eta": "30-40",
+      "price_range": 2,
+      "primary": [
+        "pizza",
+        "pasta",
+        "salad"
+      ],
+      "rating": 280,
+      "slug": "pizzetta",
+      "id": "5f047d638190d7b83e6c8df4"
+    },
+    {
+      "name": "סלטים | פתח תקווה",
+      "address": "מוטה גור 9 ",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "vegetarian",
+        "kosher-for-passover",
+        "kosher",
+        "pasta",
+        "sandwich",
+        "kosher-lmehadrin",
+        "salad"
+      ],
+      "rating": 10,
+      "slug": "salateam-petach-tikva",
+      "id": "5ee774f0ec0dc5f8d9c38b99"
+    },
+    {
+      "name": "אהרוני׳ס",
+      "address": "דרך הים 14 גני תקווה",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "sandwich",
+        "street_food"
+      ],
+      "rating": 176,
+      "slug": "aharonis",
+      "id": "637df67ecbf80bccafe984be"
+    },
+    {
+      "name": "לחם בית",
+      "address": "חיים בר לב 10, אור יהודה",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "steak",
+        "homemade",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "bbq"
+      ],
+      "rating": 90,
+      "slug": "lechem-bait",
+      "id": "635fb9defcc7153958367ebe"
+    },
+    {
+      "name": "ניני צ׳ו",
+      "address": "הסיבים 18, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "vegan",
+        "noodles",
+        "sushi",
+        "asian",
+        "kids-meals",
+        "kosher-for-passover",
+        "kosher",
+        "japanese"
+      ],
+      "rating": 124,
+      "slug": "poke-by-nini-choo",
+      "id": "638f36f305060e9dc028e153"
+    },
+    {
+      "name": "גו קנטינה אסיאתית כשר | רמת אפעל",
+      "address": "דרך שיבא 10, רמת אפעל",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "soup",
+        "noodles",
+        "sushi",
+        "asian",
+        "vegetarian",
+        "kosher-for-passover",
+        "kosher",
+        "japanese"
+      ],
+      "rating": 177,
+      "slug": "go-asian-canteen-ramat-efal",
+      "id": "66f024606a244262db2ffa91"
+    },
+    {
+      "name": "סמרקנד | אור יהודה",
+      "address": "ההגנה 4, אור יהודה",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "steak",
+        "kosher-for-passover",
+        "kosher",
+        "mediterranean",
+        "bbq"
+      ],
+      "rating": 125,
+      "slug": "samarkand-or-yehuda",
+      "id": "5f6c64cc9d8f94c271051b92"
+    },
+    {
+      "name": "אייס בר | קריית אונו",
+      "address": "שלמה המלך 37, קרית אונו",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "ice_cream",
+        "smoothie",
+        "kosher-for-passover",
+        "kosher",
+        "dessert"
+      ],
+      "rating": 218,
+      "slug": "ice-bar-kiryat-ono",
+      "id": "6234d0dd9f524f6817b6afac"
+    },
+    {
+      "name": "ביתא קפה | סביון",
+      "address": "השקמה 1, סביון",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "vegan",
+        "vegetarian",
+        "pasta",
+        "sandwich",
+        "salad"
+      ],
+      "rating": 91,
+      "slug": "beta-cafe-savyon",
+      "id": "5f1d81b6a1b37cef8c37ea93"
+    },
+    {
+      "name": "פיתה בשר | רמת אפעל",
+      "address": "ביה״ח תל השומר",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "steak",
+        "chicken",
+        "israeli",
+        "sandwich",
+        "bbq"
+      ],
+      "rating": 281,
+      "slug": "pita-basar-tel-hashomer",
+      "id": "68a2f019a53be07032f9de38"
+    },
+    {
+      "name": "גוד מורנינג סאנשיין | קרית אונו",
+      "address": "נעמי שמר 5, קרית אונו",
+      "eta": "30-40",
+      "price_range": 2,
+      "primary": [
+        "brunch",
+        "cafe",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "breakfast",
+        "salad"
+      ],
+      "rating": 178,
+      "slug": "good-morning-sunshine-kiryat-ono",
+      "id": "66824d75f6f7013a9effd263"
+    },
+    {
+      "name": "‫B-FRESH | קרית אונו",
+      "address": "שלמה המלך 37, קרית אונו",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "vegan",
+        "smoothie",
+        "vegetarian",
+        "kosher-for-passover",
+        "kosher",
+        "healthy"
+      ],
+      "rating": 255,
+      "slug": "be-fresh-kiryat-ono",
+      "id": "62ef80837a4932ef8f34d4fb"
+    },
+    {
+      "name": "ווק טו ווק הכשר | פתח תקווה",
+      "address": "תוצרת הארץ 3",
+      "eta": "50-60",
+      "price_range": 1,
+      "primary": [
+        "noodles",
+        "sushi",
+        "asian",
+        "japanese",
+        "kosher-for-passover",
+        "kosher",
+        "thai",
+        "chinese"
+      ],
+      "rating": 126,
+      "slug": "wok-to-walk-petach-tikva",
+      "id": "5ede60ec7e7dcbe9a811a3d8"
+    },
+    {
+      "name": "בכור את שושי | פתח תקווה",
+      "address": "ז׳בוטנסקי 63, פתח תקווה",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "chicken",
+        "homemade",
+        "kosher-for-passover",
+        "kosher",
+        "mediterranean"
+      ],
+      "rating": 2,
+      "slug": "bechor-and-shoshi-petah-tikva",
+      "id": "648b1e6117c8276b9965e4d7"
+    },
+    {
+      "name": "דלי קרים | גני תקווה",
+      "address": "הכרמל 20 גני תקווה",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "dessert",
+        "ice_cream"
+      ],
+      "rating": 219,
+      "slug": "deli-cream-ganei-tikva",
+      "id": "5f8d5c658af9796ec73f5d5b"
+    },
+    {
+      "name": "חומוס  אור יהודה",
+      "address": "הראשונים 5, אור יהודה",
+      "eta": "35-45",
+      "price_range": 1,
+      "primary": [
+        "vegan",
+        "street_food",
+        "hummus",
+        "kosher-for-passover",
+        "kosher",
+        "kosher-lmehadrin",
+        "mediterranean"
+      ],
+      "rating": 51,
+      "slug": "hummus-or-yahuda",
+      "id": "5f451db19e91d990cfec9797"
+    },
+    {
+      "name": "‫קרמרי דה ל׳אקלר | גבעת שמואל",
+      "address": "מנחם בגין 38, גבעת שמואל",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "kosher-for-passover",
+        "dessert",
+        "kosher",
+        "ice_cream"
+      ],
+      "rating": 299,
+      "slug": "cremerie-de-leclair-givat-shmuel",
+      "id": "636a4250066fbb424d6857eb"
+    },
+    {
+      "name": "פאפא ג'ינוס פיצה | רמת אפעל",
+      "address": "החוגה 2, רמת אפעל",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "pizza",
+        "italian"
+      ],
+      "rating": 92,
+      "slug": "papa-ginos-pizza",
+      "id": "5f69ec9523e4a371d9b06cd9"
+    },
+    {
+      "name": "אצה סושי בר מהדרין | פתח תקווה",
+      "address": "העצמאות 65, פתח תקווה ",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "noodles",
+        "sushi",
+        "asian",
+        "kosher-for-passover",
+        "kosher-lmehadrin",
+        "kosher",
+        "japanese"
+      ],
+      "rating": 179,
+      "slug": "atza-petah-tikva",
+      "id": "6488329917c8276b9965e00c"
+    },
+    {
+      "name": "ג׳אפן ג׳אפן | גבעת שמואל",
+      "address": "מטה גור 14, גבעת שמואל",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "noodles",
+        "sushi",
+        "asian",
+        "kosher-for-passover",
+        "kosher",
+        "japanese",
+        "fish"
+      ],
+      "rating": 220,
+      "slug": "japan-japan-givat",
+      "id": "630377c15aa4a21a760ecf75"
+    },
+    {
+      "name": "בורקס קדוש",
+      "address": "הברון הירש 5, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 1,
+      "primary": [
+        "bakery",
+        "kosher-for-passover",
+        "kosher",
+        "breakfast",
+        "mediterranean"
+      ],
+      "rating": 28,
+      "slug": "burekas-kadosh",
+      "id": "626a4f208b0b4bd6cec8a36b"
+    },
+    {
+      "name": "מינה טומיי | יהוד",
+      "address": "אלטלף 4, יהוד",
+      "eta": "40-50",
+      "price_range": 3,
+      "primary": [
+        "noodles",
+        "sushi",
+        "asian",
+        "japanese",
+        "fish"
+      ],
+      "rating": 180,
+      "slug": "minna-tomei-yehud",
+      "id": "64ecb3d4b0201c75e7c09a8a"
+    },
+    {
+      "name": "שווארמה אורלוב | פתח תקווה",
+      "address": "אורלוב 55 פתח תקווה",
+      "eta": "40-50",
+      "price_range": 1,
+      "primary": [
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "mediterranean"
+      ],
+      "rating": 52,
+      "slug": "shawarma-orlov",
+      "id": "60eaf13bce948d33146fbadd"
+    },
+    {
+      "name": "אסלאן אקספרס",
+      "address": "המעגל 58, קרית אונו",
+      "eta": "25-35",
+      "price_range": 2,
+      "primary": [
+        "steak",
+        "bbq"
+      ],
+      "rating": 338,
+      "slug": "aslan-express",
+      "id": "695e1a42c869b22d03edfda6"
+    },
+    {
+      "name": "קפה גרג | גבעת שמואל",
+      "address": "מנחם בגין 30, קניון עמי, גבעת שמואל",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "pizza",
+        "pasta",
+        "sandwich",
+        "kosher-lmehadrin"
+      ],
+      "rating": 221,
+      "slug": "cafe-greg12",
+      "id": "5ffc68f408702e137fcc2d05"
+    },
+    {
+      "name": "מיטאפ",
+      "address": "מוהליבר 2, יהוד",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "steak",
+        "street_food",
+        "american",
+        "kosher-for-passover",
+        "kosher",
+        "bbq"
+      ],
+      "rating": 53,
+      "slug": "meatup",
+      "id": "694bb38811aa865ce60fe69a"
+    },
+    {
+      "name": "בורגרים | גבעת שמואל",
+      "address": "מנחם בגין 38, גבעת שמואל",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "kids-meals",
+        "kosher-for-passover",
+        "american",
+        "kosher",
+        "kosher-lmehadrin",
+        "lunch",
+        "salad"
+      ],
+      "rating": 222,
+      "slug": "burgerim-givaat-shmuel",
+      "id": "67890ac64fa38126313598aa"
+    },
+    {
+      "name": "בומבה בורגר | רמת אפעל",
+      "address": "שד האורנים רמת אפעל 10",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "kosher-for-passover",
+        "kosher",
+        "burgers",
+        "street_food"
+      ],
+      "rating": 93,
+      "slug": "bomba-burger-pt",
+      "id": "60f42db78408933dc263568c"
+    },
+    {
+      "name": "פיצה יואב | גני תקווה",
+      "address": "דרך ההדרים 7, גני תקווה",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "pizza",
+        "street_food",
+        "vegetarian"
+      ],
+      "rating": 223,
+      "slug": "pizza-yoav-ganei-tikva",
+      "id": "668a7128b7ae6f6f0d487f8e"
+    },
+    {
+      "name": "מטבחוצ",
+      "address": "רם כהן 6 יהוד ",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "kosher-for-passover",
+        "kosher",
+        "burgers",
+        "street_food"
+      ],
+      "rating": 11,
+      "slug": "mitbahuts",
+      "id": "65269ec0efb86a4b638404d3"
+    },
+    {
+      "name": "ריבאר כשר | רמת אפעל",
+      "address": "דרך שיבא 14, רמת גן",
+      "eta": "30-40",
+      "price_range": 2,
+      "primary": [
+        "vegan",
+        "smoothie",
+        "kosher-for-passover",
+        "kosher",
+        "breakfast"
+      ],
+      "rating": 282,
+      "slug": "rebar-ramat-efal",
+      "id": "660a6fabec174c407e3189d3"
+    },
+    {
+      "name": "המרקייה",
+      "address": "המכבים 35, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 1,
+      "primary": [
+        "soup",
+        "vegan",
+        "vegetarian",
+        "kosher-for-passover",
+        "kosher"
+      ],
+      "rating": 94,
+      "slug": "hamarakiya",
+      "id": "64c0d28f2bfcaa70319e9e78"
+    },
+    {
+      "name": "סביח פרישמן | גבעת שמואל",
+      "address": "אורנים 1",
+      "eta": "35-45",
+      "price_range": 1,
+      "primary": [
+        "street_food",
+        "mediterranean",
+        "sandwich",
+        "kosher-lmehadrin"
+      ],
+      "rating": 181,
+      "slug": "sabich-frishman-givat-shmuel",
+      "id": "66c5b04cc7cc2b501ae2f829"
+    },
+    {
+      "name": "BBB | פתח תקווה",
+      "address": "דרך יצחק רבין 17, פתח תקווה, מתחם יכין סנטר",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "street_food",
+        "kids-meals",
+        "american",
+        "sandwich"
+      ],
+      "rating": 182,
+      "slug": "bbb-petah-tikva",
+      "id": "63b69ab99b58be5d64c463f0"
+    },
+    {
+      "name": "הודו הגדולה",
+      "address": "סטרומה 8 פתח תקווה",
+      "eta": "55-65",
+      "price_range": 2,
+      "primary": [
+        "vegan",
+        "vegetarian",
+        "kosher-for-passover",
+        "kosher",
+        "indian",
+        "gluten-free"
+      ],
+      "rating": 29,
+      "slug": "great-india",
+      "id": "676c028aba9dfa14e920be4e"
+    },
+    {
+      "name": "השניצל של מוטי",
+      "address": "סעדיה חתוכה 38, יהוד",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "street_food",
+        "homemade",
+        "sandwich"
+      ],
+      "rating": 224,
+      "slug": "haschnitzel-shel-motti",
+      "id": "63399950ce06548494df55d6"
+    },
+    {
+      "name": "אלוהה | פתח תקווה",
+      "address": "יצחק רבין 4, פתח תקווה",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "asian",
+        "kosher-for-passover",
+        "kosher",
+        "street_food"
+      ],
+      "rating": 30,
+      "slug": "aloha-petah-tikva",
+      "id": "67c8118c0418db0599f06614"
+    },
+    {
+      "name": "פלאפל בריבוע | גבעת שמואל",
+      "address": "יוני נתניהו 23",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "vegan",
+        "falafel",
+        "hummus",
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "mediterranean",
+        "salad"
+      ],
+      "rating": 127,
+      "slug": "falafel-baribua-petach-tikva",
+      "id": "5ee12836ae170037de2e665c"
+    },
+    {
+      "name": "טורו סושי",
+      "address": "יצחק רבין 5, אור יהודה",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "noodles",
+        "sushi",
+        "asian",
+        "kosher-for-passover",
+        "kosher-lmehadrin",
+        "kosher",
+        "japanese"
+      ],
+      "rating": 225,
+      "slug": "toro-sushi-or-yehuda",
+      "id": "673b3fbd9f214569298af589"
+    },
+    {
+      "name": "סושי במושבה",
+      "address": "מוטה גור 9, פתח תקווה",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "asian",
+        "fish",
+        "sushi",
+        "japanese"
+      ],
+      "rating": 31,
+      "slug": "sushi-bamoshava",
+      "id": "6191415379cab885bce3823c"
+    },
+    {
+      "name": "חומוס אחדות",
+      "address": "שמחוני אסף 4, פתח תקווה",
+      "eta": "35-45",
+      "price_range": 1,
+      "primary": [
+        "street_food",
+        "hummus",
+        "kosher-for-passover",
+        "kosher",
+        "mediterranean"
+      ],
+      "rating": 54,
+      "slug": "hummus-achdut",
+      "id": "625cf215e6b67a20a114e69a"
+    },
+    {
+      "name": "לה פסטה",
+      "address": "ההגנה 11, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 1,
+      "primary": [
+        "italian",
+        "kosher-for-passover",
+        "kosher",
+        "pasta",
+        "salad"
+      ],
+      "rating": 32,
+      "slug": "la-pasta",
+      "id": "62f904e57b527e0a6f28838d"
+    },
+    {
+      "name": "שניצל השומר",
+      "address": "אהרון קציר 1, רמת גן ",
+      "eta": "20-30",
+      "price_range": 2,
+      "primary": [
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "mediterranean",
+        "salad"
+      ],
+      "rating": 300,
+      "slug": "schnitzel-hashomer",
+      "id": "66c6276d6fd9a974917b29ca"
+    },
+    {
+      "name": "ביסטרו דלי ובר קפה",
+      "address": "ז'בוטינסקי 512, גבעת שמואל",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "cafe",
+        "kosher-for-passover",
+        "kosher",
+        "pasta",
+        "salad"
+      ],
+      "rating": 6,
+      "slug": "bistro-deli-coffe-bar",
+      "id": "67a1f1c83355632b3ebf104d"
+    },
+    {
+      "name": "בית הפנקייק המקורי | פתח תקווה",
+      "address": "גיסין 17",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "breakfast",
+        "dessert"
+      ],
+      "rating": 95,
+      "slug": "pancakes-house-pt",
+      "id": "627d05dc0a2c247a22eecd61"
+    },
+    {
+      "name": "בורגר מרקט | רמת אפעל",
+      "address": "דרך שיבא 2, תל אביב",
+      "eta": "30-40",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "street_food",
+        "lunch"
+      ],
+      "rating": 55,
+      "slug": "burger-market-shiba",
+      "id": "692edf566f32d6dcf16e0d07"
+    },
+    {
+      "name": "רוביניק | פתח תקווה",
+      "address": "העצמאות 63, פתח תקווה",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "dessert",
+        "ice_cream",
+        "kosher-lmehadrin"
+      ],
+      "rating": 128,
+      "slug": "rubinik-art-cream-petah-tikva",
+      "id": "617157061171fa630d32b402"
+    },
+    {
+      "name": "מוצ'ה פיצה | פתח תקווה",
+      "address": "שחם 17, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "italian",
+        "pizza",
+        "kosher-for-passover",
+        "kosher",
+        "pasta",
+        "kosher-lmehadrin",
+        "salad"
+      ],
+      "rating": 12,
+      "slug": "mucha-pizza-petah-tikva",
+      "id": "63628794976c13dc559c756d"
+    },
+    {
+      "name": "דולצ׳ה מילה",
+      "address": "השקמה 1, סביון",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "dessert",
+        "ice_cream"
+      ],
+      "rating": 56,
+      "slug": "dolce-mila",
+      "id": "6804a77964322d3a118d7488"
+    },
+    {
+      "name": "נדב שווארמה ופלאפל",
+      "address": "עוזר חיים 38, פתח תקווה ",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "falafel",
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "mediterranean",
+        "kebab"
+      ],
+      "rating": 33,
+      "slug": "nadav-shawarma-and-falafel",
+      "id": "64bd04214c9d0440988340d5"
+    },
+    {
+      "name": "פארוק",
+      "address": "בן פורת 70, אור יהודה",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "steak",
+        "kosher-for-passover",
+        "kosher",
+        "kosher-lmehadrin",
+        "mediterranean",
+        "kebab",
+        "bbq"
+      ],
+      "rating": 183,
+      "slug": "faruk-or-yehuda",
+      "id": "675571123b16fe1e3200b419"
+    },
+    {
+      "name": "פיצה רונדו | גני תקווה",
+      "address": "הרי יהודה 67, גני תקווה",
+      "eta": "30-40",
+      "price_range": 2,
+      "primary": [
+        "pizza",
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "pasta",
+        "kosher-lmehadrin"
+      ],
+      "rating": 256,
+      "slug": "pizza-rondo-ganei-tikva",
+      "id": "6564906157b4a459c1a5dfa4"
+    },
+    {
+      "name": "סואשי",
+      "address": "הסיבים 9, פתח תקווה",
+      "eta": "60-70",
+      "price_range": 2,
+      "primary": [
+        "sushi",
+        "asian",
+        "kosher-for-passover",
+        "kosher",
+        "japanese",
+        "fish"
+      ],
+      "rating": 57,
+      "slug": "soashi",
+      "id": "62021fd88957a9e3f7f86ad9"
+    },
+    {
+      "name": "סיקרט צ׳יקן",
+      "address": "רם כהן 6, יהוד",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "chicken",
+        "street_food",
+        "american",
+        "kosher-for-passover",
+        "kosher"
+      ],
+      "rating": 58,
+      "slug": "secret-chicken",
+      "id": "678e46390c8bbf222715cdf0"
+    },
+    {
+      "name": "חלה'ס | פתח תקווה",
+      "address": "גיסין 17 פ״ת",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "vegan",
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "mediterranean",
+        "salad"
+      ],
+      "rating": 96,
+      "slug": "chalas",
+      "id": "65dc96c2d3c36d3bf8117106"
+    },
+    {
+      "name": "פרש-שופ | כפר גנים פתח תקווה",
+      "address": "העצמאות 65, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 1,
+      "primary": [
+        "ice_cream",
+        "smoothie",
+        "kosher-for-passover",
+        "kosher",
+        "dessert"
+      ],
+      "rating": 129,
+      "slug": "freshop-petah-tikva",
+      "id": "61e41c2a194f53b295b84389"
+    },
+    {
+      "name": "שיפודי הגבעה",
+      "address": "אורנים 1, גבעת שמואל",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "steak",
+        "kosher-for-passover",
+        "kosher",
+        "kosher-lmehadrin",
+        "mediterranean",
+        "bbq"
+      ],
+      "rating": 283,
+      "slug": "shipudey-hagiva",
+      "id": "659fcb23d8303cb7dc144333"
+    },
+    {
+      "name": "שניצליגה",
+      "address": "ראשון לציון 1, פתח תקווה",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "mediterranean",
+        "salad"
+      ],
+      "rating": 59,
+      "slug": "schnitzeliga",
+      "id": "65ed78dc4237890dc2175842"
+    },
+    {
+      "name": "מוסררה | תל השומר",
+      "address": "מרכז גימיון - בית חולים תל השומר",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "steak",
+        "homemade",
+        "hummus",
+        "kosher-for-passover",
+        "kosher",
+        "bbq"
+      ],
+      "rating": 34,
+      "slug": "pinati-tel-hashomer",
+      "id": "6193b0a1cb8b29886687abf9"
+    },
+    {
+      "name": "מר פרצל | קריית אונו",
+      "address": "Shlomo ha-Melekh St 37, Kiryat Ono",
+      "eta": "30-40",
+      "price_range": 1,
+      "primary": [
+        "street_food",
+        "kids-meals",
+        "kosher-for-passover",
+        "bakery",
+        "kosher",
+        "breakfast",
+        "dessert"
+      ],
+      "rating": 301,
+      "slug": "mr-pretzel-kiryat-ono",
+      "id": "5fd9cc0cc0b79e1c861e9ec3"
+    },
+    {
+      "name": "פסטה פסטה | רמת גן",
+      "address": "שיבא תל השומר, Ramat Gan",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "kosher-for-passover",
+        "kosher",
+        "pasta",
+        "kosher-lmehadrin",
+        "salad"
+      ],
+      "rating": 257,
+      "slug": "fasta-pasta-ramat-gan",
+      "id": "68c137935d5d5268ed909157"
+    },
+    {
+      "name": "ווק ריפבליק | פתח תקווה",
+      "address": "פינסקר 72, פתח תקווה",
+      "eta": "40-50",
+      "price_range": 1,
+      "primary": [
+        "vegan",
+        "noodles",
+        "asian",
+        "street_food",
+        "vegetarian",
+        "thai"
+      ],
+      "rating": 97,
+      "slug": "wok-republic-petach-tikva",
+      "id": "5ede7321f4ff17c48764f00f"
+    },
+    {
+      "name": "גומבה | פתח תקווה",
+      "address": "לשם 11",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "pizza",
+        "italian",
+        "pasta"
+      ],
+      "rating": 60,
+      "slug": "goomba-petah-tikva",
+      "id": "61f640a243dc75e6210f2db1"
+    },
+    {
+      "name": "אלישקו אקספרס",
+      "address": "אורנים 1, גבעת שמואל",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "steak",
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "bbq"
+      ],
+      "rating": 312,
+      "slug": "elishko-besarim",
+      "id": "63ea48a358dd127538e131d3"
+    },
+    {
+      "name": "נקניק בוטיק",
+      "address": "Ein Ganim St 8, Ganei Tikva",
+      "eta": "25-35",
+      "price_range": 2,
+      "primary": [
+        "kosher-for-passover",
+        "street_food",
+        "kosher",
+        "sandwich"
+      ],
+      "rating": 130,
+      "slug": "naknik-boutique",
+      "id": "6891b0d70109761b7de4880d"
+    },
+    {
+      "name": "מילמן",
+      "address": "ברקת 9, פתח תקווה",
+      "eta": "60-70",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "steak",
+        "homemade",
+        "american",
+        "kosher-for-passover",
+        "kosher",
+        "bbq"
+      ],
+      "rating": 131,
+      "slug": "mealman",
+      "id": "6829b41575557d812c330149"
+    },
+    {
+      "name": "תאי צ׳ו",
+      "address": "Bareket St 9, Petah Tikva",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "vegan",
+        "noodles",
+        "asian",
+        "street_food",
+        "vegetarian"
+      ],
+      "rating": 61,
+      "slug": "thai-choo",
+      "id": "6728aab5f5a4c00ba4387919"
+    },
+    {
+      "name": "ריבר סושי בר | פתח תקווה",
+      "address": "השחם 36",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "noodles",
+        "sushi",
+        "asian",
+        "japanese",
+        "fish"
+      ],
+      "rating": 184,
+      "slug": "river-petah-tikva",
+      "id": "606c55162669ad2f02c5aa14"
+    },
+    {
+      "name": "קפה ליון | אור יהודה",
+      "address": "יצחק רבין 5, אור יהודה",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "kosher-for-passover",
+        "kosher",
+        "pasta",
+        "sandwich",
+        "kosher-lmehadrin",
+        "salad"
+      ],
+      "rating": 226,
+      "slug": "cafe-lyon-or-yehuda",
+      "id": "61a3791c740360de85cdb8aa"
+    },
+    {
+      "name": "סנדוויץ׳ בר מוקפץ | אור יהודה",
+      "address": "יחזקאל קזז 12, אור יהודה",
+      "eta": "30-40",
+      "price_range": 2,
+      "primary": [
+        "noodles",
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich"
+      ],
+      "rating": 258,
+      "slug": "hamukpats",
+      "id": "67570875ceb3346107ceda3c"
+    },
+    {
+      "name": "רול בורגר",
+      "address": "ישעיהו משורר 11, פתח תקווה",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "kosher-lmehadrin",
+        "salad"
+      ],
+      "rating": 62,
+      "slug": "roll-burger",
+      "id": "64a410afaf78e0371484c04a"
+    },
+    {
+      "name": "שווארמה מלאבס",
+      "address": "חיים עוזר 4, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "street_food",
+        "american",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "bbq"
+      ],
+      "rating": 132,
+      "slug": "shawarma-melabes",
+      "id": "6280eaa3f4fbcd89e64ae70c"
+    },
+    {
+      "name": "הדרים | קרית אונו",
+      "address": "דרך דורי יעקב 7, קרית אונו",
+      "eta": "20-30",
+      "price_range": 1,
+      "primary": [
+        "dessert",
+        "smoothie"
+      ],
+      "rating": 284,
+      "slug": "citrus",
+      "id": "5f3a4df51649aaba74fabeff"
+    },
+    {
+      "name": "נאפיס | פתח תקווה",
+      "address": "הפסגות 9, פתח תקווה",
+      "eta": "55-65",
+      "price_range": 2,
+      "primary": [
+        "asian",
+        "italian",
+        "kids-meals",
+        "street_food"
+      ],
+      "rating": 259,
+      "slug": "nafis-petah-tikva",
+      "id": "5f1da4c74ca56066e7018ba0"
+    },
+    {
+      "name": "לנדוור הכשר למהדרין | גבעת שמואל",
+      "address": "מנחם בגין 38, גבעת שמואל, מתחם רוגובין",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "kids-meals",
+        "cafe",
+        "kosher-for-passover",
+        "kosher",
+        "kosher-lmehadrin",
+        "salad"
+      ],
+      "rating": 260,
+      "slug": "landwer-cafe-givat-shmuel",
+      "id": "5f22c0b6148581a059f4b908"
+    },
+    {
+      "name": "טורקיש גריל",
+      "address": "העבודה 2, אור יהודה ",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "mediterranean",
+        "kebab",
+        "sandwich"
+      ],
+      "rating": 330,
+      "slug": "turkish-grill-or-yehuda",
+      "id": "671f839eeb755f61f46353fb"
+    },
+    {
+      "name": "באפלו | פתח תקווה",
+      "address": "Derech Yitshak Rabin 2, Petah Tikva",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "mexican"
+      ],
+      "rating": 133,
+      "slug": "buffalo-petah-tikva",
+      "id": "6926dfa21b930a1df481c82c"
+    },
+    {
+      "name": "ווינגז",
+      "address": "Ha'arava St 1, Giv'at Shmuel",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "chicken",
+        "street_food",
+        "kosher-for-passover",
+        "kosher"
+      ],
+      "rating": 98,
+      "slug": "wingzgs",
+      "id": "657f0967a3c2ab43f2221b24"
+    },
+    {
+      "name": "אגאדיר | פתח תקווה",
+      "address": "שחם 30",
+      "eta": "45-55",
+      "price_range": 3,
+      "primary": [
+        "soup",
+        "burgers",
+        "steak",
+        "american",
+        "bbq"
+      ],
+      "rating": 285,
+      "slug": "agadir-petach-tikva",
+      "id": "5edf3951fd6d12098ec320dd"
+    },
+    {
+      "name": "טורטיוס",
+      "address": "שדרות אליהו סעדון 128, אור יהודה",
+      "eta": "45-55",
+      "price_range": 1,
+      "primary": [
+        "burgers",
+        "street_food",
+        "kids-meals",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich"
+      ],
+      "rating": 185,
+      "slug": "tortillios",
+      "id": "5fb63b33981dd1ea92754f7f"
+    },
+    {
+      "name": "ברגר קינג כשר | כפר גנים",
+      "address": "העצמאות 63, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "street_food",
+        "kids-meals",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich"
+      ],
+      "rating": 319,
+      "slug": "burger-king-kfar-ganim",
+      "id": "6485c7f43cbfa52aa6852d70"
+    },
+    {
+      "name": "פלאפל חתוכה | פתח תקווה",
+      "address": "ההסתדרות 4, פתח תקווה ",
+      "eta": "50-60",
+      "price_range": 1,
+      "primary": [
+        "falafel",
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "kosher-lmehadrin",
+        "mediterranean"
+      ],
+      "rating": 63,
+      "slug": "falafel-hatuka",
+      "id": "61b9cf97746c16a318dcd5fc"
+    },
+    {
+      "name": "חומוס מדאמס | גבעת שמואל",
+      "address": "מנחם בגין 38 גבעת שמואל, מתחם רוגוזין",
+      "eta": "35-45",
+      "price_range": 1,
+      "primary": [
+        "vegan",
+        "hummus",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "mediterranean"
+      ],
+      "rating": 134,
+      "slug": "hummus-meddamas-givat-shmuel",
+      "id": "5f7edd75d855042cc5c2314d"
+    },
+    {
+      "name": "פלאפל צ׳ומה",
+      "address": "בן גוריון 20, גבעת שמואל",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "falafel",
+        "hummus",
+        "kosher-for-passover",
+        "kosher",
+        "mediterranean"
+      ],
+      "rating": 13,
+      "slug": "falafel-chuma",
+      "id": "656c89213429db432dc14c52"
+    },
+    {
+      "name": "סארו",
+      "address": "פינסקר 23 א, פתח תקווה",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "italian",
+        "salad"
+      ],
+      "rating": 99,
+      "slug": "saro",
+      "id": "68663d67af52921106d622f7"
+    },
+    {
+      "name": "ג׳ט לק | פתח תקווה",
+      "address": "תוצרת הארץ 2",
+      "eta": "55-65",
+      "price_range": 2,
+      "primary": [
+        "ice_cream",
+        "kids-meals",
+        "kosher-for-passover",
+        "kosher",
+        "kosher-lmehadrin",
+        "dessert"
+      ],
+      "rating": 332,
+      "slug": "jetlek-petach-tikva",
+      "id": "5ed8d8309d01f446a64941cb"
+    },
+    {
+      "name": "פיצה פרגו | יהוד",
+      "address": "Derech Moshe Dayan 3, Yehud-Monosson",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "italian",
+        "pizza",
+        "kosher-for-passover",
+        "kosher",
+        "salad"
+      ],
+      "rating": 333,
+      "slug": "pizza-prego-yehud",
+      "id": "64c23d1d969adb2ad4d3d8e9"
+    },
+    {
+      "name": "ניו יורק קריספי צ׳יקן",
+      "address": "הקנין הגדול, זאב ז'בוטינסקי 72",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "chicken",
+        "street_food",
+        "kosher-for-passover",
+        "kosher"
+      ],
+      "rating": 186,
+      "slug": "new-york-crispy-chicken",
+      "id": "5ed78d8cfee479fb6df7ca33"
+    },
+    {
+      "name": "שיפודי ציפורה | פתח תקווה",
+      "address": "יצחק רבין 17, פתח תקווה",
+      "eta": "55-65",
+      "price_range": 2,
+      "primary": [
+        "steak",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "mediterranean",
+        "bbq"
+      ],
+      "rating": 261,
+      "slug": "shipudey-tzipora-petah-tikva",
+      "id": "65edb424e8c2375b0efb8325"
+    },
+    {
+      "name": "Sunkiss | סאן קיס",
+      "address": "מוהליבר 2 יהוד",
+      "eta": "45-55",
+      "price_range": 3,
+      "primary": [
+        "asian",
+        "noodles",
+        "sushi",
+        "japanese"
+      ],
+      "rating": 187,
+      "slug": "sunkiss-yehud",
+      "id": "6968a9a848bb89d4c0f077ee"
+    },
+    {
+      "name": "בית הוופל והדונאטס | פתח תקווה",
+      "address": "גיסין 17",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [],
+      "rating": 135,
+      "slug": "house-of-donuts-petah-tikva",
+      "id": "6894511cd027930ff1f5c38a"
+    },
+    {
+      "name": "אלוף הבשרים",
+      "address": "יחזקאל קזז 12 אור יהודה",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "steak",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "kosher-lmehadrin",
+        "mediterranean",
+        "kebab",
+        "bbq"
+      ],
+      "rating": 286,
+      "slug": "aluf-habesarim",
+      "id": "683ffcf38caba75cf58dc76b"
+    },
+    {
+      "name": "ארציאלי פיצה | קריית אונו",
+      "address": "נעמי שמר 5, קרית אונו",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "pizza",
+        "italian",
+        "street_food"
+      ],
+      "rating": 64,
+      "slug": "artzieli-pizza-kiryat-ono",
+      "id": "658aa9ca883fab0531db4972"
+    },
+    {
+      "name": "בלאק הכשר | הקניון הגדול פתח תקווה",
+      "address": "זאב ז׳בוטינסקי 72",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "american",
+        "kids-meals",
+        "kosher-for-passover",
+        "kosher"
+      ],
+      "rating": 188,
+      "slug": "black-petah-tikva-big-mall",
+      "id": "61c1db03880551fb84ceb8d3"
+    },
+    {
+      "name": "לה קרנה | פתח תקווה",
+      "address": "תוצרת הארץ 1",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "sandwich",
+        "burgers",
+        "kosher",
+        "kosher-for-passover"
+      ],
+      "rating": 136,
+      "slug": "la-carne",
+      "id": "5edb6d42425274660f48c286"
+    },
+    {
+      "name": "תמרה | פתח תקווה",
+      "address": "תוצרת הארץ 3",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "vegan",
+        "smoothie",
+        "kosher-for-passover",
+        "kosher",
+        "dessert"
+      ],
+      "rating": 137,
+      "slug": "tamara-petah-tikva",
+      "id": "5f746eb9031321e476d25fd2"
+    },
+    {
+      "name": "קוקו חביתה",
+      "address": "יחזקאל קזז 11 אור יהודה",
+      "eta": "40-50",
+      "price_range": 1,
+      "primary": [
+        "vegetarian",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "breakfast"
+      ],
+      "rating": 65,
+      "slug": "koko-chavita",
+      "id": "686629aa099a081e2f931449"
+    },
+    {
+      "name": "שיפודי חן | פתח תקווה",
+      "address": "מוטה גור 7",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "kosher-for-passover",
+        "kosher",
+        "street_food"
+      ],
+      "rating": 313,
+      "slug": "shipudei-chen",
+      "id": "5ed92fec7eabb999140b0912"
+    },
+    {
+      "name": "פיצה פפיניו | קניון סירקין",
+      "address": "קניון סירקין, פרידמן אלעזר 9",
+      "eta": "50-60",
+      "price_range": 1,
+      "primary": [
+        "italian",
+        "pizza",
+        "kosher-for-passover",
+        "kosher",
+        "kosher-lmehadrin",
+        "salad"
+      ],
+      "rating": 66,
+      "slug": "pizza-peppinio",
+      "id": "60058090b0f4a38180649170"
+    },
+    {
+      "name": "לאפלס - החומוס והפלאפל ",
+      "address": "עוזר חיים 10",
+      "eta": "45-55",
+      "price_range": 1,
+      "primary": [
+        "vegan",
+        "hummus",
+        "kosher-for-passover",
+        "kosher",
+        "kosher-lmehadrin",
+        "salad"
+      ],
+      "rating": 138,
+      "slug": "lafels-hummus",
+      "id": "5ecd35167d01f7f01e3b4306"
+    },
+    {
+      "name": "מאפה, קפה וסימפטיה",
+      "address": "חובבי ציון 4 פתח תקווה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "bakery",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "breakfast",
+        "dessert"
+      ],
+      "rating": 3,
+      "slug": "pastry-coffee-and-sympathy",
+      "id": "688f6b3647133d1f04299af1"
+    },
+    {
+      "name": "קפה לוסיל",
+      "address": "Derech Moshe Dayan 3, Yehud-Monosson",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "italian",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "kosher-lmehadrin",
+        "salad"
+      ],
+      "rating": 139,
+      "slug": "cafe-lucille",
+      "id": "64b516d16e95633c5b125e84"
+    },
+    {
+      "name": "פיצה אחד העם | גבעת שמואל",
+      "address": "Jabotinsky St 512, Giv'at Shmuel",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "pizza",
+        "kosher-for-passover",
+        "kosher",
+        "pasta",
+        "salad"
+      ],
+      "rating": 67,
+      "slug": "pizza-ahad-haam-givat-shalom",
+      "id": "6728d1f7f5a4c00ba4387964"
+    },
+    {
+      "name": "מסעדת אחלה",
+      "address": "גיסין אבשלום 9",
+      "eta": "65-75",
+      "price_range": 2,
+      "primary": [
+        "steak",
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "mediterranean",
+        "bbq"
+      ],
+      "rating": 287,
+      "slug": "achla-restaurant",
+      "id": "5ed4b71904bbcd5ded4b3b26"
+    },
+    {
+      "name": "גרין האוס | רמת אפעל",
+      "address": "שדרות האורנים 2 רמת אפעל",
+      "eta": "30-40",
+      "price_range": 2,
+      "primary": [
+        "pizza",
+        "pasta",
+        "salad"
+      ],
+      "rating": 35,
+      "slug": "green-house-ramat-effal",
+      "id": "68f494bebccf398a2a71f429"
+    },
+    {
+      "name": "פיצה סטריט | יהוד",
+      "address": "סעדיה חתוכה 31, יהוד",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "italian",
+        "pizza",
+        "street_food",
+        "kosher-for-passover",
+        "kosher"
+      ],
+      "rating": 189,
+      "slug": "pizza-street-yehud",
+      "id": "6241a87a011c2e4c635d4cf0"
+    },
+    {
+      "name": "קומל | פתח תקווה",
+      "address": "תוצרת הארץ 3 פתח תקווה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "street_food",
+        "kids-meals",
+        "kosher-for-passover",
+        "kosher"
+      ],
+      "rating": 262,
+      "slug": "kumel",
+      "id": "5f997875b43671978980c738"
+    },
+    {
+      "name": "הפריקסה של חיימיקו | פתח תקווה",
+      "address": "ראשון לציון 1",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "street_food",
+        "vegetarian",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "mediterranean"
+      ],
+      "rating": 227,
+      "slug": "haimikos-frikase-petah-tikva",
+      "id": "5ef9ed94a238cb756d6cef9f"
+    },
+    {
+      "name": "בליקר בייקרי | פתח תקווה",
+      "address": "יצחק רבין 17, יכין סנטר",
+      "eta": "55-65",
+      "price_range": 2,
+      "primary": [
+        "italian",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "kosher-lmehadrin",
+        "breakfast",
+        "salad"
+      ],
+      "rating": 190,
+      "slug": "bleeker-bakery",
+      "id": "5ece75a25588e70a93a9dced"
+    },
+    {
+      "name": "קפה הכרם",
+      "address": "HaCarmel St 20, Ganei Tikva",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "cafe",
+        "sandwich",
+        "salad"
+      ],
+      "rating": 14,
+      "slug": "caffe-hakerem",
+      "id": "67c4cb988bd4bd565af54954"
+    },
+    {
+      "name": "מסעדת אלפרדו",
+      "address": "Shlomo Shmeltzer Rd 94",
+      "eta": "55-65",
+      "price_range": 3,
+      "primary": [
+        "italian",
+        "pizza",
+        "kosher-for-passover",
+        "kosher",
+        "pasta"
+      ],
+      "rating": 191,
+      "slug": "alfredo-restaurant",
+      "id": "5ec66b71e8a82421a5e9af02"
+    },
+    {
+      "name": "חומוס הר-ברכה",
+      "address": "ברקת 9",
+      "eta": "40-50",
+      "price_range": 1,
+      "primary": [
+        "hummus",
+        "kosher-for-passover",
+        "kosher",
+        "kosher-lmehadrin",
+        "mediterranean",
+        "salad"
+      ],
+      "rating": 302,
+      "slug": "hummus-har-bracha",
+      "id": "613f44b2e4de99e696db7a71"
+    },
+    {
+      "name": "הפינה בכפר",
+      "address": "שוהם 1, נופך",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "soup",
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "mediterranean"
+      ],
+      "rating": 68,
+      "slug": "hapina-bakfar",
+      "id": "6305d3d6bd5cc1b90b4e8e4e"
+    },
+    {
+      "name": "פיצה ריקו",
+      "address": "אהרון קציר 1, רמת גן",
+      "eta": "30-40",
+      "price_range": 2,
+      "primary": [
+        "italian",
+        "pizza",
+        "kosher-for-passover",
+        "kosher",
+        "pasta"
+      ],
+      "rating": 15,
+      "slug": "rico-pizza",
+      "id": "660bcaa980c6817e49327f5e"
+    },
+    {
+      "name": "האדון הבוכרי | פתח תקווה",
+      "address": "Khayim Ozer St 10, Petah Tikva, 4936110",
+      "eta": "45-55",
+      "price_range": 1,
+      "primary": [
+        "homemade",
+        "bakery",
+        "kosher-for-passover",
+        "kosher",
+        "kosher-lmehadrin",
+        "breakfast"
+      ],
+      "rating": 100,
+      "slug": "the-bukhari-tabun",
+      "id": "64e1f58498ab2e31ada1638c"
+    },
+    {
+      "name": "סיציליאנו | פתח תקווה",
+      "address": "ז'בוטינסקי 72",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "italian",
+        "pizza",
+        "kosher-for-passover",
+        "kosher",
+        "pasta",
+        "kosher-lmehadrin"
+      ],
+      "rating": 288,
+      "slug": "siciliano-petach-tikva",
+      "id": "5ed39f9c852f4524eb1d8830"
+    },
+    {
+      "name": "דודי׳ס על הפלנצ׳ה",
+      "address": "אמפי פארק יהוד",
+      "eta": "40-50",
+      "price_range": 0,
+      "primary": [
+        "sandwich",
+        "mexican",
+        "street_food"
+      ],
+      "rating": 140,
+      "slug": "dudis-al-haplancha",
+      "id": "67598b9db526a1660036969e"
+    },
+    {
+      "name": "בבא חלה",
+      "address": "תוצרת הארץ 4, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "kosher-for-passover",
+        "street_food",
+        "kosher",
+        "sandwich"
+      ],
+      "rating": 263,
+      "slug": "baba-challah",
+      "id": "6465f64449e7ea7fa00ff067"
+    },
+    {
+      "name": "ניו דלי | פתח תקווה",
+      "address": "ז׳בוטינסקי 72, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 1,
+      "primary": [
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "salad"
+      ],
+      "rating": 141,
+      "slug": "new-deli-petah-tikva",
+      "id": "66d87d67d07cc156b46b0cf6"
+    },
+    {
+      "name": "שניצל 20 טעמים | פתח תקווה",
+      "address": "‫אלעזר פרידמן 9, Petah Tikva, Israel",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "steak",
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "bbq"
+      ],
+      "rating": 289,
+      "slug": "schnitzel-20-flavours-petah-tikva",
+      "id": "69119fa85fd189630c35d288"
+    },
+    {
+      "name": "סברי מרנן",
+      "address": "הערבה 1 גבעת שמואל",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "kosher-for-passover",
+        "homemade",
+        "kosher",
+        "salad"
+      ],
+      "rating": 192,
+      "slug": "savri-maranan",
+      "id": "62e140a3717ac7280ec0793a"
+    },
+    {
+      "name": "פיצה נעמה | קריית אונו",
+      "address": "הנשיא 57 קרית אונו",
+      "eta": "25-35",
+      "price_range": 2,
+      "primary": [
+        "pizza",
+        "kosher-for-passover",
+        "kosher",
+        "pasta",
+        "salad"
+      ],
+      "rating": 322,
+      "slug": "pizza-naama-ko",
+      "id": "64a2cb6ded345b5a891e8c72"
+    },
+    {
+      "name": " מאמי'ס",
+      "address": "הנביאים 47",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "steak",
+        "hummus",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "bbq"
+      ],
+      "rating": 101,
+      "slug": "mamis",
+      "id": "5ee6052da28aab58b500efd4"
+    },
+    {
+      "name": "סביח השרון | פתח תקווה",
+      "address": "ההסתדרות 18, פתח תקווה",
+      "eta": "40-50",
+      "price_range": 1,
+      "primary": [
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "kosher-lmehadrin",
+        "mediterranean"
+      ],
+      "rating": 16,
+      "slug": "sabich-hasharon-petah-tikva",
+      "id": "614c52d7cf3a4a290e289f45"
+    },
+    {
+      "name": "מיסטר קורן כשר למהדרין | הקניון הגדול",
+      "address": "‫הקניון הגדול, זאב ז'בוטינסקי 72",
+      "eta": "60-70",
+      "price_range": 1,
+      "primary": [
+        "vegan",
+        "street_food",
+        "vegetarian",
+        "kosher-for-passover",
+        "kosher",
+        "kosher-lmehadrin"
+      ],
+      "rating": 142,
+      "slug": "mr-corn-grand-mall",
+      "id": "6228d762d962e57909cde268"
+    },
+    {
+      "name": "חומוס פירלה",
+      "address": "סעדיה חתוכה 31, יהוד",
+      "eta": "45-55",
+      "price_range": 1,
+      "primary": [
+        "street_food",
+        "hummus",
+        "kosher-for-passover",
+        "kosher",
+        "kosher-lmehadrin",
+        "mediterranean"
+      ],
+      "rating": 17,
+      "slug": "hummus-pirela",
+      "id": "635e7a55e5675481357f1f8e"
+    },
+    {
+      "name": "קנסאי סושי | פתח תקווה",
+      "address": "רפאל איתן 3",
+      "eta": "60-70",
+      "price_range": 2,
+      "primary": [
+        "sushi",
+        "asian",
+        "kosher-for-passover",
+        "kosher",
+        "japanese",
+        "salad"
+      ],
+      "rating": 143,
+      "slug": "kansai-pt",
+      "id": "625c579c3d95e371a17b16b0"
+    },
+    {
+      "name": "בורקס בבא | פתח תקווה",
+      "address": "אלכסנדר ינאי 2, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 1,
+      "primary": [
+        "breakfast",
+        "bakery",
+        "mediterranean",
+        "street_food"
+      ],
+      "rating": 7,
+      "slug": "bourekas-baba-petah-tikva",
+      "id": "630b67949c3fae74c38de170"
+    },
+    {
+      "name": "הסושיה | פתח תקווה",
+      "address": "יעל רום 8",
+      "eta": "55-65",
+      "price_range": 1,
+      "primary": [
+        "noodles",
+        "sushi",
+        "asian",
+        "japanese",
+        "fish"
+      ],
+      "rating": 144,
+      "slug": "hasushia-petach-tikva",
+      "id": "5ee0de0341983500f9374e0e"
+    },
+    {
+      "name": "קפאו",
+      "address": "תוצרת הארץ 3, פתח תקווה",
+      "eta": "55-65",
+      "price_range": 2,
+      "primary": [
+        "sushi",
+        "kosher-lmehadrin",
+        "kosher-for-passover",
+        "kosher",
+        "thai",
+        "japanese",
+        "fish"
+      ],
+      "rating": 102,
+      "slug": "kapao",
+      "id": "64f5b324433d751e35781ce9"
+    },
+    {
+      "name": "פיצה רמת חן | אור יהודה",
+      "address": "העצמאות 65 אור יהודה",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "italian",
+        "pizza",
+        "kosher-for-passover",
+        "kosher",
+        "pasta",
+        "salad"
+      ],
+      "rating": 228,
+      "slug": "pizza-ramat-hen-or-yehuda",
+      "id": "5f9930fa24d43a69ee0ba941"
+    },
+    {
+      "name": "סיזל",
+      "address": "השחם 30",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "chicken",
+        "street_food",
+        "american",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich"
+      ],
+      "rating": 103,
+      "slug": "sizzle-pt",
+      "id": "686fc771490f9c8cf93171d1"
+    },
+    {
+      "name": "פלאפל גלעדי",
+      "address": "אסף שמחוני 4, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "falafel",
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "mediterranean"
+      ],
+      "rating": 69,
+      "slug": "falafel-giladi",
+      "id": "66e30719bb0267696d770a9b"
+    },
+    {
+      "name": "זינק | יהוד",
+      "address": "אלטלף 9 יהוד",
+      "eta": "40-50",
+      "price_range": 3,
+      "primary": [
+        "burgers",
+        "sushi",
+        "italian",
+        "asian",
+        "japanese"
+      ],
+      "rating": 229,
+      "slug": "zinc",
+      "id": "5f4268092ce5105f52ee7671"
+    },
+    {
+      "name": "סביח קונספט",
+      "address": "חיים עוזר 7",
+      "eta": "45-55",
+      "price_range": 1,
+      "primary": [
+        "street_food",
+        "vegetarian",
+        "kosher-for-passover",
+        "kosher",
+        "mediterranean"
+      ],
+      "rating": 18,
+      "slug": "sabich-concept",
+      "id": "625ebaa90265e13141e6731d"
+    },
+    {
+      "name": "אנטריקוטי | פתח תקווה",
+      "address": "א.ד גורדון 28, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 3,
+      "primary": [
+        "steak",
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "kosher-lmehadrin",
+        "kebab",
+        "bbq"
+      ],
+      "rating": 70,
+      "slug": "antricoti-pt",
+      "id": "62122dbacb707d35be0ae0a0"
+    },
+    {
+      "name": "צ׳ו טו",
+      "address": "הסיבים 18, פתח תקווה",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "noodles",
+        "asian",
+        "kosher-for-passover",
+        "kosher",
+        "thai",
+        "salad"
+      ],
+      "rating": 320,
+      "slug": "choo-tu",
+      "id": "6638926505d62bcb7902878b"
+    },
+    {
+      "name": "ריקו | שחם",
+      "address": "שחם 30, פתח תקווה",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "vegan",
+        "burgers",
+        "street_food",
+        "vegetarian",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "kosher-lmehadrin"
+      ],
+      "rating": 314,
+      "slug": "ricco-shacham",
+      "id": "67067eb66002ba0062140859"
+    },
+    {
+      "name": "דון פרדו | פתח תקווה",
+      "address": "אליעזר קפלן 13, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "pizza",
+        "kosher-for-passover",
+        "kosher",
+        "dessert",
+        "salad"
+      ],
+      "rating": 264,
+      "slug": "don-perdo-petah-tikva",
+      "id": "6321a2781b3b305f73944a63"
+    },
+    {
+      "name": "רוטיסרי צ׳יקן קלאב | פתח תקווה",
+      "address": "zabotinsky 61, Petah tikva",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "chicken",
+        "street_food",
+        "kids-meals",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich"
+      ],
+      "rating": 265,
+      "slug": "rotisserie-chicken-club-petah-tikva",
+      "id": "62c3cd27bdc72fc062496423"
+    },
+    {
+      "name": "טאטי ביסטרו | יהוד",
+      "address": "אברהם גירון 3, יהוד",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "sandwich",
+        "italian",
+        "salad"
+      ],
+      "rating": 193,
+      "slug": "tatti-loft-yehud",
+      "id": "5f3d331c1563d85209f5a0e4"
+    },
+    {
+      "name": "חומוס בהדונס | פתח תקווה",
+      "address": "אודם 3",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "street_food",
+        "hummus",
+        "kosher-for-passover",
+        "kosher",
+        "kosher-lmehadrin",
+        "salad"
+      ],
+      "rating": 71,
+      "slug": "hummus-bahadunas-petah-tikva",
+      "id": "63c3f50c823394d730513407"
+    },
+    {
+      "name": "לה ג׳בטה",
+      "address": "חיים עוזר 1, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "steak",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "bbq"
+      ],
+      "rating": 194,
+      "slug": "la-ciabatta",
+      "id": "66e727d9b3e0f360fb834aff"
+    },
+    {
+      "name": "ברילוצ׳ה | פתח תקווה",
+      "address": "תוצרת הארץ 1, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "mexican",
+        "sandwich"
+      ],
+      "rating": 195,
+      "slug": "bariloche-petah-tikva",
+      "id": "6849763c4b10f4193561f37b"
+    },
+    {
+      "name": "אכילה (אינס)",
+      "address": "הסיבים 18 ",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "homemade",
+        "kosher-for-passover",
+        "kosher",
+        "kosher-lmehadrin",
+        "mediterranean"
+      ],
+      "rating": 72,
+      "slug": "bishulim-express",
+      "id": "62de99c8b2a0c5f888eb4958"
+    },
+    {
+      "name": "פיצה סופרנוס | יהוד",
+      "address": "צבי ישי 1 יהוד",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "pizza",
+        "pasta",
+        "salad",
+        "kosher-lmehadrin"
+      ],
+      "rating": 230,
+      "slug": "pizza-sopranos",
+      "id": "64734d9d7fa568444f928627"
+    },
+    {
+      "name": "קסם של סביח",
+      "address": "המלאכה 12, אור יהודה",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "mediterranean"
+      ],
+      "rating": 19,
+      "slug": "kesem-shel-sabich",
+      "id": "674466baa8f0de2ef87cb66e"
+    },
+    {
+      "name": "בוקאדו",
+      "address": "מתחם בסר , פתח תקווה",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "dessert",
+        "salad"
+      ],
+      "rating": 4,
+      "slug": "bokado",
+      "id": "67713ff7339a5b2f7e4f0693"
+    },
+    {
+      "name": "ממפיס | פתח תקווה",
+      "address": "תוצרת הארץ 3, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "kosher-lmehadrin",
+        "salad"
+      ],
+      "rating": 266,
+      "slug": "memphis-petah-tikva",
+      "id": "63a42015d417d1d8a07af1f6"
+    },
+    {
+      "name": "וניליה | פתח תקווה",
+      "address": "יעל רום 8 ",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "dessert",
+        "ice_cream"
+      ],
+      "rating": 73,
+      "slug": "vaniglia-petah-tikva",
+      "id": "60890f2dbde98759e3b39a28"
+    },
+    {
+      "name": "שגב ניהון נו בה | פתח תקווה",
+      "address": "תוצרת הארץ 3, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "noodles",
+        "sushi",
+        "asian",
+        "kosher-for-passover",
+        "kosher",
+        "japanese"
+      ],
+      "rating": 231,
+      "slug": "nihon-nu-ba",
+      "id": "62b2f86af3ea7e1cd3803ae5"
+    },
+    {
+      "name": "סנדביץ׳ שמוליק",
+      "address": "השילוח 6, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "kids-meals",
+        "street_food",
+        "sandwich"
+      ],
+      "rating": 36,
+      "slug": "sandwich-shmulik",
+      "id": "63ac63708d1fafb35d034823"
+    },
+    {
+      "name": "מיסטר גרין | פתח תקווה",
+      "address": "זבוטינסקי 61, פתח תקווה",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "vegan",
+        "vegetarian",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "kosher-lmehadrin",
+        "salad"
+      ],
+      "rating": 104,
+      "slug": "mr-green-pt",
+      "id": "67964293077db20a836d1ad7"
+    },
+    {
+      "name": "בוקריה",
+      "address": "שחם 17, מתחם יכין יצחק רבין",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "breakfast",
+        "italian",
+        "salad"
+      ],
+      "rating": 303,
+      "slug": "bokeria",
+      "id": "5f86ce7c7ce6eb05b4a57d6e"
+    },
+    {
+      "name": "צחי גריל",
+      "address": "העבודה 8, אור יהודה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "steak",
+        "sandwich",
+        "kebab",
+        "bbq"
+      ],
+      "rating": 196,
+      "slug": "tzahi-grill",
+      "id": "670bc9c2046a0567f2dc4866"
+    },
+    {
+      "name": "מטבל | גבעת שמואל",
+      "address": "יוני נתניהו 31, גבעת שמואל",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "street_food",
+        "american",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "kosher-lmehadrin",
+        "mediterranean",
+        "bbq"
+      ],
+      "rating": 315,
+      "slug": "hataboon-vehamangal",
+      "id": "62cc1c6f158c82f06711e7e5"
+    },
+    {
+      "name": "גאיה איטליה",
+      "address": "שטמפפר 21, פתח תקווה",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "pizza",
+        "kosher-for-passover",
+        "kosher",
+        "pasta",
+        "salad"
+      ],
+      "rating": 145,
+      "slug": "gaia-italia",
+      "id": "6208e077abc41dce38335e99"
+    },
+    {
+      "name": "הפונדק",
+      "address": "Altalef St 3",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "steak",
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "kebab",
+        "bbq"
+      ],
+      "rating": 290,
+      "slug": "hapundak",
+      "id": "655b2cc8ede96e6f1cbd3585"
+    },
+    {
+      "name": "ווסט בורגר | אור יהודה",
+      "address": "חטיבת אלכסנדרוני 1, אור יהודה",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "vegan",
+        "burgers",
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "kosher-lmehadrin"
+      ],
+      "rating": 105,
+      "slug": "west-burger-or-yehuda",
+      "id": "694a71c6246336baaa896b8b"
+    },
+    {
+      "name": "הסאלוף",
+      "address": "ההגנה 16 ",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "vegan",
+        "street_food",
+        "vegetarian",
+        "kosher-for-passover",
+        "kosher",
+        "mediterranean"
+      ],
+      "rating": 146,
+      "slug": "salufpt",
+      "id": "5ed25f1bdea58b1833fd00c1"
+    },
+    {
+      "name": "גאיו  חומוס פול | סגולה",
+      "address": "בן ציון גליס 6",
+      "eta": "45-55",
+      "price_range": 1,
+      "primary": [
+        "vegan",
+        "street_food",
+        "hummus",
+        "kosher-for-passover",
+        "kosher"
+      ],
+      "rating": 106,
+      "slug": "hummus-babiya",
+      "id": "5eda751614f6137b00a76bf1"
+    },
+    {
+      "name": "חומוס הבוטקה",
+      "address": "HaSivim 18 ",
+      "eta": "45-55",
+      "price_range": 1,
+      "primary": [
+        "hummus",
+        "salad"
+      ],
+      "rating": 232,
+      "slug": "habotke-hummus",
+      "id": "5ed0f4d8768509451d95ec43"
+    },
+    {
+      "name": "ביגה | כפר גנים",
+      "address": "העצמאות 63, כפר גנים",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "italian",
+        "kosher-for-passover",
+        "kosher",
+        "pasta",
+        "breakfast",
+        "salad"
+      ],
+      "rating": 267,
+      "slug": "biga-kfar-ganim",
+      "id": "62ea773429a0282e80f41166"
+    },
+    {
+      "name": "אנסלדה | פתח תקווה",
+      "address": "וולט אנטרפריזס ישראל בע״מ",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "vegetarian",
+        "kosher-for-passover",
+        "kosher",
+        "fish",
+        "healthy",
+        "salad"
+      ],
+      "rating": 304,
+      "slug": "nsalada-petah-tikva",
+      "id": "65a4f79e480efdc8c610361b"
+    },
+    {
+      "name": "ג׳וני קפה",
+      "address": "שלמה המלך 6 קרית אונו",
+      "eta": "20-30",
+      "price_range": 1,
+      "primary": [
+        "mediterranean",
+        "israeli",
+        "hummus"
+      ],
+      "rating": 342,
+      "slug": "joni-coffee-wine",
+      "id": "68ebaf27f8f5d9a9e28f3f17"
+    },
+    {
+      "name": "שווארמה בויה",
+      "address": "היצירה 5 פתח תקווה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "homemade",
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "mediterranean",
+        "kebab",
+        "salad"
+      ],
+      "rating": 107,
+      "slug": "shawarma-buya",
+      "id": "67067cc07f250e4b8987ec7e"
+    },
+    {
+      "name": "יהב בורגר",
+      "address": "המלאכה 7, אור יהודה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich"
+      ],
+      "rating": 108,
+      "slug": "yahav-burger",
+      "id": "691d831fd438ccabc3312ce9"
+    },
+    {
+      "name": "הגורמה",
+      "address": "לשם 6, פתח תקווה",
+      "eta": "40-50",
+      "price_range": 1,
+      "primary": [
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "breakfast",
+        "mediterranean"
+      ],
+      "rating": 74,
+      "slug": "hagourmet",
+      "id": "6231ebc30d4895f6203972db"
+    },
+    {
+      "name": "בוריקה בלאמו סאסי",
+      "address": "יחזקאל קזז 11, אור יהודה",
+      "eta": "30-40",
+      "price_range": 1,
+      "primary": [
+        "street_food",
+        "vegetarian",
+        "kosher-for-passover",
+        "kosher",
+        "kosher-lmehadrin",
+        "mediterranean"
+      ],
+      "rating": 37,
+      "slug": "blamu-sasi-burika",
+      "id": "66a9f8a0df31e17b8419e86d"
+    },
+    {
+      "name": "דודא טוסט נקניק",
+      "address": "רפאל איתן 3, פתח תקווה",
+      "eta": "55-65",
+      "price_range": 1,
+      "primary": [
+        "kosher-for-passover",
+        "street_food",
+        "kosher",
+        "sandwich"
+      ],
+      "rating": 147,
+      "slug": "duda-toast",
+      "id": "61d2c8f48d4c66a2c5efcd99"
+    },
+    {
+      "name": "קוקו",
+      "address": "דרך יצחק רבין 5, פתח תקווה ",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "steak",
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "kosher-lmehadrin",
+        "bbq"
+      ],
+      "rating": 233,
+      "slug": "coco-yay",
+      "id": "6873a1d38baebed17f78c768"
+    },
+    {
+      "name": "טאבון סיטי",
+      "address": "תוצרת הארץ 3, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "pizza",
+        "bakery",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "kosher-lmehadrin",
+        "breakfast"
+      ],
+      "rating": 234,
+      "slug": "tabun-city",
+      "id": "635e5c6490f420f9a39b596f"
+    },
+    {
+      "name": "טורף",
+      "address": "ז'בוטנסקי  72 קניון הגדול, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "steak",
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "bbq"
+      ],
+      "rating": 197,
+      "slug": "torf-pt",
+      "id": "68fa03f044584f6ae9424d5e"
+    },
+    {
+      "name": "סולו פיצה פאי | פתח תקווה",
+      "address": "חיים עוזר 6 פתח תקווה ",
+      "eta": "55-65",
+      "price_range": 2,
+      "primary": [
+        "pizza",
+        "pasta",
+        "salad"
+      ],
+      "rating": 148,
+      "slug": "solo-pizza-pie-pt",
+      "id": "67cd8c852e5e366b78a17001"
+    },
+    {
+      "name": "החיטה | קריית אונו",
+      "address": "שמירה אימבר גדיש 9, קריית אונו",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "pizza",
+        "pasta",
+        "salad"
+      ],
+      "rating": 38,
+      "slug": "the-wheat-ko",
+      "id": "69524e04aa6485f6a413b1da"
+    },
+    {
+      "name": "מרכז החומוס והפול",
+      "address": "הברון הירש 22, פתח תקווה",
+      "eta": "40-50",
+      "price_range": 1,
+      "primary": [
+        "mediterranean",
+        "street_food",
+        "hummus"
+      ],
+      "rating": 291,
+      "slug": "merkaz-hahummus-vehaful",
+      "id": "65003f543aa032018d3b7ff7"
+    },
+    {
+      "name": "לחם בשר | פתח תקווה",
+      "address": "תוצרת הארץ 3, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "kosher-lmehadrin"
+      ],
+      "rating": 316,
+      "slug": "lechem-basar-petah-tikva",
+      "id": "659e59875622ad5cdf8e7b0d"
+    },
+    {
+      "name": "בית הכריך | פתח תקווה",
+      "address": "גיסין 17, פתח תקווה",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "street_food"
+      ],
+      "rating": 235,
+      "slug": "beit-hapita-petah-tikva",
+      "id": "6783bfec84f80e5ac81b0ca1"
+    },
+    {
+      "name": "מלכונא",
+      "address": "מוטה גור 9",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "homemade",
+        "street_food",
+        "hummus",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "mediterranean"
+      ],
+      "rating": 20,
+      "slug": "malkouna",
+      "id": "62cebe1261213a482de72146"
+    },
+    {
+      "name": "דרימרי",
+      "address": "הסיבים 48, גבעת שמואל",
+      "eta": "40-50",
+      "price_range": 3,
+      "primary": [
+        "bakery",
+        "kosher-for-passover",
+        "kosher",
+        "breakfast",
+        "dessert",
+        "salad"
+      ],
+      "rating": 323,
+      "slug": "dreamerie",
+      "id": "5ecbdfe9785321d345a3fd87"
+    },
+    {
+      "name": "מורכבים",
+      "address": "וולט אנטרפריזס ישראל בע״מ",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "kosher-for-passover",
+        "kosher",
+        "pasta",
+        "sandwich",
+        "kosher-lmehadrin",
+        "salad"
+      ],
+      "rating": 268,
+      "slug": "build-it",
+      "id": "610fca6088a44167045b7d3d"
+    },
+    {
+      "name": "הכריך של ארז",
+      "address": "וינגייט 12 קריית אונו",
+      "eta": "20-30",
+      "price_range": 2,
+      "primary": [
+        "street_food",
+        "sandwich"
+      ],
+      "rating": 39,
+      "slug": "erezs-sandwich",
+      "id": "675730b9791339abad58cea0"
+    },
+    {
+      "name": "פסטה פקטורי | פתח תקווה",
+      "address": "וולט אנטרפריזס ישראל בע״מ",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "italian",
+        "vegetarian",
+        "kosher-for-passover",
+        "kosher",
+        "pasta"
+      ],
+      "rating": 269,
+      "slug": "pasta-factory",
+      "id": "5ed151a379ab830aedf4c52f"
+    },
+    {
+      "name": "זה הפלאפל",
+      "address": "שדרות יצחק שמיר 9 אור יהודה",
+      "eta": "25-35",
+      "price_range": 1,
+      "primary": [
+        "falafel",
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "kosher-lmehadrin",
+        "mediterranean"
+      ],
+      "rating": 75,
+      "slug": "ze-hafalafel",
+      "id": "6877714d8b639423445baf28"
+    },
+    {
+      "name": "ווק אווי | פתח תקווה",
+      "address": "יעל רום 8, פתח תקווה",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "noodles",
+        "sushi",
+        "asian",
+        "street_food",
+        "japanese"
+      ],
+      "rating": 109,
+      "slug": "wok-a-way-petah-tikva",
+      "id": "65683c77175b38ebbb78d51c"
+    },
+    {
+      "name": "מיסטר פיצה | פתח תקווה",
+      "address": "חיים עוזר 18, פתח תקווה",
+      "eta": "50-60",
+      "price_range": 1,
+      "primary": [
+        "kosher-lmehadrin",
+        "pizza",
+        "street_food",
+        "vegetarian"
+      ],
+      "rating": 110,
+      "slug": "mr-pizza-pt",
+      "id": "6592cab03cc30c249c493a6a"
+    },
+    {
+      "name": "בישולים",
+      "address": "Avshalom Gissin St 7, Petah Tikva",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "kosher-for-passover",
+        "homemade",
+        "kosher"
+      ],
+      "rating": 149,
+      "slug": "bishulim",
+      "id": "6488327417c8276b9965e009"
+    },
+    {
+      "name": "שגב בורגר | פתח תקווה",
+      "address": "תוצרת הארץ 3, פתח תקווה",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich"
+      ],
+      "rating": 305,
+      "slug": "segev-burger-petah-tikva",
+      "id": "64c1060a2142bff20b0c4efe"
+    },
+    {
+      "name": "בורקאסה",
+      "address": "אפעל 18, פתח תקווה",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "vegetarian",
+        "kosher-for-passover",
+        "kosher",
+        "kosher-lmehadrin",
+        "mediterranean",
+        "salad"
+      ],
+      "rating": 343,
+      "slug": "bourecasa",
+      "id": "685bba02f93fcf72cabeaebb"
+    },
+    {
+      "name": "שווארמה רפאלוס",
+      "address": "שדה יצחק 34, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "hummus",
+        "kosher-for-passover",
+        "kosher",
+        "kosher-lmehadrin",
+        "kebab"
+      ],
+      "rating": 198,
+      "slug": "shawarma-refaelos",
+      "id": "61bf370128da80684522304c"
+    },
+    {
+      "name": "פיתה רחוב | פתח תקווה",
+      "address": "הסיבים 2",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "kosher-for-passover",
+        "kosher",
+        "street_food"
+      ],
+      "rating": 236,
+      "slug": "pita-rehov-petah-tikva",
+      "id": "5f4bbbef1bf016223cc74aea"
+    },
+    {
+      "name": "קפה נויה",
+      "address": "בלפור 4 פתח תקווה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "pasta",
+        "sandwich",
+        "salad"
+      ],
+      "rating": 40,
+      "slug": "cafe-noya-pt",
+      "id": "69a5bbe635dee232b230ff7a"
+    },
+    {
+      "name": "מעדניה עם סגנון",
+      "address": "העצמאות 65, פתח תקווה",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "lunch",
+        "mediterranean",
+        "homemade"
+      ],
+      "rating": 41,
+      "slug": "deli-with-style",
+      "id": "621263a6fa3bb08224eb1ff6"
+    },
+    {
+      "name": "STAY",
+      "address": "יגיע כפיים 22, פתח תקווה",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "italian",
+        "cafe",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "salad"
+      ],
+      "rating": 76,
+      "slug": "stay-pt",
+      "id": "688f45fc424cc6c2eb9bbfcf"
+    },
+    {
+      "name": "גוזל וציונה",
+      "address": "המכבים 29",
+      "eta": "50-60",
+      "price_range": 1,
+      "primary": [
+        "hummus",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "mediterranean"
+      ],
+      "rating": 237,
+      "slug": "gozal-ve-ziona",
+      "id": "5ee65b602a9a003a52b7d78e"
+    },
+    {
+      "name": "סביח קדוש",
+      "address": "הברון הירש 5, פתח תקווה",
+      "eta": "40-50",
+      "price_range": 1,
+      "primary": [
+        "breakfast",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich"
+      ],
+      "rating": 199,
+      "slug": "sabich-kadosh",
+      "id": "656c5af4efb8ac32acb30226"
+    },
+    {
+      "name": "סמבוסביח",
+      "address": "הירקונים 27",
+      "eta": "50-60",
+      "price_range": 1,
+      "primary": [
+        "hummus",
+        "vegetarian",
+        "kosher-for-passover",
+        "kosher",
+        "mediterranean"
+      ],
+      "rating": 21,
+      "slug": "sambusabich",
+      "id": "5edd0b06aa3f408d29795730"
+    },
+    {
+      "name": "אילן שניץ",
+      "address": "בן ציון גאליס 15 פתח תקווה",
+      "eta": "40-50",
+      "price_range": 1,
+      "primary": [
+        "burgers",
+        "kosher",
+        "kebab",
+        "kosher-for-passover"
+      ],
+      "rating": 111,
+      "slug": "ilan-schnitz",
+      "id": "676928a362535f3ef7b4a484"
+    },
+    {
+      "name": "ג׳מילה | פתח תקווה",
+      "address": "Totseret ha-Arets St 2, Petah Tikva",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "mediterranean"
+      ],
+      "rating": 200,
+      "slug": "jamila",
+      "id": "6499510e60dd391059d77493"
+    },
+    {
+      "name": "ג׳ויה | פתח תקווה",
+      "address": "גיסין 17, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "italian",
+        "pizza",
+        "kids-meals",
+        "pasta",
+        "fish"
+      ],
+      "rating": 238,
+      "slug": "joya-petah-tikva",
+      "id": "635923d6de3b0e99abcfa162"
+    },
+    {
+      "name": "פיצה טיים | גבעת שמואל",
+      "address": "בן גוריון 20, גבעת שמואל",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "italian",
+        "pizza",
+        "kosher-for-passover",
+        "kosher",
+        "pasta",
+        "kosher-lmehadrin"
+      ],
+      "rating": 239,
+      "slug": "pizza-timegs",
+      "id": "630b568c1cb90c3fabdef50a"
+    },
+    {
+      "name": "אצל אלברט",
+      "address": "אהרון קציר 2, רמת גן",
+      "eta": "30-40",
+      "price_range": 2,
+      "primary": [
+        "street_food",
+        "american",
+        "kosher-for-passover",
+        "kosher",
+        "mediterranean",
+        "bbq"
+      ],
+      "rating": 324,
+      "slug": "at-alberts",
+      "id": "62bdb0988f5bb1c47f4db27a"
+    },
+    {
+      "name": "פיצה דומינו | פתח תקווה",
+      "address": "ההסתדרות 3",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "pizza",
+        "kosher-for-passover",
+        "kosher",
+        "pasta",
+        "kosher-lmehadrin",
+        "salad"
+      ],
+      "rating": 77,
+      "slug": "pizza-domino-petah-tikva",
+      "id": "619250a9d5c7114cfff6a155"
+    },
+    {
+      "name": "ביג אפל פיצה | פתח תקווה",
+      "address": "מבצע דקל 9, פתח תקווה",
+      "eta": "55-65",
+      "price_range": 2,
+      "primary": [
+        "pizza",
+        "pasta",
+        "salad"
+      ],
+      "rating": 150,
+      "slug": "big-apple-pizza-pt",
+      "id": "6677be8bd130e104687934f3"
+    },
+    {
+      "name": "ג'ולייטה",
+      "address": "הרב משורר ישעיהו 11, פתח תקווה",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "ice_cream",
+        "pizza",
+        "kosher-for-passover",
+        "kosher",
+        "kosher-lmehadrin",
+        "dessert",
+        "salad"
+      ],
+      "rating": 201,
+      "slug": "zisalek-petah-tikva",
+      "id": "638488854e330c729c041030"
+    },
+    {
+      "name": "פיקולה איטליה | פתח תקווה",
+      "address": "יהושע שטמפפר 32, פתח תקווה",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "pizza",
+        "italian",
+        "pasta"
+      ],
+      "rating": 240,
+      "slug": "piccola-italia-petah-tikva",
+      "id": "67e2753f5404d2fba36d99cc"
+    },
+    {
+      "name": "הפלאפל של אבא",
+      "address": "Hoshe'a St 2, Petah Tikva",
+      "eta": "50-60",
+      "price_range": 1,
+      "primary": [
+        "mediterranean",
+        "sandwich",
+        "street_food"
+      ],
+      "rating": 112,
+      "slug": "hafalafel-shel-aba",
+      "id": "66cc3160e729582e05276f13"
+    },
+    {
+      "name": "פיצה לוגאנו",
+      "address": "זאב וינהויז 9, יהוד",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "dessert",
+        "pizza",
+        "italian",
+        "pasta"
+      ],
+      "rating": 325,
+      "slug": "pizza-lugano",
+      "id": "67bf7ba2eb063308b2b5f15a"
+    },
+    {
+      "name": "בלאק קפה",
+      "address": " הסיבים 25, פתח תקווה",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "kosher-for-passover",
+        "kosher",
+        "pasta",
+        "sandwich",
+        "kosher-lmehadrin",
+        "breakfast",
+        "salad"
+      ],
+      "rating": 42,
+      "slug": "black-caffe",
+      "id": "63be9f5bab9880acd04cea3c"
+    },
+    {
+      "name": "פיצה רונדו | פתח תקווה",
+      "address": "יצחק שדה 34, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "italian",
+        "pizza",
+        "kosher-for-passover",
+        "kosher",
+        "pasta"
+      ],
+      "rating": 241,
+      "slug": "pizza-rondo-pt",
+      "id": "6319ad6c69d52094b169d465"
+    },
+    {
+      "name": "השווארמה של מנו",
+      "address": "השילוח 5 פ״ת",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "kosher-for-passover",
+        "kosher",
+        "kebab",
+        "street_food"
+      ],
+      "rating": 326,
+      "slug": "manos-shawarma",
+      "id": "65a64f9d069c2e49bdf512e3"
+    },
+    {
+      "name": "פיצה מילי",
+      "address": "חיים ארלוזורוב 2‎",
+      "eta": "50-60",
+      "price_range": 1,
+      "primary": [
+        "pizza",
+        "kosher-for-passover",
+        "kosher",
+        "pasta",
+        "salad"
+      ],
+      "rating": 242,
+      "slug": "pizza-milli",
+      "id": "61d435b0d1c16ff73220a57e"
+    },
+    {
+      "name": "פיצה בריבוע | פתח תקווה",
+      "address": "חיים עוזר 4, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 1,
+      "primary": [
+        "breakfast",
+        "bakery",
+        "pizza",
+        "italian"
+      ],
+      "rating": 202,
+      "slug": "pizza-baribua",
+      "id": "5f0d9cef25987c49acffbf76"
+    },
+    {
+      "name": "תיסלם",
+      "address": "אבשלום גיסין 78, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 1,
+      "primary": [
+        "sandwich",
+        "pasta",
+        "salad"
+      ],
+      "rating": 0,
+      "slug": "tislam",
+      "id": "669399140be43b729b28680e"
+    },
+    {
+      "name": "גיאורגיה הקטנה",
+      "address": "מוהליבר 16, פתח תקווה",
+      "eta": "55-65",
+      "price_range": 2,
+      "primary": [
+        "breakfast",
+        "bakery",
+        "georgian",
+        "central-asian"
+      ],
+      "rating": 1,
+      "slug": "georgia-haktana",
+      "id": "69090a67e11b6f8d7dde4448"
+    },
+    {
+      "name": "אצל יחזקאל",
+      "address": "אלכסנדר ינאי 2",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "mediterranean",
+        "salad"
+      ],
+      "rating": 78,
+      "slug": "etzel-yehazkel",
+      "id": "66727a92343f49792e1c77bf"
+    },
+    {
+      "name": "שנקר על האש | פתח תקווה",
+      "address": "אריה שנקר 8 פתח תקווה",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "steak",
+        "hummus",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "mediterranean",
+        "bbq"
+      ],
+      "rating": 334,
+      "slug": "grill-bar-petah-tikva",
+      "id": "6728cf6e606f8b3678fd7fd3"
+    },
+    {
+      "name": "קרלוס",
+      "address": "חיים עוזר 1, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "vegan",
+        "pizza",
+        "kosher-for-passover",
+        "kosher",
+        "kosher-lmehadrin",
+        "salad"
+      ],
+      "rating": 203,
+      "slug": "manchis-pizza",
+      "id": "645222beba9e2fdfd653c588"
+    },
+    {
+      "name": "ג׳ונם",
+      "address": "בן ציון גליס 51 פתח תקווה ",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "soup",
+        "kosher-for-passover",
+        "kosher",
+        "mediterranean",
+        "healthy"
+      ],
+      "rating": 306,
+      "slug": "joonam",
+      "id": "622619109bea5cd4f6b80c00"
+    },
+    {
+      "name": "אבי רותם העיראקי",
+      "address": "רקפת 2, קרית אונו",
+      "eta": "20-30",
+      "price_range": 1,
+      "primary": [
+        "mediterranean",
+        "vegetarian"
+      ],
+      "rating": 335,
+      "slug": "bourekas-bdalak",
+      "id": "68bd6ffeafbb6ef76bf7b7aa"
+    },
+    {
+      "name": "״המושבה״ פלאפל ושניצל 4 טעמים",
+      "address": "בר כוכבא 41",
+      "eta": "55-65",
+      "price_range": 1,
+      "primary": [
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "mediterranean"
+      ],
+      "rating": 341,
+      "slug": "falafel-4-flavours-petah-tikva",
+      "id": "6044c8b7603591ae129f2233"
+    },
+    {
+      "name": "הקערה בר בריאות",
+      "address": "וולט אנטרפריזס ישראל בע״מ",
+      "eta": "45-55",
+      "price_range": 1,
+      "primary": [
+        "kosher-for-passover",
+        "kosher",
+        "pasta",
+        "salad"
+      ],
+      "rating": 336,
+      "slug": "the-bowl",
+      "id": "5ff1cab2e83fd970c1142a1e"
+    },
+    {
+      "name": "ביס בר",
+      "address": "סמטת התבור 3 פתח תקווה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "mediterranean",
+        "salad"
+      ],
+      "rating": 344,
+      "slug": "bis-bar",
+      "id": "68e772ae4f8bba49b44162c1"
+    },
+    {
+      "name": "פסטה & קו",
+      "address": "משה שוולב 7, פתח תקווה",
+      "eta": "60-70",
+      "price_range": 2,
+      "primary": [
+        "italian",
+        "vegetarian",
+        "kosher-for-passover",
+        "kosher",
+        "pasta"
+      ],
+      "rating": 22,
+      "slug": "pasta-co-pt",
+      "id": "68191f03613692bfba79a406"
+    },
+    {
+      "name": "אמריקן פיצה | פתח תקווה",
+      "address": "יהושע שטמפפר 32, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "italian",
+        "pizza",
+        "kosher-for-passover",
+        "kosher",
+        "salad"
+      ],
+      "rating": 243,
+      "slug": "american-pizza-petah-tikva",
+      "id": "61ae1284346b705c9ea69462"
+    },
+    {
+      "name": "פיצה בכפר",
+      "address": "יונה גרין 9, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "italian",
+        "pizza",
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "kosher-lmehadrin"
+      ],
+      "rating": 270,
+      "slug": "pizza-bakfar",
+      "id": "62ab0b9d1f5663796f3a4716"
+    },
+    {
+      "name": "פיצה סטאר",
+      "address": "יוסף פפר 9 ",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "italian",
+        "pizza",
+        "kosher-for-passover",
+        "kosher",
+        "salad"
+      ],
+      "rating": 244,
+      "slug": "pizza-star",
+      "id": "5f22c8f8fc3528435595f04e"
+    },
+    {
+      "name": "קפה לוגאנו",
+      "address": "החוגה 2, רמת גן",
+      "eta": "30-40",
+      "price_range": 2,
+      "primary": [
+        "italian",
+        "cafe",
+        "kosher-for-passover",
+        "kosher",
+        "mediterranean"
+      ],
+      "rating": 204,
+      "slug": "cafe-lugano",
+      "id": "634fd52d4f4951fb6a3ce959"
+    },
+    {
+      "name": "שרינה קפה",
+      "address": "אימבר 14",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "kosher-for-passover",
+        "kosher",
+        "pasta",
+        "sandwich",
+        "kosher-lmehadrin",
+        "salad"
+      ],
+      "rating": 292,
+      "slug": "sarina-cafe",
+      "id": "6203e36d2485aa1851649c06"
+    },
+    {
+      "name": "חומוס אליהו | אור יהודה",
+      "address": "המפעל 13, אור יהודה",
+      "eta": "35-45",
+      "price_range": 1,
+      "primary": [
+        "falafel",
+        "hummus",
+        "kosher-for-passover",
+        "kosher",
+        "mediterranean"
+      ],
+      "rating": 79,
+      "slug": "hummus-eliyahu-or-yehuda",
+      "id": "61a4a30a79d3a15527b32d5f"
+    },
+    {
+      "name": "מקדונלד'ס אונו מרקט",
+      "address": "Derekh Refa'el Eitan 1, Kiryat Ono",
+      "eta": "25-35",
+      "price_range": 2,
+      "primary": [
+        "american",
+        "burgers",
+        "kids-meals"
+      ],
+      "rating": 317,
+      "slug": "mcdonalds-ono-market",
+      "id": "5f06f4e4a8c36bb093fa5040"
+    },
+    {
+      "name": "גולדה כשר | תל השומר",
+      "address": "דרך שיבא 2, רמת גן",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "kosher-for-passover",
+        "dessert",
+        "kosher",
+        "ice_cream"
+      ],
+      "rating": 151,
+      "slug": "golda-tel-hashomer",
+      "id": "619b80f8b1120f6ded49e4a6"
+    },
+    {
+      "name": "מקדונלד'ס תל השומר הכשר",
+      "address": "מרכז גימיון - בית חולים תל השומר",
+      "eta": "30-40",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "chicken",
+        "american",
+        "kosher-for-passover",
+        "kids-meals",
+        "kosher"
+      ],
+      "rating": 327,
+      "slug": "mcdonalds-tel-hashomer-kosher",
+      "id": "5f75a8d081494302db669e56"
+    },
+    {
+      "name": "גולדה | גני תקווה",
+      "address": "דרך הים 14, גני תקווה",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "dessert",
+        "ice_cream"
+      ],
+      "rating": 245,
+      "slug": "golda-ganei-tikva",
+      "id": "621b74a291d6ddb4caf905cb"
+    },
+    {
+      "name": "ריבאר הכשר | גני תקווה",
+      "address": "דרך הים 14 גני תקווה",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "vegan",
+        "healthy",
+        "smoothie",
+        "vegetarian",
+        "kosher-for-passover",
+        "kosher",
+        "breakfast",
+        "dessert"
+      ],
+      "rating": 23,
+      "slug": "rebar-kosher-ganei-tikva",
+      "id": "6225d8c7b4e71d3ac623a04b"
+    },
+    {
+      "name": "גולדה כשר | גבעת שמואל",
+      "address": "הערבה 1, גבעת שמואל",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "kosher-for-passover",
+        "dessert",
+        "kosher",
+        "ice_cream"
+      ],
+      "rating": 271,
+      "slug": "golda-givat-shmuel",
+      "id": "5eeb3c64ad87fe8c93816bf4"
+    },
+    {
+      "name": "ריבאר | הקריה האקדמית אונו",
+      "address": "השדרה האקדמית 1, קרית אונו",
+      "eta": "30-40",
+      "price_range": 2,
+      "primary": [
+        "dessert",
+        "smoothie"
+      ],
+      "rating": 43,
+      "slug": "rebar-academic-ono",
+      "id": "663211a87c0ff5684160b912"
+    },
+    {
+      "name": "סיונרה",
+      "address": "הורדים 11 סביון",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "sushi",
+        "asian",
+        "kosher-for-passover",
+        "kosher",
+        "japanese",
+        "fish"
+      ],
+      "rating": 205,
+      "slug": "sayonara-kiryat-ono",
+      "id": "6044ac744bb7b8d845d3d9f7"
+    },
+    {
+      "name": "ג׳פניקה | פתח תקווה",
+      "address": "שחם 32, פתח תקווה",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "soup",
+        "noodles",
+        "sushi",
+        "asian",
+        "japanese"
+      ],
+      "rating": 206,
+      "slug": "japanika-petah-tikva",
+      "id": "6321e0a5aa57606e4656402e"
+    },
+    {
+      "name": "ג׳ירף | פתח תקווה",
+      "address": "שחם 30, פתח תקווה",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "noodles",
+        "sushi",
+        "asian",
+        "vegetarian",
+        "thai",
+        "japanese"
+      ],
+      "rating": 152,
+      "slug": "giraffe-petah-tikva",
+      "id": "64d8b0bb28c4f3ac1ef6b479"
+    },
+    {
+      "name": "מקדונלד'ס קניון הגבעה הכשר",
+      "address": "Yoni Netanyahu St 27, Givat Shmuel",
+      "eta": "35-45",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "chicken",
+        "american",
+        "kosher-for-passover",
+        "kids-meals",
+        "kosher"
+      ],
+      "rating": 307,
+      "slug": "mcdonalds-hagiva-mall",
+      "id": "5ee87c8f307a5ec410fc509c"
+    },
+    {
+      "name": "גולדה כשר | אור יהודה",
+      "address": "יהדות קנדה 1, אור יהודה",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "kosher-for-passover",
+        "dessert",
+        "kosher",
+        "ice_cream"
+      ],
+      "rating": 207,
+      "slug": "golda-kosher-or-yehuda",
+      "id": "5f47a121481f71f8012ef4f9"
+    },
+    {
+      "name": "‫B-FRESH | ביג יהוד",
+      "address": "‫מרכז BIG, יהוד",
+      "eta": "40-50",
+      "price_range": 1,
+      "primary": [
+        "vegan",
+        "healthy",
+        "smoothie",
+        "vegetarian",
+        "kids-meals",
+        "dessert"
+      ],
+      "rating": 208,
+      "slug": "b-fresh-big-yehud",
+      "id": "61138d7bf83719055cfe6c9b"
+    },
+    {
+      "name": "לנדוור הכשר | אור יהודה",
+      "address": "יהדות קנדה 1, אור יהודה",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "pizza",
+        "kids-meals",
+        "kosher-for-passover",
+        "cafe",
+        "kosher",
+        "pasta",
+        "sandwich",
+        "kosher-lmehadrin",
+        "salad"
+      ],
+      "rating": 246,
+      "slug": "landwer-cafe-kosher-or-yehuda",
+      "id": "5f4763f705909c46472e7efd"
+    },
+    {
+      "name": "פיצה שמש | יהוד",
+      "address": "ויצמן 44, יהוד",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "pizza",
+        "italian",
+        "street_food",
+        "kosher-lmehadrin"
+      ],
+      "rating": 153,
+      "slug": "pizza-shemesh-yehud",
+      "id": "63d2284c7dc95e514e2eaf81"
+    },
+    {
+      "name": "‫ריבאר | יהוד",
+      "address": "דרך משה דיין 3, יהוד",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "breakfast",
+        "dessert",
+        "smoothie",
+        "vegan"
+      ],
+      "rating": 44,
+      "slug": "rebar-yehud",
+      "id": "5f4e15d80d6a3645a98af1ca"
+    },
+    {
+      "name": "יאשקה | פתח תקווה",
+      "address": "גיסין 15, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "steak",
+        "kosher-for-passover",
+        "kosher",
+        "salad",
+        "kebab",
+        "bbq"
+      ],
+      "rating": 318,
+      "slug": "yashka-petah-tikva",
+      "id": "6469f2e5a89dfe2b28953ae0"
+    },
+    {
+      "name": "גולדה כשר | אם המושבות",
+      "address": "רפאל איתן 5 ",
+      "eta": "55-65",
+      "price_range": 2,
+      "primary": [
+        "dessert",
+        "ice_cream"
+      ],
+      "rating": 247,
+      "slug": "golda-em-em-hamoshavot",
+      "id": "610002f56a2978199de2fa81"
+    },
+    {
+      "name": "‫גוד מורנינג סאנשיין | יהוד",
+      "address": "וינהויז זאב 29, יהוד",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "pizza",
+        "kosher-for-passover",
+        "kosher",
+        "breakfast",
+        "salad"
+      ],
+      "rating": 154,
+      "slug": "good-morning-sunshine-benedict-bakey",
+      "id": "5f4f9572bb522140e11f6c6b"
+    },
+    {
+      "name": "פיצה שמש | גבעת שמואל",
+      "address": "ארזים 1, גבעת שמואל",
+      "eta": "40-50",
+      "price_range": 1,
+      "primary": [
+        "pizza",
+        "kosher-for-passover",
+        "kosher",
+        "mediterranean",
+        "salad"
+      ],
+      "rating": 272,
+      "slug": "pizza-shemesh-givat-shmuel",
+      "id": "639b2678e2cd43353a69309f"
+    },
+    {
+      "name": "פיצה שמש | בית בפארק אור יהודה",
+      "address": "תבור 1, אור יהודה",
+      "eta": "30-40",
+      "price_range": 1,
+      "primary": [
+        "mediterranean",
+        "pizza",
+        "pasta",
+        "kosher-lmehadrin"
+      ],
+      "rating": 273,
+      "slug": "pizza-shemesh-bait-bapark-or-yehuda",
+      "id": "673edefc6dd2111bab41dec8"
+    },
+    {
+      "name": "גולדה | פתח תקווה",
+      "address": "השחם 30",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "dessert",
+        "ice_cream"
+      ],
+      "rating": 209,
+      "slug": "golda-petach-tikva",
+      "id": "5eeb354a7cacb70020805422"
+    },
+    {
+      "name": "מקדונלד'ס סביון סנטר",
+      "address": "שדרות חיים בר לב 10-12 אור יהודה, אור יהודה",
+      "eta": "30-40",
+      "price_range": 2,
+      "primary": [
+        "american",
+        "burgers",
+        "kids-meals",
+        "chicken"
+      ],
+      "rating": 340,
+      "slug": "mcdonalds-savyon-center",
+      "id": "5f4cf23dbd0c2ba63f139366"
+    },
+    {
+      "name": "ארומה | גלובל טאוורס פתח תקווה",
+      "address": "דרך יצחק רבין 1",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "cafe",
+        "sandwich",
+        "salad"
+      ],
+      "rating": 113,
+      "slug": "aroma-global-towers-petah-tikva",
+      "id": "63e385e93abdf664069d5d1d"
+    },
+    {
+      "name": "חומוס אליהו | פתח תקווה",
+      "address": " דרך יצחק רבין 4, פתח תקווה",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "hummus",
+        "vegetarian",
+        "kosher-for-passover",
+        "kosher",
+        "mediterranean"
+      ],
+      "rating": 248,
+      "slug": "hummus-eliyahu-petah-tikva",
+      "id": "62ab1838dab8ea43f792ef86"
+    },
+    {
+      "name": "גולדה | ביג יהוד",
+      "address": "‫מרכז BIG, יהוד",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "dessert",
+        "ice_cream"
+      ],
+      "rating": 210,
+      "slug": "golda-yehud",
+      "id": "608ff59cb09b703dbf3e9a7e"
+    },
+    {
+      "name": "סביח פרישמן | אור יהודה",
+      "address": "יהדות קנדה 6",
+      "eta": "40-50",
+      "price_range": 1,
+      "primary": [
+        "mediterranean",
+        "street_food",
+        "sandwich"
+      ],
+      "rating": 321,
+      "slug": "sabich-frishman-or-yehuda",
+      "id": "664f070413b017528c0fbb76"
+    },
+    {
+      "name": "בייגל קפה | פ״ת",
+      "address": "ז׳בוטינסקי 72 פתח תקווה",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "kosher-for-passover",
+        "kosher",
+        "bagel",
+        "sandwich",
+        "kosher-lmehadrin",
+        "breakfast"
+      ],
+      "rating": 80,
+      "slug": "bagel-cafe-pt",
+      "id": "6900cefdd55eef5d4ce7b3b7"
+    },
+    {
+      "name": "ברגר קינג כשר | יהוד",
+      "address": "דרך העצמאות 42, יהוד",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "street_food",
+        "kids-meals",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich"
+      ],
+      "rating": 274,
+      "slug": "burger-king-yehud",
+      "id": "63e379ded6e9fd2f2f9c59bb"
+    },
+    {
+      "name": "פיצה שמש | אור יהודה",
+      "address": "Sderot Mordehai Ben Porat 79, Or Yehuda",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "italian",
+        "pizza",
+        "kosher-for-passover",
+        "kosher",
+        "pasta",
+        "kosher-lmehadrin"
+      ],
+      "rating": 308,
+      "slug": "pizza-shemesh-or-yehuda",
+      "id": "63ff6ceadab857efe2892cff"
+    },
+    {
+      "name": "לנדוור | אם המושבות פתח תקווה",
+      "address": "יעל רום 8, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "kids-meals",
+        "cafe",
+        "pasta",
+        "lunch",
+        "salad"
+      ],
+      "rating": 155,
+      "slug": "landwer-em-hamoshavot",
+      "id": "61d40ea03029b13a64f37db7"
+    },
+    {
+      "name": "לנדוור | השחם פתח תקווה",
+      "address": "שחם 30",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "kids-meals",
+        "cafe",
+        "sandwich",
+        "salad"
+      ],
+      "rating": 211,
+      "slug": "landwer-cafe-petach-tikva",
+      "id": "5ee0f0e563c120d4fce654c7"
+    },
+    {
+      "name": "נונומימי | פתח תקווה",
+      "address": "בזל 16, פתח תקווה",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "italian",
+        "ice_cream",
+        "pizza",
+        "bakery",
+        "pasta",
+        "breakfast",
+        "lunch",
+        "dessert",
+        "salad"
+      ],
+      "rating": 156,
+      "slug": "nono-petah-tikva",
+      "id": "63a191f1faabadcfaa054ae1"
+    },
+    {
+      "name": "ארומה | אם המושבות ",
+      "address": "ראשון לציון 1",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "cafe",
+        "kosher-for-passover",
+        "kosher",
+        "sandwich",
+        "salad"
+      ],
+      "rating": 157,
+      "slug": "aroma-petach-tikva",
+      "id": "5ee113e277ce8c897b1cdbf0"
+    },
+    {
+      "name": "‫B-FRESH | גיסין פתח תקווה",
+      "address": "גיסין 15, פתח תקווה",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "vegan",
+        "healthy",
+        "smoothie",
+        "vegetarian",
+        "dessert"
+      ],
+      "rating": 114,
+      "slug": "b-fresh-petah-tikva",
+      "id": "628a2df7b4011f3e59e5ddcc"
+    },
+    {
+      "name": "פיצה סטורי | אור יהודה",
+      "address": "Haim Bar Lev Blvd 12 or yehuda",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "italian",
+        "pizza",
+        "kosher-for-passover",
+        "kosher",
+        "pasta",
+        "kosher-lmehadrin"
+      ],
+      "rating": 275,
+      "slug": "pizza-story-or-yehuda",
+      "id": "6465e66e54eb15014431bc5e"
+    },
+    {
+      "name": "TeaBar | Petah Tikva",
+      "address": "ז׳בוטינסקי 72 פתח תקווה ",
+      "eta": "50-60",
+      "price_range": 1,
+      "primary": [
+        "tapioca",
+        "dessert",
+        "smoothie",
+        "asian"
+      ],
+      "rating": 45,
+      "slug": "teabar-petah-tikva",
+      "id": "658beeac90cd7fa0b9e1842c"
+    },
+    {
+      "name": "בורגראנץ׳ | אור יהודה",
+      "address": "אליהו סעדון 120, אור יהודה",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "burgers"
+      ],
+      "rating": 339,
+      "slug": "burgeranch-or-yehuda",
+      "id": "62b9bda58791d647c5478c4c"
+    },
+    {
+      "name": "מר פרצל | פתח תקווה",
+      "address": "מתחם בסר , פתח תקווה",
+      "eta": "50-60",
+      "price_range": 1,
+      "primary": [
+        "street_food",
+        "kids-meals",
+        "bakery",
+        "kosher-for-passover",
+        "kosher",
+        "kosher-lmehadrin",
+        "breakfast",
+        "dessert"
+      ],
+      "rating": 24,
+      "slug": "mr-pretzels-petah-tikva",
+      "id": "63145ff4d29509ab8524f54b"
+    },
+    {
+      "name": "פסטיטו | פתח תקווה",
+      "address": "תוצרת הארץ 3",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "italian",
+        "kosher-for-passover",
+        "kosher",
+        "pasta",
+        "salad"
+      ],
+      "rating": 158,
+      "slug": "pastito-petah-tikva",
+      "id": "67f26dbd8f6ffd3f1ad73edc"
+    },
+    {
+      "name": "בורגראנץ׳ | גבעת שמואל",
+      "address": "יוני נתניהו 31, גבעת שמואל",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "kids-meals",
+        "burgers",
+        "kosher",
+        "kosher-for-passover"
+      ],
+      "rating": 276,
+      "slug": "burgeranch-givat-shmuel",
+      "id": "62fdf7cc5d73c93f0aaca17d"
+    },
+    {
+      "name": "מקדונלד'ס הקניון הגדול",
+      "address": "ז'בוטינסקי 72",
+      "eta": "45-55",
+      "price_range": 2,
+      "primary": [
+        "american",
+        "burgers",
+        "chicken"
+      ],
+      "rating": 309,
+      "slug": "mcdonalds-grand-mall",
+      "id": "612dee5116ccd29aade5dd08"
+    },
+    {
+      "name": "‫B-FRESH כשר  | בסר פתח תקווה",
+      "address": "דרך תוצרת הארץ 3, פתח תקווה",
+      "eta": "50-60",
+      "price_range": 1,
+      "primary": [
+        "smoothie",
+        "vegetarian",
+        "kosher-for-passover",
+        "kosher",
+        "dessert"
+      ],
+      "rating": 159,
+      "slug": "b-fresh-petah-tikva-bsr",
+      "id": "637200afb06ad1d564e7622d"
+    },
+    {
+      "name": "שׁניצל קוקי | פתח תקווה",
+      "address": "בזל 1",
+      "eta": "50-60",
+      "price_range": 1,
+      "primary": [
+        "kosher-for-passover",
+        "kosher",
+        "street_food",
+        "salad"
+      ],
+      "rating": 212,
+      "slug": "schnitzel-kuki-petah-tikva",
+      "id": "6037a8f1f4ff7e39e5bde347"
+    },
+    {
+      "name": "ריבאר הכשר | גבעת שמואל",
+      "address": "בגין מנחם 38, גבעת שמואל",
+      "eta": "35-45",
+      "price_range": 1,
+      "primary": [
+        "vegan",
+        "healthy",
+        "smoothie"
+      ],
+      "rating": 115,
+      "slug": "rebargs",
+      "id": "5ed7542d2c23b0e74a507c7c"
+    },
+    {
+      "name": "ריבאר | פתח תקווה",
+      "address": "ראשון לציון 1",
+      "eta": "45-55",
+      "price_range": 1,
+      "primary": [
+        "vegan",
+        "healthy",
+        "smoothie"
+      ],
+      "rating": 116,
+      "slug": "rebar",
+      "id": "5ed54690e8450f66e9932dd1"
+    },
+    {
+      "name": "מקדונלד׳ס עמי ב.ס.ר סיטי הכשר",
+      "address": "תוצרת הארץ 3, פתח תקווה",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "kids-meals",
+        "burgers",
+        "kosher",
+        "kosher-for-passover"
+      ],
+      "rating": 331,
+      "slug": "mcdonalds-dan-town",
+      "id": "630f5bfa3d5cc686c4593c10"
+    },
+    {
+      "name": "ביגה | פתח תקווה",
+      "address": "זאב ז׳בוטינסקי 72, פתח תקווה",
+      "eta": "55-65",
+      "price_range": 2,
+      "primary": [
+        "pizza",
+        "pasta",
+        "sandwich",
+        "kosher-lmehadrin",
+        "breakfast",
+        "lunch",
+        "salad"
+      ],
+      "rating": 328,
+      "slug": "biga-petah-tikva",
+      "id": "67a1e231e9f5ce06533d4273"
+    },
+    {
+      "name": "בורגראנץ׳ | פתח תקווה",
+      "address": "פרידמן אלעזר 9",
+      "eta": "55-65",
+      "price_range": 2,
+      "primary": [
+        "burgers",
+        "kids-meals",
+        "kosher-for-passover",
+        "kosher",
+        "kosher-lmehadrin"
+      ],
+      "rating": 293,
+      "slug": "burgeranch-petah-tikva",
+      "id": "5f841931eb5efc4024c04e65"
+    },
+    {
+      "name": "פיצה נעמה | אור יהודה",
+      "address": " יצחק שמיר 13, אור יהודה ",
+      "eta": "25-35",
+      "price_range": 2,
+      "primary": [
+        "pizza",
+        "pasta",
+        "salad"
+      ],
+      "rating": 160,
+      "slug": "pizza-naama-or-yehuda",
+      "id": "6885e5138f356051374f7e60"
+    },
+    {
+      "name": "קפה גרג | סירקין",
+      "address": "פרידמן אלעזר 9, פתח תקווה",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "kosher-for-passover",
+        "cafe",
+        "kosher",
+        "sandwich",
+        "kosher-lmehadrin",
+        "breakfast",
+        "salad"
+      ],
+      "rating": 161,
+      "slug": "cafe-greg-sirkin",
+      "id": "64c0f9b21bc29262a4f3cf61"
+    },
+    {
+      "name": "פיצה סטורי | גבעת שמואל",
+      "address": "מנחם בגין 38, גבעת שמואל ",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "pizza",
+        "italian",
+        "street_food",
+        "kosher-lmehadrin"
+      ],
+      "rating": 249,
+      "slug": "pizza-story-givat-shmuel",
+      "id": "65195835f06b3b00acf34f52"
+    },
+    {
+      "name": "פיתה בשר | פתח תקווה",
+      "address": "אבשלום גיסין 64",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "steak",
+        "chicken",
+        "kosher-for-passover",
+        "kosher",
+        "israeli",
+        "salad",
+        "mediterranean",
+        "kebab",
+        "bbq"
+      ],
+      "rating": 294,
+      "slug": "pita-basar-petah-tikva",
+      "id": "615af6f2c1f8548d6215efbc"
+    },
+    {
+      "name": "מקדונלד'ס הסיבים",
+      "address": "הסיבים 2 פינת ז'בוטינסקי פתח תקווה",
+      "eta": "40-50",
+      "price_range": 2,
+      "primary": [
+        "american",
+        "burgers",
+        "kids-meals",
+        "chicken"
+      ],
+      "rating": 337,
+      "slug": "mcdonalds-hasivim",
+      "id": "5f75ac34040d9d09dfcb0a46"
+    },
+    {
+      "name": "פרשופ | פתח תקווה הקניון הגדול",
+      "address": "זאב זבוטינסקי 72, פתח תקווה",
+      "eta": "55-65",
+      "price_range": 1,
+      "primary": [
+        "ice_cream",
+        "smoothie",
+        "kosher-for-passover",
+        "kosher",
+        "dessert"
+      ],
+      "rating": 162,
+      "slug": "freshop-petah-tikva-granf-mall",
+      "id": "644ba6e77969539df353d334"
+    },
+    {
+      "name": "פיצה סטורי | פתח תקווה",
+      "address": "אבשלום גיסין 17, פתח תקווה",
+      "eta": "50-60",
+      "price_range": 3,
+      "primary": [
+        "italian",
+        "kosher-for-passover",
+        "kosher",
+        "pasta",
+        "salad"
+      ],
+      "rating": 277,
+      "slug": "pizza-story-petahtikva",
+      "id": "657ac7ac2b828858bef0e259"
+    },
+    {
+      "name": "פיצה בריבוע | אם המושבות",
+      "address": "רפאל איתן 5 פתח תקווה",
+      "eta": "50-60",
+      "price_range": 2,
+      "primary": [
+        "italian",
+        "pizza",
+        "street_food",
+        "kosher-for-passover",
+        "kosher",
+        "kosher-lmehadrin"
+      ],
+      "rating": 163,
+      "slug": "pizza-baribua-em-hamoshavot-petah-tikva",
+      "id": "6783c64177e97d620de950d5"
+    }
+  ]
+}

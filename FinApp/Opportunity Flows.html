@@ -1,0 +1,830 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Invest Coach — Opportunity Calculation Flows</title>
+<link rel="stylesheet" href="sketchy.css"/>
+<style>
+  html, body { margin: 0; height: 100%; background: #f0eee9; overflow: hidden; }
+
+  /* sticky top nav */
+  .top-nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+    display: flex; align-items: center; gap: 6px;
+    padding: 10px 20px;
+    background: #fdfcf8; border-bottom: 2px dashed #1a1a1a;
+    font-family: 'Kalam', cursive;
+  }
+  .top-nav .title { font-family: 'Caveat'; font-size: 22px; font-weight: 700; margin-right: 12px; }
+  .strat-btn {
+    padding: 5px 12px; font-family: 'Kalam', cursive; font-size: 12px; font-weight: 700;
+    border: 1.5px solid #1a1a1a; border-radius: 9999px;
+    background: #fdfcf8; cursor: pointer; white-space: nowrap;
+  }
+  .strat-btn.on { background: #2F5DFF; color: #fff; }
+  .edit-hint {
+    margin-left: auto; font-size: 11px; color: #4a4a4a;
+    background: #fff48a55; border: 1px dashed #1a1a1a;
+    padding: 4px 10px; border-radius: 999px;
+  }
+
+  /* canvas area */
+  .canvas {
+    position: fixed; top: 56px; left: 0; right: 0; bottom: 0;
+    overflow: auto; padding: 30px 40px 60px;
+  }
+
+  /* flow row */
+  .flow {
+    display: flex; align-items: flex-start; gap: 0;
+    min-width: max-content; margin-bottom: 20px;
+  }
+
+  /* node types */
+  .node {
+    position: relative; cursor: pointer;
+    font-family: 'Kalam', cursive; font-size: 12.5px;
+    line-height: 1.3; flex-shrink: 0;
+    transition: box-shadow 0.1s;
+  }
+  .node:hover .node-body { box-shadow: 3px 4px 0 #2F5DFF55; }
+  .node.selected .node-body { outline: 2px solid #2F5DFF; }
+
+  .node-body {
+    padding: 10px 14px;
+    border: 1.5px solid #1a1a1a;
+    border-radius: 8px 11px 7px 12px / 11px 7px 12px 8px;
+    background: #fdfcf8;
+    box-shadow: 2px 3px 0 rgba(0,0,0,0.1);
+    min-width: 130px; max-width: 180px;
+  }
+  .node-body.source { background: #D5DFFF; min-width: 110px; max-width: 150px; }
+  .node-body.check  { background: #fdfcf8; }
+  .node-body.score  { background: #fff48a88; min-width: 150px; }
+  .node-body.output { background: #b8e6b8; min-width: 120px; }
+  .node-body.gate   {
+    background: #fdfcf8;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    width: 90px; height: 70px; min-width: 90px; max-width: 90px;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center; padding: 0 14px; font-size: 11px; font-weight: 700;
+    box-shadow: none; border: none;
+    border-radius: 0;
+  }
+  .gate-wrap {
+    width: 90px; height: 70px; position: relative; flex-shrink: 0;
+  }
+  .gate-wrap svg { position: absolute; top: 0; left: 0; pointer-events: none; }
+
+  .node-provider {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.3px;
+    text-transform: uppercase; color: #1C3FE5; margin-bottom: 3px;
+  }
+  .node-label { font-weight: 700; font-size: 13px; margin-bottom: 1px; }
+  .node-rule  { font-size: 11.5px; color: #2b2a2a; }
+  .node-edit  {
+    font-size: 10px; color: #1C3FE5; margin-top: 4px;
+    border-top: 1px dashed #ACBEFF; padding-top: 4px;
+    display: flex; align-items: center; gap: 3px;
+  }
+
+  /* arrow connector */
+  .arrow {
+    display: flex; align-items: center; flex-shrink: 0;
+    margin: 0 2px;
+  }
+  .arrow svg { display: block; }
+
+  /* vertical stack of check nodes */
+  .checks {
+    display: flex; flex-direction: column; gap: 12px; flex-shrink: 0;
+  }
+
+  /* edit panel */
+  .edit-panel {
+    position: fixed; bottom: 20px; right: 20px; width: 300px;
+    background: #fdfcf8; border: 2px solid #1a1a1a;
+    border-radius: 12px; padding: 16px; z-index: 300;
+    box-shadow: 4px 5px 0 rgba(0,0,0,0.2);
+    font-family: 'Kalam', cursive;
+    display: none;
+  }
+  .edit-panel.on { display: block; }
+  .edit-panel h4 { font-family: 'Caveat'; font-size: 22px; margin: 0 0 4px; }
+  .edit-panel .provider-tag {
+    display: inline-block; padding: 2px 8px; font-size: 11px; font-weight: 700;
+    background: #D5DFFF; border: 1.2px solid #1C3FE5; color: #1C3FE5;
+    border-radius: 9999px; margin-bottom: 10px;
+  }
+  .edit-panel textarea {
+    width: 100%; box-sizing: border-box;
+    font-family: 'Kalam', cursive; font-size: 13px;
+    border: 1.5px solid #1a1a1a;
+    border-radius: 6px 9px 5px 8px / 9px 5px 8px 6px;
+    padding: 8px 10px; resize: vertical; min-height: 70px;
+    background: #f5f3ec;
+  }
+  .edit-panel input {
+    width: 100%; box-sizing: border-box;
+    font-family: 'Kalam', cursive; font-size: 13px;
+    border: 1.5px solid #1a1a1a;
+    border-radius: 6px 9px 5px 8px / 9px 5px 8px 6px;
+    padding: 6px 10px; background: #f5f3ec; margin-bottom: 8px;
+  }
+  .edit-panel label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.4px; color: #4a4a4a; display: block; margin-bottom: 3px; }
+  .edit-actions { display: flex; gap: 8px; margin-top: 10px; }
+
+  .comment-dot {
+    position: absolute; top: -6px; right: -6px;
+    width: 16px; height: 16px; background: #ff9800; border-radius: 50%;
+    border: 2px solid #1a1a1a; display: none; z-index: 2;
+    font-size: 9px; color: #fff; font-weight: 700;
+    align-items: center; justify-content: center;
+  }
+  .comment-dot.on { display: flex; }
+
+  .section-title {
+    font-family: 'Caveat'; font-size: 26px; font-weight: 700;
+    margin-bottom: 6px; padding-bottom: 6px;
+    border-bottom: 2px solid #1a1a1a; display: flex; align-items: center; gap: 10px;
+  }
+  .section-title .badge {
+    font-size: 12px; padding: 2px 10px;
+    border: 1.5px solid #1a1a1a; border-radius: 9999px; background: #fdfcf8;
+    font-family: 'Kalam'; font-weight: 700;
+  }
+  .section-title .badge.blue { background: #D5DFFF; border-color: #1C3FE5; color: #1C3FE5; }
+  .section-sub { font-family: 'Kalam'; font-size: 12.5px; color: #4a4a4a; margin-bottom: 16px; }
+
+  .postit {
+    background: #fef4a8;
+    border: 1.5px solid #1a1a1a;
+    border-radius: 5px;
+    padding: 10px 12px;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 12px; line-height: 1.4; color: #5a4a2a;
+    box-shadow: 2px 3px 0 rgba(0,0,0,0.1);
+    max-width: 180px;
+    transform: rotate(-2deg);
+    flex-shrink: 0;
+  }
+
+  .legend {
+    display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px;
+    font-family: 'Kalam'; font-size: 12px;
+  }
+  .legend span { display: flex; align-items: center; gap: 5px; }
+  .swatch {
+    width: 14px; height: 14px; border: 1.5px solid #1a1a1a; border-radius: 3px;
+  }
+</style>
+</head>
+<body>
+<!-- Top nav -->
+<div class="top-nav" id="topNav">
+  <div class="title">Opportunity flows</div>
+  <span id="stratTabs"></span>
+  <div class="edit-hint">Click any box to edit its rule ✏️</div>
+</div>
+
+<!-- Canvas -->
+<div class="canvas" id="mainCanvas"></div>
+
+<!-- Edit panel -->
+<div class="edit-panel" id="editPanel">
+  <h4 id="epTitle">Edit rule</h4>
+  <div id="epProvider" class="provider-tag">Provider</div>
+  <label>Rule / threshold</label>
+  <textarea id="epRule"></textarea>
+  <label>Comment / note</label>
+  <textarea id="epComment" placeholder="Why this threshold? Any edge cases?"></textarea>
+  <div class="edit-actions">
+    <button class="sk-btn sk-btn--primary" id="epSave" style="flex:1; justify-content:center;">Save</button>
+    <button class="sk-btn" id="epClose">✕</button>
+  </div>
+</div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel">
+
+// ─── Strategy flow definitions ──────────────────────────────
+const FLOWS = {
+  bounce: {
+    name: 'Bounce-Back',
+    sub: 'Good company had a one-off bad quarter. Likely to recover in 3–6m.',
+    color: '#D5DFFF',
+    accent: '#1C3FE5',
+    steps: [
+      {
+        phase: 'Fetch',
+        nodes: [
+          { id: 'b-q', type: 'source', provider: 'FMP (free tier)', label: 'Q Reports', rule: 'GET /financials/income/{ticker}\nLast 8 quarters' },
+          { id: 'b-p', type: 'source', provider: 'Alpaca (free)', label: 'Price history', rule: 'GET /bars/{ticker}\n60-day daily bars' },
+          { id: 'b-n', type: 'source', provider: 'Marketaux (free)', label: 'News + sentiment', rule: 'GET /news?symbols={ticker}\nLast 30 days' },
+        ],
+      },
+      {
+        phase: 'Check',
+        nodes: [
+          { id: 'b-c1', type: 'check', provider: 'FMP', label: 'Revenue trend', rule: 'Revenue YoY > +8%\nfor 3 of last 4 quarters', editable: true },
+          { id: 'b-c2', type: 'check', provider: 'FMP', label: 'Q earnings miss', rule: 'Latest Q EPS < estimate\nby more than 10%', editable: true },
+          { id: 'b-c3', type: 'check', provider: 'Alpaca', label: 'Stock drop', rule: 'Price down > 15%\nfrom 60-day high', editable: true },
+          { id: 'b-c4', type: 'check', provider: 'Marketaux', label: 'News clean?', rule: 'Sentiment score > –0.3\n(no scandal, no fraud)', editable: true },
+        ],
+      },
+      {
+        phase: 'Score',
+        nodes: [
+          { id: 'b-s', type: 'score', provider: 'Local', label: 'Bounce-Back score', rule: '(revenue_strength × 0.4)\n+ (drop_size × 0.4)\n+ (news_ok × 0.2)\n→ 0–100', editable: true },
+        ],
+      },
+      {
+        phase: 'Signal',
+        nodes: [
+          { id: 'b-o', type: 'output', provider: '', label: '🟢 Opportunity if score ≥ 65', rule: 'Upside est = avg(analyst targets) – price', editable: true },
+        ],
+      },
+    ],
+    note: 'The trick: revenue trend must be positive BEFORE the bad Q, so we know it\'s isolated.',
+  },
+
+  dip: {
+    name: 'Market Dip',
+    sub: 'External shock (war, rates, panic) pushes a quality stock below fair value.',
+    color: '#ffb3c655',
+    accent: '#b32121',
+    steps: [
+      {
+        phase: 'Fetch',
+        nodes: [
+          { id: 'd-idx', type: 'source', provider: 'Alpaca (free)', label: 'Index prices', rule: 'GET /bars/SPY,QQQ\n10-day daily bars' },
+          { id: 'd-n',   type: 'source', provider: 'Marketaux (free)', label: 'Macro news', rule: 'GET /news (no ticker filter)\nLook for war/rates/CPI tags' },
+          { id: 'd-f',   type: 'source', provider: 'FMP (free)', label: 'Stock fundamentals', rule: 'Cached P/E, avg P/E, debt ratio\n(refresh weekly)' },
+        ],
+      },
+      {
+        phase: 'Check',
+        nodes: [
+          { id: 'd-c1', type: 'check', provider: 'Alpaca', label: 'Market-wide drop', rule: 'SPY or QQQ down > 5%\nin last 10 trading days', editable: true },
+          { id: 'd-c2', type: 'check', provider: 'Marketaux', label: 'External trigger', rule: 'News category in:\n[geopolitical, rates, macro]\nnot [earnings, fraud]', editable: true },
+          { id: 'd-c3', type: 'check', provider: 'FMP', label: 'Quality gate', rule: 'Stock P/E < 5yr avg P/E\nDebt/equity < 1.5', editable: true },
+          { id: 'd-c4', type: 'check', provider: 'Alpaca', label: 'Stock overreacted?', rule: 'Stock drop > index drop\nby more than 5%', editable: true },
+        ],
+      },
+      {
+        phase: 'Score',
+        nodes: [
+          { id: 'd-s', type: 'score', provider: 'Local', label: 'Dip score', rule: '(market_drop × 0.3)\n+ (overreaction × 0.4)\n+ (quality × 0.3)\n→ 0–100', editable: true },
+        ],
+      },
+      {
+        phase: 'Signal',
+        nodes: [
+          { id: 'd-o', type: 'output', provider: '', label: '🟢 Opportunity if score ≥ 60', rule: 'Upside = distance to pre-dip price', editable: true },
+        ],
+      },
+    ],
+    note: 'Key: the drop must be market-wide, not company-specific. That\'s the "buy the dip" vs "catch a falling knife" distinction.',
+  },
+
+  value: {
+    name: 'Undervalued',
+    sub: 'Cheap by the numbers — low P/E, healthy cashflow, growing revenue.',
+    color: '#fff48a88',
+    accent: '#b35e00',
+    steps: [
+      {
+        phase: 'Fetch',
+        nodes: [
+          { id: 'v-f', type: 'source', provider: 'FMP (free tier)', label: 'Fundamentals', rule: 'P/E, P/S, P/B ratios\nRevenue, FCF, debt' },
+          { id: 'v-p', type: 'source', provider: 'Alpaca (free)', label: 'Current price', rule: 'GET /trades/latest/{ticker}' },
+          { id: 'v-a', type: 'source', provider: 'FMP (free)', label: 'Analyst targets', rule: 'Avg 12-month price target\n(industry fair value proxy)' },
+        ],
+      },
+      {
+        phase: 'Check',
+        nodes: [
+          { id: 'v-c1', type: 'check', provider: 'FMP', label: 'P/E vs industry', rule: 'Stock P/E < industry avg P/E\nby at least 20%', editable: true },
+          { id: 'v-c2', type: 'check', provider: 'FMP', label: 'Revenue growing', rule: 'YoY revenue growth > 0%\nfor last 2 years', editable: true },
+          { id: 'v-c3', type: 'check', provider: 'FMP', label: 'Cashflow positive', rule: 'Free cash flow > 0\nlast 4 quarters', editable: true },
+          { id: 'v-c4', type: 'check', provider: 'FMP', label: 'Not a value trap', rule: 'Debt/equity < 2\nNet income trend ≥ flat', editable: true },
+        ],
+      },
+      {
+        phase: 'Score',
+        nodes: [
+          { id: 'v-s', type: 'score', provider: 'Local', label: 'Value score', rule: '(pe_discount × 0.35)\n+ (revenue_trend × 0.25)\n+ (fcf_strength × 0.25)\n+ (debt_safety × 0.15)\n→ 0–100', editable: true },
+        ],
+      },
+      {
+        phase: 'Signal',
+        nodes: [
+          { id: 'v-o', type: 'output', provider: '', label: '🟢 Opportunity if score ≥ 70', rule: 'Upside = analyst target – price', editable: true },
+        ],
+      },
+    ],
+    note: 'Must pass all 4 checks. One failure = not a value stock, it\'s a value trap.',
+  },
+
+  dividend: {
+    name: 'Steady Dividend',
+    sub: 'Reliable income — companies that have raised dividends for 10+ years.',
+    color: '#b8e6b8',
+    accent: '#07715E',
+    steps: [
+      {
+        phase: 'Fetch',
+        nodes: [
+          { id: 'dv-f', type: 'source', provider: 'FMP (free)', label: 'Dividend history', rule: 'GET /historical-price-full/\nstock_dividend/{ticker}\nLast 15 years' },
+          { id: 'dv-b', type: 'source', provider: 'FMP (free)', label: 'Balance sheet', rule: 'Debt, equity, payout ratio' },
+          { id: 'dv-p', type: 'source', provider: 'Alpaca (free)', label: 'Current price', rule: 'To calc live yield' },
+        ],
+      },
+      {
+        phase: 'Check',
+        nodes: [
+          { id: 'dv-c1', type: 'check', provider: 'FMP', label: 'Consecutive raises', rule: 'Dividend raised every year\nfor ≥ 10 years', editable: true },
+          { id: 'dv-c2', type: 'check', provider: 'FMP', label: 'Payout ratio safe', rule: 'Payout ratio < 65%\n(room to keep paying)', editable: true },
+          { id: 'dv-c3', type: 'check', provider: 'FMP', label: 'Debt manageable', rule: 'Debt/equity < 1.5', editable: true },
+          { id: 'dv-c4', type: 'check', provider: 'Alpaca', label: 'Yield attractive', rule: 'Current yield ≥ 2.5%\n(above 10yr treasury)', editable: true },
+        ],
+      },
+      {
+        phase: 'Score',
+        nodes: [
+          { id: 'dv-s', type: 'score', provider: 'Local', label: 'Dividend safety score', rule: '(streak × 0.4)\n+ (payout_safety × 0.3)\n+ (yield × 0.2)\n+ (debt × 0.1)\n→ 0–100', editable: true },
+        ],
+      },
+      {
+        phase: 'Signal',
+        nodes: [
+          { id: 'dv-o', type: 'output', provider: '', label: '🟢 Include if score ≥ 75', rule: 'Upside = annual yield %\n(income, not capital gain)', editable: true },
+        ],
+      },
+    ],
+    note: 'This is the SAFEST strategy. Conservative risk profile users see only this + Undervalued by default.',
+  },
+
+  upgrade: {
+    name: 'Analyst Upgrade',
+    sub: '3+ sell-side analysts raised their price target in the last 30 days.',
+    color: '#fff48a88',
+    accent: '#b35e00',
+    steps: [
+      {
+        phase: 'Fetch',
+        nodes: [
+          { id: 'u-r', type: 'source', provider: 'FMP (free)', label: 'Analyst ratings', rule: 'GET /upgrades-downgrades/{ticker}\nLast 30 days' },
+          { id: 'u-t', type: 'source', provider: 'FMP (free)', label: 'Price targets', rule: 'GET /price-target-summary/{ticker}\nAvg target, # analysts' },
+          { id: 'u-p', type: 'source', provider: 'Alpaca (free)', label: 'Current price', rule: 'To compute gap to target' },
+        ],
+      },
+      {
+        phase: 'Check',
+        nodes: [
+          { id: 'u-c1', type: 'check', provider: 'FMP', label: 'Min upgrades', rule: '≥ 3 Buy / Outperform ratings\nin last 30 days', editable: true },
+          { id: 'u-c2', type: 'check', provider: 'FMP', label: 'Target raised', rule: 'Average target price\nincreased in last 30 days', editable: true },
+          { id: 'u-c3', type: 'check', provider: 'Alpaca', label: 'Price below target', rule: 'Current price < avg target\nby ≥ 10% (margin of safety)', editable: true },
+          { id: 'u-c4', type: 'check', provider: 'FMP', label: 'No contrary signal', rule: 'Downgrades < 2\nin same 30-day window', editable: true },
+        ],
+      },
+      {
+        phase: 'Score',
+        nodes: [
+          { id: 'u-s', type: 'score', provider: 'Local', label: 'Momentum score', rule: '(upgrade_count × 0.35)\n+ (target_raise_pct × 0.35)\n+ (price_gap × 0.2)\n+ (consensus_ratio × 0.1)\n→ 0–100', editable: true },
+        ],
+      },
+      {
+        phase: 'Signal',
+        nodes: [
+          { id: 'u-o', type: 'output', provider: '', label: '🟢 Opportunity if score ≥ 68', rule: 'Upside = avg analyst target – price', editable: true },
+        ],
+      },
+    ],
+    note: 'This strategy is the most reactive. Run daily. If upgrades age out, remove the stock from picks.',
+  },
+};
+
+const STRAT_ORDER = ['bounce', 'dip', 'value', 'dividend', 'upgrade', '__arch'];
+
+// ─── Arch tab renderer ──────────────────────────────────────
+function ArchView() {
+  // Universe
+  const universe = 400; // practical NASDAQ watchlist
+  // Nightly batch calls
+  const batch = [
+    { step: 'Price bars (60d daily)', provider: 'Alpaca', calls: 4, note: 'Bulk endpoint: up to 100 symbols/call → 4 calls for 400 stocks', cache: '1 day', trigger: 'Nightly', color: '#D5DFFF' },
+    { step: 'Earnings calendar', provider: 'FMP', calls: 1, note: '1 call for next-7-days calendar. Flags which stocks just reported.', cache: '1 day', trigger: 'Nightly', color: '#D5DFFF' },
+    { step: 'Income stmt (Q report)', provider: 'FMP', calls: 20, note: 'Only for stocks that JUST reported (≈5/day avg). Rest served from cache.', cache: '90 days', trigger: 'Earnings date', color: '#fff48a88' },
+    { step: 'Analyst ratings/targets', provider: 'FMP', calls: 10, note: 'Incremental: only fetch tickers with new upgrades today. Cached otherwise.', cache: '7 days', trigger: 'Nightly delta', color: '#fff48a88' },
+    { step: 'Market index bars', provider: 'Alpaca', calls: 1, note: 'SPY + QQQ 10-day bars. 1 bulk call. Powers Market Dip detector.', cache: '1 day', trigger: 'Nightly', color: '#D5DFFF' },
+    { step: 'News + sentiment', provider: 'Marketaux', calls: 20, note: '5 sector calls + 15 targeted calls for stocks that moved >3% today.', cache: '12 hours', trigger: 'Nightly + intraday trigger', color: '#b8e6b855' },
+    { step: 'Dividend history', provider: 'FMP', calls: 5, note: 'Only changes annually. Re-fetch once/month for any stock on watchlist.', cache: '30 days', trigger: 'Monthly', color: '#b8e6b855' },
+    { step: 'AI reasoning (Aria text)', provider: 'Claude Haiku', calls: 15, note: 'Only generate text for new/changed picks today. Cache stable picks.', cache: '24 hours', trigger: 'Post-scoring', color: '#ffb3c655' },
+  ];
+
+  const totalNightly = batch.reduce((s, r) => s + r.calls, 0);
+
+  const triggers = [
+    { icon: '🌙', name: 'Nightly batch', time: '4:30 PM ET (30min after close)', desc: 'Main scan. Runs every trading day. Produces the next day\'s opportunity list.', color: '#D5DFFF' },
+    { icon: '📉', name: 'Intraday dip alert', time: 'Intraday, when triggered', desc: 'SPY or QQQ drops >3% vs yesterday close → run Market Dip scan immediately. ~25 extra calls.', color: '#ffb3c655' },
+    { icon: '📋', name: 'Earnings release', time: 'Within 2h of report', desc: 'Earnings calendar flags a stock reported → fetch new Q data → re-score for Bounce-Back.', color: '#fff48a88' },
+    { icon: '⭐', name: 'Analyst upgrade', time: 'Nightly delta check', desc: 'FMP upgrade feed shows new rating → re-score that ticker for Analyst Upgrade strategy.', color: '#b8e6b855' },
+    { icon: '🔄', name: 'Weekly refresh', time: 'Sunday night', desc: 'Full re-score of all 400 stocks even without triggers. Catches slow-moving value signals.', color: '#fdfcf8' },
+  ];
+
+  const perUser = [
+    { action: 'Open app (see today\'s list)', calls: 0, note: 'Reads from DB — pre-computed by nightly batch. Zero API calls.' },
+    { action: 'View stock detail (chart)', calls: 1, note: 'Alpaca latest quote + 1-day bars. 1 lightweight call.' },
+    { action: 'Tap "Why Aria picked this"', calls: 0, note: 'Aria text is pre-generated and cached in DB. Zero calls.' },
+    { action: 'Search for a specific stock', calls: 2, note: '1 price call + 1 fundamentals summary (served from cache if <7d old).' },
+    { action: 'Pull to refresh', calls: 0, note: 'Returns same pre-computed list unless a trigger fired since last batch.' },
+  ];
+
+  const limits = [
+    { provider: 'Alpaca free', limit: 'Unlimited bars (rate: 200 req/min)', ourUse: '~6/night', safe: true },
+    { provider: 'FMP free', limit: '250 req/day', ourUse: '~36/night', safe: true },
+    { provider: 'Marketaux free', limit: '100 req/day', ourUse: '~20/night', safe: true },
+    { provider: 'Claude Haiku', limit: 'Pay-per-token (~$0.25/1M input)', ourUse: '~$0.05/day for 400 stocks', safe: true },
+  ];
+
+  const box = (children, bg = '#fdfcf8', extra = {}) => (
+    <div style={{
+      background: bg, border: '1.5px solid #1a1a1a',
+      borderRadius: '7px 10px 6px 11px / 10px 6px 11px 7px',
+      boxShadow: '2px 3px 0 rgba(0,0,0,0.1)',
+      padding: '14px 16px', ...extra,
+    }}>{children}</div>
+  );
+
+  const pill = (text, color = '#D5DFFF') => (
+    <span style={{
+      display: 'inline-block', padding: '2px 8px', fontSize: 11,
+      border: '1.2px solid #1a1a1a', borderRadius: 9999,
+      background: color, fontWeight: 700, fontFamily: 'Kalam, cursive',
+    }}>{text}</span>
+  );
+
+  return (
+    <div style={{ fontFamily: 'Kalam, cursive', maxWidth: 1200 }}>
+      <div style={{ fontFamily: 'Caveat', fontSize: 28, fontWeight: 700, marginBottom: 4 }}>
+        Scan architecture — NASDAQ only (~400 stocks)
+      </div>
+      <div style={{ fontSize: 13, color: '#4a4a4a', marginBottom: 24 }}>
+        Key insight: scanning is <b>shared infrastructure, not per-user</b>. One nightly batch serves all users from a DB. API calls do NOT scale with user count.
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20, marginBottom: 24 }}>
+
+        {/* Universe */}
+        {box(
+          <>
+            <div style={{ fontFamily: 'Caveat', fontSize: 22, fontWeight: 700, marginBottom: 8 }}>
+              📊 Stock universe
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 6, fontSize: 13 }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', padding: '6px 0', borderBottom: '1px dashed #c4c4c4' }}>
+                <span>All NASDAQ listings</span><b>~3,500</b>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', padding: '6px 0', borderBottom: '1px dashed #c4c4c4' }}>
+                <span>Filter: market cap &gt; $1B</span><b>~800</b>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', padding: '6px 0', borderBottom: '1px dashed #c4c4c4' }}>
+                <span>Filter: avg volume &gt; 500k/day</span><b>~500</b>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', padding: '6px 0', borderBottom: '1px dashed #c4c4c4' }}>
+                <span>Filter: has 2yr+ history + fundamentals</span>
+                <b style={{ color: '#1C3FE5' }}>~400 ✓</b>
+              </div>
+            </div>
+            <div style={{ marginTop: 10, padding: '8px 10px', background: '#fff48a55', borderRadius: 6, fontSize: 12 }}>
+              400 is the practical watchlist. Covers all major NASDAQ names a retail beginner would recognise. Can expand later.
+            </div>
+          </>,
+          '#fdfcf8'
+        )}
+
+        {/* Triggers */}
+        {box(
+          <>
+            <div style={{ fontFamily: 'Caveat', fontSize: 22, fontWeight: 700, marginBottom: 10 }}>
+              ⚡ What triggers a scan?
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+              {triggers.map(t => (
+                <div key={t.name} style={{
+                  display: 'flex', gap: 10, padding: '8px 10px',
+                  background: t.color, borderRadius: 6,
+                  border: '1px solid #c4c4c4',
+                }}>
+                  <span style={{ fontSize: 18, flexShrink: 0 }}>{t.icon}</span>
+                  <div>
+                    <div style={{ fontWeight: 700, fontSize: 13 }}>{t.name} <span style={{ fontWeight: 400, fontSize: 11, color: '#4a4a4a' }}>· {t.time}</span></div>
+                    <div style={{ fontSize: 12, color: '#2b2a2a', lineHeight: 1.35 }}>{t.desc}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </>,
+          '#fdfcf8'
+        )}
+      </div>
+
+      {/* Nightly batch table */}
+      {box(
+        <>
+          <div style={{ fontFamily: 'Caveat', fontSize: 22, fontWeight: 700, marginBottom: 10 }}>
+            🌙 Nightly batch — API calls breakdown (400 stocks)
+          </div>
+          <div style={{ overflowX: 'auto' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 12.5 }}>
+              <thead>
+                <tr style={{ background: '#f5f3ec' }}>
+                  {['Step', 'Provider', 'Calls/night', 'Cache duration', 'Trigger', 'How'].map(h => (
+                    <th key={h} style={{
+                      padding: '8px 10px', textAlign: 'left', fontWeight: 700,
+                      fontSize: 11, textTransform: 'uppercase', letterSpacing: 0.3,
+                      borderBottom: '2px solid #1a1a1a', whiteSpace: 'nowrap',
+                    }}>{h}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {batch.map((r, i) => (
+                  <tr key={i} style={{ borderBottom: '1px dashed #c4c4c4', background: i % 2 === 0 ? '#fdfcf8' : '#f9f7f2' }}>
+                    <td style={{ padding: '8px 10px', fontWeight: 700 }}>{r.step}</td>
+                    <td style={{ padding: '8px 10px' }}>
+                      <span style={{
+                        display: 'inline-block', padding: '1px 7px', fontSize: 10,
+                        background: r.color, border: '1px solid #1a1a1a', borderRadius: 999,
+                        fontWeight: 700,
+                      }}>{r.provider}</span>
+                    </td>
+                    <td style={{ padding: '8px 10px', fontWeight: 700, color: '#1C3FE5', fontSize: 15 }}>{r.calls}</td>
+                    <td style={{ padding: '8px 10px', color: '#4a4a4a' }}>{r.cache}</td>
+                    <td style={{ padding: '8px 10px', color: '#4a4a4a' }}>{r.trigger}</td>
+                    <td style={{ padding: '8px 10px', color: '#2b2a2a', fontSize: 12 }}>{r.note}</td>
+                  </tr>
+                ))}
+                <tr style={{ background: '#D5DFFF', fontWeight: 700 }}>
+                  <td style={{ padding: '10px 10px' }}>TOTAL</td>
+                  <td></td>
+                  <td style={{ padding: '10px 10px', fontSize: 20, fontFamily: 'Caveat', color: '#1C3FE5' }}>{totalNightly}</td>
+                  <td colSpan={3} style={{ padding: '10px 10px', fontSize: 12, color: '#4a4a4a' }}>
+                    Well within free tiers · FMP limit 250/day · Marketaux limit 100/day ✓
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </>,
+        '#fdfcf8', { marginBottom: 20 }
+      )}
+
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
+
+        {/* Per-user calls */}
+        {box(
+          <>
+            <div style={{ fontFamily: 'Caveat', fontSize: 22, fontWeight: 700, marginBottom: 10 }}>
+              👤 API calls per user session
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+              {perUser.map((r, i) => (
+                <div key={i} style={{
+                  display: 'flex', gap: 12, alignItems: 'flex-start',
+                  padding: '8px 10px', borderRadius: 6,
+                  background: r.calls === 0 ? '#b8e6b855' : '#fff48a44',
+                  border: '1px solid #c4c4c4',
+                }}>
+                  <div style={{
+                    fontFamily: 'Caveat', fontSize: 22, fontWeight: 700, color: '#1C3FE5',
+                    minWidth: 28, textAlign: 'center',
+                  }}>{r.calls}</div>
+                  <div>
+                    <div style={{ fontWeight: 700, fontSize: 13 }}>{r.action}</div>
+                    <div style={{ fontSize: 12, color: '#4a4a4a', lineHeight: 1.3 }}>{r.note}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div style={{ marginTop: 12, padding: '8px 10px', background: '#D5DFFF', borderRadius: 6, fontSize: 12, fontWeight: 700 }}>
+              Typical session: 1–3 API calls per user per day. Scales to thousands of users with zero extra batch cost.
+            </div>
+          </>,
+          '#fdfcf8'
+        )}
+
+        {/* Free tier fit */}
+        {box(
+          <>
+            <div style={{ fontFamily: 'Caveat', fontSize: 22, fontWeight: 700, marginBottom: 10 }}>
+              ✅ Does it fit free tiers?
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 14 }}>
+              {limits.map((l, i) => (
+                <div key={i} style={{
+                  display: 'flex', alignItems: 'center', gap: 10,
+                  padding: '8px 10px', borderRadius: 6,
+                  background: '#fdfcf8', border: '1px solid #c4c4c4',
+                }}>
+                  <span style={{ fontSize: 16 }}>{l.safe ? '✅' : '⚠️'}</span>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ fontWeight: 700, fontSize: 13 }}>{l.provider}</div>
+                    <div style={{ fontSize: 11, color: '#4a4a4a' }}>Limit: {l.limit}</div>
+                    <div style={{ fontSize: 11, color: '#1a7a2e', fontWeight: 700 }}>Our use: {l.ourUse}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div style={{ padding: '10px 12px', background: '#b8e6b8', borderRadius: 6, border: '1.5px solid #1a1a1a', fontSize: 13 }}>
+              <b>Bottom line:</b> The entire nightly scan for 400 NASDAQ stocks costs <span style={{ fontFamily: 'Caveat', fontSize: 18, fontWeight: 700, color: '#1C3FE5' }}>~$0/day</span> on free tiers + roughly <b>$0.05/day</b> in Claude Haiku tokens. MVP is essentially free to run.
+            </div>
+            <div style={{ marginTop: 10, padding: '8px 10px', background: '#fff48a55', borderRadius: 6, fontSize: 12 }}>
+              <b>When to upgrade:</b> FMP free hits its 250 limit only if you expand the universe beyond ~600 stocks OR add intraday fundamentals. That's a Phase 2 problem.
+            </div>
+          </>,
+          '#fdfcf8'
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ─── App ────────────────────────────────────────────────────
+function App() {
+  const [active, setActive] = React.useState(() => localStorage.getItem('ic_flow_strat') || 'bounce');
+  const [edits, setEdits] = React.useState(() => {
+    try { return JSON.parse(localStorage.getItem('ic_flow_edits') || '{}'); } catch { return {}; }
+  });
+  const [editNode, setEditNode] = React.useState(null);
+  const [comments, setComments] = React.useState(() => {
+    try { return JSON.parse(localStorage.getItem('ic_flow_comments') || '{}'); } catch { return {}; }
+  });
+  const [panelRule, setPanelRule] = React.useState('');
+  const [panelComment, setPanelComment] = React.useState('');
+
+  React.useEffect(() => { localStorage.setItem('ic_flow_strat', active); }, [active]);
+  React.useEffect(() => { localStorage.setItem('ic_flow_edits', JSON.stringify(edits)); }, [edits]);
+  React.useEffect(() => { localStorage.setItem('ic_flow_comments', JSON.stringify(comments)); }, [comments]);
+
+  // Render tab bar
+  React.useEffect(() => {
+    const el = document.getElementById('stratTabs');
+    el.innerHTML = '';
+    STRAT_ORDER.forEach(k => {
+      const b = document.createElement('button');
+      b.className = 'strat-btn' + (k === active ? ' on' : '');
+      b.textContent = k === '__arch' ? '⚡ Scan architecture' : FLOWS[k].name;
+      b.onclick = () => setActive(k);
+      el.appendChild(b);
+    });
+  }, [active]);
+
+  const openEdit = (node) => {
+    setEditNode(node);
+    setPanelRule(edits[node.id]?.rule ?? node.rule);
+    setPanelComment(comments[node.id] || '');
+  };
+
+  const saveEdit = () => {
+    if (!editNode) return;
+    setEdits(e => ({ ...e, [editNode.id]: { rule: panelRule } }));
+    if (panelComment.trim()) {
+      setComments(c => ({ ...c, [editNode.id]: panelComment }));
+    }
+    setEditNode(null);
+  };
+
+  const flow = active !== '__arch' ? FLOWS[active] : null;
+
+  return (
+    <>
+      {/* Canvas */}
+      <div id="mainCanvas" className="canvas" onClick={e => { if (e.target === e.currentTarget) setEditNode(null); }}>
+      {active !== '__arch' && (
+        <>
+          <div className="section-title">
+            <span className="badge blue">{flow.name}</span>
+            <span style={{ fontSize: 14, fontWeight: 400, fontFamily: 'Kalam', color: '#4a4a4a' }}>{flow.sub}</span>
+          </div>
+          <div className="legend">
+            <span><span className="swatch" style={{ background: '#D5DFFF' }}></span> Data source (API call)</span>
+            <span><span className="swatch" style={{ background: '#fdfcf8' }}></span> Check / rule</span>
+            <span><span className="swatch" style={{ background: '#fff48a88' }}></span> Scoring formula</span>
+            <span><span className="swatch" style={{ background: '#b8e6b8' }}></span> Output / opportunity signal</span>
+          </div>
+        </>
+      )}
+
+      {active === '__arch'
+        ? <ArchView />
+        : <>
+            <FlowDiagram flow={flow} edits={edits} comments={comments} onEdit={openEdit} />
+            {flow && flow.note && (
+              <div className="postit" style={{ marginTop: 24 }}>
+                <b>Key insight:</b><br/>{flow.note}
+              </div>
+            )}
+          </>
+      }
+      </div>
+
+      {/* Edit panel */}
+      <div className={`edit-panel ${editNode ? 'on' : ''}`} id="editPanel">
+        <h4>{editNode?.label}</h4>
+        <div className="provider-tag">{editNode?.provider || 'Local'}</div>
+        <label>Rule / threshold</label>
+        <textarea value={panelRule} onChange={e => setPanelRule(e.target.value)} />
+        <label>Comment / note</label>
+        <textarea value={panelComment} onChange={e => setPanelComment(e.target.value)}
+          placeholder="Why this threshold? Edge cases?" />
+        <div className="edit-actions">
+          <button className="sk-btn sk-btn--primary" onClick={saveEdit} style={{ flex: 1, justifyContent: 'center' }}>Save</button>
+          <button className="sk-btn" onClick={() => setEditNode(null)}>✕</button>
+        </div>
+      </div>
+    </>
+  );
+}
+
+// ─── Flow Diagram ───────────────────────────────────────────
+function FlowDiagram({ flow, edits, comments, onEdit }) {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
+      <div className="flow" style={{ alignItems: 'center' }}>
+        {flow.steps.map((step, si) => (
+          <React.Fragment key={step.phase}>
+            {si > 0 && <Arrow />}
+            <StepCol step={step} edits={edits} comments={comments} onEdit={onEdit} />
+          </React.Fragment>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function StepCol({ step, edits, comments, onEdit }) {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 0 }}>
+      <div style={{
+        fontFamily: 'Kalam', fontSize: 10, textTransform: 'uppercase',
+        letterSpacing: 0.5, color: '#8a8a8a', marginBottom: 8,
+      }}>{step.phase}</div>
+      <div className="checks">
+        {step.nodes.map((node, ni) => (
+          <React.Fragment key={node.id}>
+            <FlowNode node={node} edits={edits} comments={comments} onEdit={onEdit} />
+          </React.Fragment>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function FlowNode({ node, edits, comments, onEdit }) {
+  const rule = edits[node.id]?.rule ?? node.rule;
+  const hasComment = !!comments[node.id];
+  const isEditable = node.editable;
+
+  return (
+    <div className={`node ${isEditable ? 'editable' : ''}`}
+      onClick={() => isEditable && onEdit(node)}
+      style={{ cursor: isEditable ? 'pointer' : 'default' }}>
+      {hasComment && <div className="comment-dot on">!</div>}
+      <div className={`node-body ${node.type}`}>
+        {node.provider && <div className="node-provider">{node.provider}</div>}
+        <div className="node-label">{node.label}</div>
+        <div className="node-rule" style={{ whiteSpace: 'pre-line' }}>{rule}</div>
+        {isEditable && (
+          <div className="node-edit">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#1C3FE5" strokeWidth="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4z"/></svg>
+            {hasComment ? `note: ${comments[node.id].slice(0, 22)}…` : 'click to edit rule'}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function Arrow() {
+  return (
+    <div className="arrow" style={{ margin: '0 6px' }}>
+      <svg width="28" height="16" viewBox="0 0 28 16">
+        <path d="M2 8 C8 6, 16 10, 22 8" fill="none" stroke="#1a1a1a" strokeWidth="1.5" strokeLinecap="round"/>
+        <path d="M19 4 L24 8 L19 12" fill="none" stroke="#1a1a1a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root') || (() => {
+  const d = document.createElement('div'); d.id = 'root'; document.body.appendChild(d); return d;
+})()).render(<App />);
+</script>
+<div id="root"></div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "id": "task-20260510-094520-define-orchestration-sys-04c618",
+  "title": "Define orchestration system design",
+  "role": "product-manager",
+  "priority": "medium",
+  "parentTaskId": null,
+  "ownerSessionKey": "agent:main:main",
+  "childSessionKey": null,
+  "createdAt": "2026-05-10T09:45:20.285439Z",
+  "updatedAt": "2026-05-10T09:52:44.922357Z",
+  "summary": "Kickoff: PM + Architect ping-pong to define the system",
+  "goal": "Define orchestration system design",
+  "tags": []
+}

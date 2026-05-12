@@ -1,0 +1,41 @@
+# Secrets and local env
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.crt
+*secret*
+*token*
+
+# OpenClaw/runtime-local state
+.openclaw/
+.trash/
+app.log
+code-server.log
+nextjs.log
+*.log
+
+# Dependencies and local build artifacts
+node_modules/
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Nested repos / local-only agent worktrees
+agents/*/.git/
+agents/*/.gitignore
+
+# Local service credentials and caches
+google-calendar-bridge/data/
+myfinapp/.env
+myfinapp/.data/
+myfinapp/gcs-key.json
+
+# Config snapshots that may contain sensitive values
+agent-profiles/full-config-with-agents.json
+state/*config-snapshot*.json
+
+# OS/editor noise
+.DS_Store
