@@ -1,0 +1,49 @@
+{
+  "name": "myfinapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:fmp": "node index.js",
+    "start": "node server.js",
+    "start:local": "export GOOGLE_APPLICATION_CREDENTIALS=\"./gcs-key.json\" && node server.js",
+    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development",
+    "dev": "concurrently \"npm run build:dev -- --watch\" \"export GOOGLE_APPLICATION_CREDENTIALS=\\\"./gcs-key.json\\\" && nodemon server.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "S&P 500 earnings web app with mobile view and date selector.",
+  "dependencies": {
+    "@google-cloud/storage": "^7.16.0",
+    "axios": "^1.9.0",
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "moment": "^2.30.1",
+    "openai": "^4.103.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.0",
+    "@babel/preset-env": "^7.22.0",
+    "@babel/preset-react": "^7.22.0",
+    "babel-loader": "^9.1.0",
+    "concurrently": "^8.2.0",
+    "css-loader": "^6.8.0",
+    "nodemon": "^3.0.0",
+    "style-loader": "^3.3.0",
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.0",
+    "webpack-dev-server": "^5.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avigu/myfinapp.git"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

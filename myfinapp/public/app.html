@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📈 MyFinApp - Modern Financial Dashboard</title>
+  <meta name="description" content="Real-time S&P 500 & NASDAQ investment opportunities with modern React interface">
+  <meta name="keywords" content="finance, stocks, investing, S&P 500, NASDAQ, earnings, market analysis">
+  <meta name="author" content="MyFinApp">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+  
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="/manifest.json">
+  
+  <!-- Meta tags for social sharing -->
+  <meta property="og:title" content="MyFinApp - Financial Dashboard">
+  <meta property="og:description" content="Real-time S&P 500 & NASDAQ investment opportunities">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://myfinapp.com/app">
+  
+  <!-- Mobile optimization -->
+  <meta name="theme-color" content="#0066cc">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="MyFinApp">
+  
+  <!-- Preconnect to external domains -->
+  <link rel="preconnect" href="https://finance.yahoo.com">
+  
+  <style>
+    /* Immediate loading styles to prevent flash */
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+    }
+    
+    #root {
+      min-height: 100vh;
+    }
+    
+    /* Loading fallback */
+    .app-loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      color: white;
+      text-align: center;
+    }
+    
+    .app-loading h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .app-loading p {
+      opacity: 0.8;
+    }
+    
+    /* Simple spinner animation */
+    .loading-spinner {
+      width: 40px;
+      height: 40px;
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      border-top: 4px solid white;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 1rem;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div class="app-loading">
+      <div>
+        <div class="loading-spinner"></div>
+        <h1>📈 MyFinApp</h1>
+        <p>Loading your financial dashboard...</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- React App Bundle -->
+  <script src="/js/app.bundle.js"></script>
+  
+  <!-- Service Worker for PWA functionality -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(function(registration) {
+            console.log('ServiceWorker registration successful');
+          })
+          .catch(function(err) {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+      });
+    }
+  </script>
+</body>
+</html> 
