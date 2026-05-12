@@ -61,6 +61,12 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - `trash` > `rm` (recoverable beats gone forever)
 - When in doubt, ask.
 
+## Git Backup Discipline
+
+- After any change that was verified to work, push the updated workspace to the `milo` GitHub repo.
+- Do not push unverified changes as if they are complete.
+- Before pushing, make sure ignored secrets/local state stay out of git.
+
 ## External vs Internal
 
 **Safe to do freely:**

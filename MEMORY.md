@@ -42,3 +42,4 @@
 - Himalaya IMAP search לא עובד על Gmail — workaround: לבקש מאבי להעביר אימיילים
 - Docker restarts מוחקים שינויים שאינם persistent
 - Hostinger firewall: פורטים לא סטנדרטיים חייבים פתיחה מפורשת
+- Preference (Avi): אחרי כל שינוי שהוכח כעובד, לעשות push ל-repo `milo` ב-GitHub
