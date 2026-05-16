@@ -39,3 +39,4 @@ state/*config-snapshot*.json
 
 # OS/editor noise
 .DS_Store
+openclaw.json.*

@@ -31,7 +31,10 @@ Things like:
 
 - home-server → 192.168.1.100, user: admin
 
-### TTS
+### Slack
+
+- My user ID: U0B2XUKL410
+
 
 - Preferred voice: "Nova" (warm, slightly British)
 - Default speaker: Kitchen HomePod
