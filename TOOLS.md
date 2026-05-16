@@ -47,3 +47,12 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 ---
 
 Add whatever helps you do your job. This is your cheat sheet.
+
+### Google Calendar
+
+- **DO NOT USE `gcalcli`**. It is not authenticated.
+- Use the custom `google-calendar-bridge` tool located in the workspace.
+- **Location:** `google-calendar-bridge/`
+- **Usage:** Run `npm run <command> -- --parameters` from within the directory.
+- **Example (Create Event):** `cd google-calendar-bridge && npm run create -- --calendar primary --title "..." --start "..." --end "..." --attendees "..."`
+- Refer to `google-calendar-bridge/README.md` for all available commands and options.
